@@ -1,0 +1,26 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"A File Icon",
+		"AdvancedNewFile",
+		"BracketHighlighter",
+		"CSS3",
+		"DashDoc",
+		"Elixir",
+		"HTML-CSS-JS Prettify",
+		"HTML5",
+		"Markdown Extended",
+		"Origami",
+		"Package Control",
+		"SideBarEnhancements",
+		"Solarized Color Scheme",
+		"SublimeLinter",
+		"SublimeLinter-contrib-sqlint",
+		"Theme - SoDaReloaded",
+		"TrailingSpaces"
+	]
+}

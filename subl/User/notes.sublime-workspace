@@ -1,0 +1,314 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 89.0,
+		"last_filter": "synelix",
+		"selected_items":
+		[
+			[
+				"synelix",
+				"Set Syntax: Elixir"
+			],
+			[
+				"trail",
+				"Trailing Spaces: Delete Trailing Spaces"
+			],
+			[
+				"rtrail",
+				"Trailing Spaces: Delete Trailing Spaces"
+			],
+			[
+				"synshel",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"markd",
+				"Set Syntax: Markdown Extended"
+			],
+			[
+				"tra",
+				"Trailing Spaces: Delete Trailing Spaces"
+			],
+			[
+				"rei",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"ruby",
+				"Set Syntax: Ruby"
+			],
+			[
+				"project",
+				"Project: Refresh Folders"
+			],
+			[
+				"proejct",
+				"Project: Save As"
+			],
+			[
+				"lint",
+				"SublimeLinter: Next Error"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"inde",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"synsql",
+				"Set Syntax: SQL"
+			],
+			[
+				"mini",
+				"View: Toggle Minimap"
+			],
+			[
+				"convert",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"packinstall",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 652.0
+	},
+	"console":
+	{
+		"height": 641.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/lance/Dropbox/notes"
+	],
+	"file_history":
+	[
+		"/Users/lance/Dropbox/notes/red hat openshift online registration local testing.md",
+		"/Users/lance/Dropbox/notes/top ten programming books every developer should read sonmez.txt",
+		"/Users/lance/Dropbox/notes/elixir ueberauth example data.md",
+		"/Users/lance/Desktop/error.html",
+		"/Users/lance/Dropbox/notes/journal 2018-01-14.md",
+		"/Users/lance/Dropbox/notes/red hat tp link sale on rdu list.md",
+		"/Users/lance/Desktop/oso_local_setup.sh",
+		"/Users/lance/dotfiles/zshrc",
+		"/Users/lance/Dropbox/notes/rails default controller.md",
+		"/Users/lance/Dropbox/notes/red hat journal 2018-01-08.md",
+		"/Users/lance/src/online-registration/app/views/admin/coupons/_form.html.erb",
+		"/Users/lance/Dropbox/notes/red hat online registration coupon.md",
+		"/Users/lance/Dropbox/notes/red hat online registration coupon information view.md",
+		"/Users/lance/Dropbox/notes/chris bui recommendation.md",
+		"/Users/lance/Dropbox/notes/red hat journal 2017-12-19.md",
+		"/Users/lance/Dropbox/notes/git rebase conflict.md",
+		"/Users/lance/Library/Application Support/Sublime Text 3/Packages/User/trailing_spaces.sublime-settings",
+		"/Users/lance/Desktop/untitled.sql",
+		"/Users/lance/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/lance/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
+	],
+	"find":
+	{
+		"height": 28.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"prefix"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 41.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "notes.sublime-project",
+	"replace":
+	{
+		"height": 52.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"onlinereglocal",
+				"red hat openshift online registration local testing.md"
+			],
+			[
+				"sonmez",
+				"top ten programming books every developer should read sonmez.txt"
+			],
+			[
+				"ueberauth",
+				"elixir ueberauth example data.md"
+			],
+			[
+				"tplink",
+				"red hat tp link sale on rdu list.md"
+			],
+			[
+				"openshiftlocal",
+				"red hat openshift online registration local testing.md"
+			],
+			[
+				"redhatonlineloca",
+				"red hat openshift online registration local testing.md"
+			],
+			[
+				"railscontroll",
+				"rails default controller.md"
+			],
+			[
+				"railscontroller",
+				"rails default controller.md"
+			],
+			[
+				"redhatonlineregistrloc",
+				"red hat openshift online registration local testing.md"
+			],
+			[
+				"redhatonline",
+				"red hat online registration coupon information view.md"
+			],
+			[
+				"redhatcoupon",
+				"red hat online registration coupon.md"
+			],
+			[
+				"openshiftonline",
+				"red hat openshift online registration local testing.md"
+			],
+			[
+				"redhatjourn",
+				"red hat journal 2017-12-19.md"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
