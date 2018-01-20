@@ -10,7 +10,7 @@ ZSH_THEME="robbyrussell"
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH="$HOME/.cask/bin:$PATH"
-export PATH="$(brew --prefix coreutils)/libexec/gnubin"
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 
 zstyle ':completion:*' hosts off
 
