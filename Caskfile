@@ -1,0 +1,80 @@
+tap "caskroom/cask"
+tap "caskroom/versions"
+
+cask_args appdir: "/Applications"
+
+cask "1password"
+cask "adium"
+cask "alfred"
+cask "android-file-transfer"
+cask "anki"
+cask "atext"
+cask "atom"
+cask "balsamiq-mockups"
+cask "brave"
+cask "caffeine"
+cask "cleanmymac"
+cask "db-browser-for-sqlite"
+cask "daisydisk"
+cask "dash"
+cask "digikam"
+cask "divvy"
+cask "dropbox"
+cask "evernote"
+cask "etcher" # Burn images to SD cards
+cask "firefox"
+cask "fluid"
+cask "gifox"
+cask "gimp"
+cask "google-chrome"
+cask "gpg-suite"
+cask "inkscape"
+cask "intellij-idea-ce"
+cask "iterm2"
+cask "java7"
+cask "kaleidoscope"
+cask "keybase"
+cask "kindle"
+cask "kitty"
+cask "lastpass"
+cask "limechat"
+# cask "mdrp" # Need to specify the version for this
+cask "monodraw"
+cask "ngrok"
+cask "nvalt"
+cask "pastor"
+cask "postico"
+cask "postman"
+cask "remember-the-milk"
+cask "renamer"
+cask "scrivener"
+cask "scummvm"
+cask "sdformatter"
+cask "sequel-pro"
+cask "slack"
+cask "skim"
+cask "sourcetree"
+cask "spectacle"
+cask "spotify"
+cask "steam"
+cask "sublime-text"
+cask "the-unarchiver"
+cask "vagrant"
+cask "virtualbox"
+cask "viscosity"
+cask "vlc"
+
+# Mac App Store Apps
+brew "mas"
+
+mas "415158530" # PixelStick (2.12.0)
+mas "407963104" # Pixelmator (3.7)
+mas "467939042" # Growl (2.1.3)
+mas "448925439" # Marked (1.4.3)
+mas "496437906" # Shush (1.2.1)
+mas "512464723" # Alinof Timer (4.1.2)
+mas "463541543" # Gemini (1.5.17)
+mas "992076693" # MindNode (2.5.7)
+mas "413857545" # Divvy (1.5.1)
+mas "668208984" # GIPHY Capture
+mas "497799835" # Xcode
