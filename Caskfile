@@ -67,15 +67,16 @@ cask "vlc"
 # Mac App Store Apps
 brew "mas"
 
-mas 415158530 # PixelStick (2.12.0)
-mas 407963104 # Pixelmator (3.7)
-mas 467939042 # Growl (2.1.3)
-mas 448925439 # Marked (1.4.3)
-mas 496437906 # Shush (1.2.1)
-mas 512464723 # Alinof Timer (4.1.2)
-mas 463541543 # Gemini (1.5.17)
-mas 992076693 # MindNode (2.5.7)
-mas 413857545 # Divvy (1.5.1)
-mas 668208984 # GIPHY Capture
-mas 497799835 # Xcode
+mas "PixelStick", id: 415158530 # PixelStick (2.12.0)
+mas "Pixelmator", id: 407963104 # Pixelmator (3.7)
+mas "Growl", id: 467939042 # Growl (2.1.3)
+mas "Marked", id: 448925439 # Marked (1.4.3)
+mas "Shush", id: 496437906 # Shush (1.2.1)
+mas "Alinof Timer", id: 512464723 # Alinof Timer (4.1.2)
+mas "Gemini", id: 463541543 # Gemini (1.5.17)
+mas "MindNode", id: 992076693 # MindNode (2.5.7)
+mas "Divvy", id: 413857545 # Divvy (1.5.1)
+mas "GIPHY Capture", id: 668208984 # GIPHY Capture
+mas "Xcode", id: 497799835 # Xcode
+
 brew "macvim"
