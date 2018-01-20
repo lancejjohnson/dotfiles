@@ -40,8 +40,6 @@ brew "wget", args: ["with-iri"]
 brew "zsh"
 
 # Containers and VMs
-brew "virtualbox"
-brew "vagrant"
 brew "docker"
 brew "openshift-cli"
 
