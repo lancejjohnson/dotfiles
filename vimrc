@@ -8,22 +8,6 @@ syntax on
 packadd minpac
 source ~/.packages.vim
 
-" GUI settings
-set guioptions-=r     " Hide right scroll bar in MacVim
-set guioptions-=L     " Hide left scroll bar in MacVim
-set guioptions-=e     " Use non-gui tabs
-set guifont=Fira\ Mono:h16
-
-" UI settings
-set termguicolors
-set background=dark
-let g:solarized_bold=0
-let g:solarized_italic=0
-" let g:solarized_termcolors=16
-" silent! colorscheme solarized
-" Want to compare this with normal solarized
-silent! colorscheme solarized8_dark
-
 " General settings
 let mapleader = ","
 
