@@ -8,6 +8,18 @@ syntax on
 packadd minpac
 source ~/.packages.vim
 
+" Colors
+set bg=dark
+"" See https://github.com/lifepillar/vimrc/blob/master/vimrc
+if has('termguicolors') && $COLORTERM ==# 'truecolor'
+  let &t_8f = "\<esc>[38;2;%lu;%lu;%lum" " Needed in tmux
+  let &t_8b = "\<esc>[48;2;%lu;%lu;%lum" " Ditto
+  set termguicolors
+endif
+let g:solarized_use16 = 1
+colorscheme solarized8
+
+
 " General settings
 let mapleader = ","
 
