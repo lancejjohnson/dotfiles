@@ -6,7 +6,7 @@ syntax on
 
 " Packages
 packadd minpac
-source ~/dotfiles/packages.vim
+source ~/.packages.vim
 
 " GUI settings
 set guioptions-=r     " Hide right scroll bar in MacVim
