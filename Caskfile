@@ -26,6 +26,7 @@ cask "firefox"
 cask "fluid"
 cask "gifox"
 cask "gimp"
+cask "github"
 cask "google-chrome"
 cask "gpg-suite"
 cask "xquartz" # Must precede inkscape
