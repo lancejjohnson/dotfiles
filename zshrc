@@ -26,7 +26,7 @@ export PATH="$HOME/.exenv/bin:$PATH"
 eval "$(exenv init -)"
 
 # Golang
-export GOPATH=$HOME/go
+export GOPATH=$HOME/Code/go
 export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
