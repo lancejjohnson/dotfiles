@@ -42,6 +42,7 @@ brew "zsh"
 # Containers and VMs
 # brew "docker" # Prefer Docker for Mac for now
 brew "openshift-cli"
+brew "socat"
 
 # Editors
 # brew "macvim", args: ["with-override-system-vim"]
