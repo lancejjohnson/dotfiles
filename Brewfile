@@ -40,7 +40,7 @@ brew "wget", args: ["with-iri"]
 brew "zsh"
 
 # Containers and VMs
-brew "docker"
+# brew "docker" # Prefer Docker for Mac for now
 brew "openshift-cli"
 
 # Editors
