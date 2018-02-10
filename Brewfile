@@ -23,7 +23,9 @@ brew "dark-mode"
 brew "exercism"
 brew "git"
 brew "git-lfs"
+brew "ghi"
 brew "gnu-sed", args: ["with-default-names"]
+brew "graphviz"
 brew "heroku"
 brew "imagemagick"
 brew "libyaml" # should come after openssl
