@@ -213,7 +213,6 @@ inoremap <s-tab> <c-n>
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '!'
-let g:syntastic_javascript_jshint_args = '--config ~/.jshintrc'
 let g:syntastic_javascript_checkers=['eslint']
 let g:syntastic_ruby_mri_exec = "$RUBY_ROOT/bin/ruby"
 let g:syntastic_ruby_checkers = ['mri', 'rubocop']
@@ -224,13 +223,18 @@ let g:syntastic_mode_map = {
       \ "active_filetypes": [],
       \ "passive_filetypes": [] }
 
+nnoremap <leader>x :SyntasticCheck<CR>
+
 " NERDTree
 let NERDTreeIgnore = ['\.pyc$','\.sublime-workspace','\.sublime-project','\.beam$']
 
 " CtrlP
-nmap <leader>t :CtrlP<cr>
+" nmap <leader>t :CtrlP<cr>
 " Allow multiple instances of the same file to be opened by ctrlp
 let g:ctrlp_switch_buffer = 0 " default is 'Et'
+
+" FZF
+nnoremap <leader>f :<C-u>FZF<CR>
 
 " Commands
 com! FormatJSON %!python -m json.tool
@@ -293,6 +297,9 @@ let g:rbpt_colorpairs = [
     \ ]
 let g:rbpt_max = 16
 let g:rbpt_loadcmd_toggle = 0
+
+" JSON
+let g:vim_json_syntax_conceal = 0
 
 " EasyAlign
 
