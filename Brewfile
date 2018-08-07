@@ -21,6 +21,7 @@ brew "bash-completion2"
 brew "chromedriver", restart_service: true
 brew "dark-mode"
 brew "exercism"
+brew "fzf"
 brew "git"
 brew "git-lfs"
 brew "ghi"
@@ -48,12 +49,12 @@ brew "socat"
 
 # Editors
 # brew "macvim", args: ["with-override-system-vim"]
+brew neovim
 brew "emacs", args: ["with-cocoa"]
 
 # Ruby
 brew "chruby"
 brew "ruby-install"
-brew "qt@5.5", link: true
 
 # Python
 brew "python"
