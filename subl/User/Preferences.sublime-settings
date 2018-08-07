@@ -1,11 +1,13 @@
 {
-	"color_scheme": "Packages/Solarized Color Scheme/Solarized (dark).tmTheme",
+	"color_scheme": "Packages/Solarized Color Scheme/Solarized (dark).sublime-color-scheme",
 	"font_face": "Fira Mono",
 	"font_size": 16,
 	"ignored_packages":
 	[
+		"Origami",
 		"Vintage"
 	],
+	"scroll_past_end": true,
 	"tab_size": 2,
 	"theme": "Adaptive.sublime-theme",
 	"translate_tabs_to_spaces": true
