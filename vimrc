@@ -228,11 +228,6 @@ nnoremap <leader>x :SyntasticCheck<CR>
 " NERDTree
 let NERDTreeIgnore = ['\.pyc$','\.sublime-workspace','\.sublime-project','\.beam$']
 
-" CtrlP
-" nmap <leader>t :CtrlP<cr>
-" Allow multiple instances of the same file to be opened by ctrlp
-let g:ctrlp_switch_buffer = 0 " default is 'Et'
-
 " FZF
 nnoremap <leader>f :<C-u>FZF<CR>
 
@@ -267,6 +262,7 @@ let g:vimrubocop_config = "$HOME/source/style-guides/ruby/.rubocop.yml"
 
 " vim-test
 let test#strategy = "basic"
+let test#go#runner = "gotest"
 nmap <silent> <leader>T :TestNearest<CR>
 nmap <silent> <leader>t :TestFile<CR>
 nmap <silent> <leader>a :TestSuite<CR>
