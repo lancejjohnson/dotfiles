@@ -294,6 +294,9 @@ let g:rbpt_colorpairs = [
 let g:rbpt_max = 16
 let g:rbpt_loadcmd_toggle = 0
 
+" golang
+let g:go_fmt_command = "goimports"
+
 " JSON
 let g:vim_json_syntax_conceal = 0
 
