@@ -41,6 +41,9 @@ fi
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 
+## Red Hat Projects
+export AMS=$GOPATH/src/gitlab.cee.redhat.com/service/uhc-account-manager
+
 # Postgres
 export PGDATA='/usr/local/var/postgres'
 export PGHOST=localhost
