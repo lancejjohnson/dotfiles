@@ -3,6 +3,14 @@
 	{
 		"selected_items":
 		[
+			[
+				"supo",
+				"support_attrs"
+			],
+			[
+				"fuse",
+				"fuse_plan_attrs"
+			]
 		]
 	},
 	"buffers":
@@ -15,17 +23,117 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 89.0,
-		"last_filter": "synelix",
+		"height": 239.0,
+		"last_filter": "",
 		"selected_items":
 		[
 			[
-				"synelix",
-				"Set Syntax: Elixir"
+				"mark",
+				"Set Syntax: Markdown"
+			],
+			[
+				"pla",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"cucu",
+				"Set Syntax: Cucumber Steps"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"gher",
+				"Gherkin/Cucumber: Format"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"pretty",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
 			],
 			[
 				"trail",
 				"Trailing Spaces: Delete Trailing Spaces"
+			],
+			[
+				"trai",
+				"Trailing Spaces: Delete Trailing Spaces"
+			],
+			[
+				"trial",
+				"Trailing Spaces: Delete Trailing Spaces"
+			],
+			[
+				"ruby",
+				"Set Syntax: Ruby"
+			],
+			[
+				"mult",
+				"Set Syntax: MultiMarkdown"
+			],
+			[
+				"wrap",
+				"Word Wrap: Toggle"
+			],
+			[
+				"indent",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"setsyru",
+				"Set Syntax: Rust"
+			],
+			[
+				"sql",
+				"SQL Beautifier: Format Current SQL File"
+			],
+			[
+				"beau",
+				"SQL Beautifier: Format Current SQL File"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"tr",
+				"Trailing Spaces: Delete Trailing Spaces"
+			],
+			[
+				"synruby",
+				"Set Syntax: Ruby"
+			],
+			[
+				"tra",
+				"Trailing Spaces: Delete Trailing Spaces"
+			],
+			[
+				"go",
+				"Set Syntax: Go"
+			],
+			[
+				"sort",
+				"Sort Lines"
+			],
+			[
+				"synyaml",
+				"Set Syntax: YAML"
+			],
+			[
+				"javascr",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"synelix",
+				"Set Syntax: Elixir"
 			],
 			[
 				"rtrail",
@@ -40,16 +148,8 @@
 				"Set Syntax: Markdown Extended"
 			],
 			[
-				"tra",
-				"Trailing Spaces: Delete Trailing Spaces"
-			],
-			[
 				"rei",
 				"Indentation: Reindent Lines"
-			],
-			[
-				"ruby",
-				"Set Syntax: Ruby"
 			],
 			[
 				"project",
@@ -62,10 +162,6 @@
 			[
 				"lint",
 				"SublimeLinter: Next Error"
-			],
-			[
-				"install",
-				"Package Control: Install Package"
 			],
 			[
 				"inde",
@@ -117,9 +213,81 @@
 	],
 	"file_history":
 	[
+		"/Users/lance/Desktop/today 2018-07-13.md",
+		"/Users/lance/Dropbox/notes/rails refactoring resources.md",
+		"/Users/lance/Dropbox/notes/red hat oved sync up 2018-07-25.md",
+		"/Users/lance/Desktop/account_management.feature",
+		"/Users/lance/Dropbox/notes/til react binding functions.txt",
+		"/Users/lance/Code/redhat/tollbooth/docs/swagger.json",
+		"/Users/lance/Dropbox/notes/build tollboth API in golang.md",
+		"/Users/lance/Dropbox/notes/red hat oso tollbooth api design.md",
+		"/Users/lance/Dropbox/notes/red hat oso tollbooth prototype.md",
+		"/Users/lance/Downloads/tollbooth-44-bkcq7.log",
+		"/Users/lance/Dropbox/notes/red hat oso tollbooth mtg abhisek.md",
+		"/Users/lance/Dropbox/notes/red hat oso 4 dot x.md",
+		"/Users/lance/Dropbox/notes/red hat oso tollbooth demo mtg 2018-07-10.md",
+		"/Users/lance/Dropbox/notes/red hat oso data model subscription plan refactor.md",
+		"/Users/lance/Dropbox/notes/red hat oso data model discussion.md",
+		"/Users/lance/Desktop/tim_pr_review.md",
+		"/Users/lance/Dropbox/notes/red hat oso registration refactoring list.md",
+		"/Users/lance/Dropbox/notes/openshift in action ch 04.md",
+		"/Users/lance/Dropbox/notes/openshift in action installation.md",
+		"/Users/lance/Desktop/katas.sh",
+		"/Users/lance/Desktop/katas.rb",
+		"/Users/lance/Dropbox/notes/fearless refactoring rails controllers notes.md",
+		"/Users/lance/Dropbox/notes/red hat oso openshift all hands mtg 2018-06-21.md",
+		"/Users/lance/Dropbox/notes/red hat oso production accounts.md",
+		"/Users/lance/Dropbox/notes/red hat oso data model refactor.md",
+		"/Users/lance/Dropbox/notes/openshift in action.md",
+		"/Users/lance/Dropbox/notes/openshift in action ch 03.md",
+		"/Users/lance/Dropbox/notes/openshift in action commands.md",
+		"/Users/lance/Desktop/my_script.rb",
+		"/Users/lance/Dropbox/notes/tims_script.rb",
+		"/Users/lance/Desktop/tims_script.rb",
+		"/Users/lance/Dropbox/notes/red hat oso keep existing bug 2018-05-24.md",
+		"/Users/lance/Dropbox/notes/red hat oso managing envs.md",
+		"/Users/lance/Dropbox/notes/red hat oso fuse plans 2018-04-16.md",
+		"/Users/lance/Dropbox/notes/red hat oso ipaas registration 2018-03-14.md",
+		"/Users/lance/Dropbox/notes/openshift in action commands.me",
+		"/Users/lance/Dropbox/notes/workout strategy 2018.md",
+		"/Users/lance/Dropbox/notes/red hat goals 2018.md",
+		"/Users/lance/Dropbox/notes/inskool data model.md",
+		"/Users/lance/Dropbox/notes/inskool create schools feature.md",
+		"/Users/lance/Dropbox/notes/docker mastery notes.md",
+		"/Users/lance/Dropbox/notes/red hat oso aria cc errors.md",
+		"/Users/lance/Code/redhat/online-registration/spec/controllers/register/fuse/validation_controller_spec.rb",
+		"/Users/lance/Code/redhat/online-registration/app/views/register/_contact.html.erb",
+		"/Users/lance/Dropbox/notes/red hat oso subscription model 2018-04-11.md",
+		"/Users/lance/Dropbox/notes/red hat oso plan model refactor 2018-04-10.md",
+		"/Users/lance/Desktop/currency problem.md",
+		"/Users/lance/Desktop/aria credit bug.txt",
+		"/Users/lance/Dropbox/notes/rentpath atc state machine idea.md",
+		"/Users/lance/Dropbox/notes/red hat oso recurring coupon change 2018-04-05.md",
+		"/Users/lance/Desktop/countries.rb",
+		"/Users/lance/SwitchyPac.pac",
+		"/Users/lance/Dropbox/notes/untitled.rb",
+		"/Users/lance/Dropbox/notes/rails hartl notes 2014-09-02.txt",
+		"/Users/lance/Code/redhat/online-registration/spec/models/coupon/row_presenter_spec.rb",
+		"/Users/lance/Dropbox/notes/red hat journal 2018-03-01.md",
+		"/Users/lance/Code/redhat/online-registration/spec/requests/coupons_spec.rb",
+		"/Users/lance/Desktop/coupons_spec.rb",
+		"/Users/lance/Dropbox/notes/red hat online registration coupon.md",
+		"/Users/lance/Dropbox/notes/birthdays.txt",
+		"/Users/lance/Dropbox/notes/today 2018-02-12.md",
+		"/Users/lance/Dropbox/notes/soccer tool.md",
+		"/Users/lance/Dropbox/notes/journal 2018-02-05.md",
 		"/Users/lance/Dropbox/notes/red hat openshift online registration local testing.md",
-		"/Users/lance/Dropbox/notes/top ten programming books every developer should read sonmez.txt",
+		"/Users/lance/Dropbox/notes/red hat journal 2018-02-01.md",
+		"/Users/lance/Code/go/src/github.com/openshift/online/accountant/example_server.yaml",
+		"/Users/lance/Desktop/oso_reg_accountant.yaml",
+		"/Users/lance/Dropbox/notes/red hat openshift online registration acceptance testing.md",
+		"/Users/lance/Dropbox/notes/red hat online registration account setup.md",
+		"/Users/lance/Dropbox/notes/til elixir feature tests.md",
 		"/Users/lance/Dropbox/notes/elixir ueberauth example data.md",
+		"/Users/lance/.exercism.json",
+		"/Users/lance/Dropbox/notes/inskool auth.md",
+		"/Users/lance/Dropbox/notes/postgres.txt",
+		"/Users/lance/Dropbox/notes/top ten programming books every developer should read sonmez.txt",
 		"/Users/lance/Desktop/error.html",
 		"/Users/lance/Dropbox/notes/journal 2018-01-14.md",
 		"/Users/lance/Dropbox/notes/red hat tp link sale on rdu list.md",
@@ -128,7 +296,6 @@
 		"/Users/lance/Dropbox/notes/rails default controller.md",
 		"/Users/lance/Dropbox/notes/red hat journal 2018-01-08.md",
 		"/Users/lance/src/online-registration/app/views/admin/coupons/_form.html.erb",
-		"/Users/lance/Dropbox/notes/red hat online registration coupon.md",
 		"/Users/lance/Dropbox/notes/red hat online registration coupon information view.md",
 		"/Users/lance/Dropbox/notes/chris bui recommendation.md",
 		"/Users/lance/Dropbox/notes/red hat journal 2017-12-19.md",
@@ -140,13 +307,15 @@
 	],
 	"find":
 	{
-		"height": 28.0
+		"height": 42.0
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 111.0,
 		"where_history":
 		[
+			"/Users/lance/Dropbox/notes",
+			""
 		]
 	},
 	"find_state":
@@ -154,14 +323,41 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"ccoleman",
+			"ccoleman+openshift-ci-test",
+			"(\\d)\\)",
+			"sub",
+			" ",
+			",",
+			"plan_attrs = fuse_plan_attrs.merge(",
+			"cluster",
+			"MCT3748MO",
+			"include(info: a_string_matching",
+			"input type=\"text\"",
+			"POST",
+			"registrations",
+			" .",
+			"# ",
+			", ",
+			"content_for",
+			"via",
+			"actions",
+			"via",
+			"presents the date of the final recurrence",
+			"whatchanged",
+			", ",
+			" ",
+			"$GOPATH",
+			"3000",
 			"prefix"
 		],
 		"highlight": true,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": false,
+		"regex": true,
 		"replace_history":
 		[
+			"\\($1\\)"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -179,7 +375,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 28.0
+		"height": 29.0
 	},
 	"input":
 	{
@@ -208,6 +404,18 @@
 		]
 	},
 	"menu_visible": true,
+	"output.SublimeLinter":
+	{
+		"height": 0.0
+	},
+	"output.SublimeLinter Messages":
+	{
+		"height": 133.0
+	},
+	"output.exec":
+	{
+		"height": 133.0
+	},
 	"output.find_results":
 	{
 		"height": 0.0
@@ -216,7 +424,7 @@
 	"project": "notes.sublime-project",
 	"replace":
 	{
-		"height": 52.0
+		"height": 75.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -225,6 +433,134 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"rails resource",
+				"rails refactoring resources.md"
+			],
+			[
+				"discussion",
+				"red hat oso data model discussion.md"
+			],
+			[
+				"red hat oso model",
+				"red hat oso data model refactor.md"
+			],
+			[
+				"red hat oso pro",
+				"red hat oso production accounts.md"
+			],
+			[
+				"opens",
+				"openshift in action commands.md"
+			],
+			[
+				"openshift",
+				"openshift in action.md"
+			],
+			[
+				"openshift comm",
+				"openshift in action commands.md"
+			],
+			[
+				"opensh",
+				"openshift in action.md"
+			],
+			[
+				"openshift in ",
+				"openshift in action.md"
+			],
+			[
+				"red hat oso env",
+				"red hat oso managing envs.md"
+			],
+			[
+				"red hat oso ipaa",
+				"red hat oso ipaas registration 2018-03-14.md"
+			],
+			[
+				"red had oso",
+				"red hat oso fuse plans 2018-04-16.md"
+			],
+			[
+				"openshi",
+				"openshift in action commands.md"
+			],
+			[
+				"red hat oso ",
+				"red hat oso managing envs.md"
+			],
+			[
+				"inskool data",
+				"inskool data model.md"
+			],
+			[
+				"docker",
+				"docker mastery notes.md"
+			],
+			[
+				"redosoip",
+				"red hat oso ipaas registration 2018-03-14.md"
+			],
+			[
+				"redhatoso",
+				"red hat oso fuse plans 2018-04-16.md"
+			],
+			[
+				"ipaas",
+				"red hat oso ipaas registration 2018-03-14.md"
+			],
+			[
+				"redoso",
+				"red hat oso ipaas registration 2018-03-14.md"
+			],
+			[
+				"redhatipa",
+				"red hat oso ipaas registration 2018-03-14.md"
+			],
+			[
+				"statemachine",
+				"rentpath atc state machine idea.md"
+			],
+			[
+				"redhatcoupon",
+				"red hat online registration coupon.md"
+			],
+			[
+				"birthdat",
+				"birthdays.txt"
+			],
+			[
+				"birth",
+				"birthdays.txt"
+			],
+			[
+				"redhatonlineregistrationtesting.md",
+				"red hat openshift online registration local testing.md"
+			],
+			[
+				"redhatonlineregistration",
+				"red hat online registration account setup.md"
+			],
+			[
+				"onlineint",
+				"red hat openshift online registration acceptance testing.md"
+			],
+			[
+				"redhato",
+				"red hat online registration coupon.md"
+			],
+			[
+				"ueber",
+				"elixir ueberauth example data.md"
+			],
+			[
+				"ueb",
+				"elixir ueberauth example data.md"
+			],
+			[
+				"postr",
+				"postgres.txt"
+			],
 			[
 				"onlinereglocal",
 				"red hat openshift online registration local testing.md"
@@ -266,10 +602,6 @@
 				"red hat online registration coupon information view.md"
 			],
 			[
-				"redhatcoupon",
-				"red hat online registration coupon.md"
-			],
-			[
 				"openshiftonline",
 				"red hat openshift online registration local testing.md"
 			],
@@ -282,12 +614,16 @@
 	},
 	"select_project":
 	{
-		"height": 0.0,
+		"height": 500.0,
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"",
+				"~/.dotfiles/subl/User/notes.sublime-project"
+			]
 		],
-		"width": 0.0
+		"width": 380.0
 	},
 	"select_symbol":
 	{
