@@ -19,6 +19,7 @@ alias gss="git show -p stash@{0}"
 alias gpr="git difftool master..HEAD"
 alias gfum="git fetch upstream master"
 alias grum="git rebase upstream/master"
+alias gbehind="git rev-list --left-right --count master...HEAD"
 
 # Ruby
 alias be="bundle exec"
