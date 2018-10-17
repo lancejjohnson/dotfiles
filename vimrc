@@ -224,6 +224,7 @@ let g:syntastic_mode_map = {
       \ "passive_filetypes": [] }
 
 nnoremap <leader>x :SyntasticCheck<CR>
+nnoremap <leader>r :SyntasticReset<CR>
 
 " NERDTree
 let NERDTreeIgnore = ['\.pyc$','\.sublime-workspace','\.sublime-project','\.beam$']
