@@ -21,7 +21,7 @@
 [push]
 	default = simple
 [core]
-	excludesfile = /Users/lance/.gitignore_global
+	excludesfile = ~/.gitignore_global
 	editor = nvim
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"

@@ -22,8 +22,11 @@ then
 fi
 
 # Elixir and Erlang
-export PATH="$HOME/.exenv/bin:$PATH"
-eval "$(exenv init -)"
+if [ -d $HOME/.exenv ]
+then
+  export PATH="$HOME/.exenv/bin:$PATH"
+  eval "$(exenv init -)"
+fi
 
 # Golang
 if [ -d $HOME/Code/go ]
