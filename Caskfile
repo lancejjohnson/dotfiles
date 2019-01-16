@@ -13,7 +13,7 @@ cask "atom"
 cask "balsamiq-mockups"
 cask "brave"
 cask "caffeine"
-cask "cleanmymac"
+cask "cleanmymac" # Need to specify the version for this
 cask "db-browser-for-sqlite"
 cask "daisydisk"
 cask "dash"
@@ -23,23 +23,23 @@ cask "dropbox"
 cask "evernote"
 cask "etcher" # Burn images to SD cards
 cask "firefox"
-cask "fluid"
+cask "fluid" # Make mac apps from web pages
 cask "gifox"
-cask "gimp"
+# cask "gimp"
 cask "github"
 cask "google-chrome"
 cask "gpg-suite"
-cask "xquartz" # Must precede inkscape
-cask "inkscape"
-cask "intellij-idea-ce"
+# cask "xquartz" # Must precede inkscape
+# cask "inkscape"
+# cask "intellij-idea-ce"
 cask "iterm2"
 cask "java7"
 cask "kaleidoscope"
 cask "keybase"
 cask "kindle"
-cask "kitty"
+# cask "kitty"
 cask "lastpass"
-cask "limechat"
+# cask "limechat"
 # cask "mdrp" # Need to specify the version for this
 cask "monodraw"
 cask "ngrok"
@@ -48,23 +48,23 @@ cask "pastor"
 cask "postico"
 cask "postman"
 cask "remember-the-milk"
-cask "renamer"
+# cask "renamer"
 cask "scrivener"
-cask "scummvm"
-cask "sdformatter"
+# cask "scummvm"
+# cask "sdformatter"
 cask "sequel-pro"
 cask "slack"
 cask "skim"
-cask "sourcetree"
+# cask "sourcetree"
 cask "spectacle"
 cask "spotify"
-cask "steam"
+# cask "steam"
 cask "sublime-text"
 cask "textual"
 cask "the-unarchiver"
 cask "vagrant"
 cask "virtualbox"
-cask "viscosity"
+# cask "viscosity"
 cask "vlc"
 
 # Mac App Store Apps
@@ -79,5 +79,5 @@ mas "Alinof Timer", id: 512464723 # Alinof Timer (4.1.2)
 mas "Gemini", id: 463541543 # Gemini (1.5.17)
 mas "MindNode", id: 992076693 # MindNode (2.5.7)
 mas "Divvy", id: 413857545 # Divvy (1.5.1)
-mas "GIPHY Capture", id: 668208984 # GIPHY Capture
-mas "Xcode", id: 497799835 # Xcode
+# mas "GIPHY Capture", id: 668208984 # GIPHY Capture
+# mas "Xcode", id: 497799835 # Xcode
