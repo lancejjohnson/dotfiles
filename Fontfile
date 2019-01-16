@@ -15,3 +15,7 @@ cask "font-inconsolata-for-powerline"
 cask "font-inconsolata-nerd-font-mono"
 cask "font-inconsolata-nerd-font"
 cask "font-inconsolata"
+
+cask "font-hack"
+cask "font-hack-nerd-font"
+cask "font-hack-nerd-font-mono"
