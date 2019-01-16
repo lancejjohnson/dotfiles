@@ -12,6 +12,7 @@ doc/
 .idea
 .DS_Store
 .secret
+.ctags*
 .tags*
 tags
 TAGS
