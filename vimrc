@@ -60,6 +60,14 @@ set incsearch
 " Line numbers
 set number
 set relativenumber
+function! ToggleRelativeNumber()
+  if(&relativenumber == 1)
+    set norelativenumber
+  else
+    set relativenumber
+  endif
+endfunc
+command! ToggleRelativeNumber call ToggleRelativeNumber()
 
 " Open new split panes to right and bottom
 set splitbelow
@@ -73,21 +81,10 @@ runtime macros/matchit.vim
 nmap <leader>S :StripWhitespace<CR>
 highlight ExtraWhitespace ctermbg=61 guibg=#6c71c4
 
-function! ToggleRelativeNumber()
-  if(&relativenumber == 1)
-    set norelativenumber
-  else
-    set relativenumber
-  endif
-endfunc
-command! ToggleRelativeNumber call ToggleRelativeNumber()
-
-
 " Turn off highlighting after search
 map <C-n> :nohl<cr>
 " Search project for word under cursor
 map <leader>\ :Ag <C-R><C-W> -Q<CR>
-
 
 " Autocmds
 augroup vimrcEx
@@ -313,3 +310,7 @@ nmap ga <Plug>(EasyAlign)
 
 "" Align GitHub-flavored Markdown tables
 vmap <Leader><Bslash> :EasyAlign*<Bar><Enter>
+
+" Ranger
+let g:ranger_map_keys = 0
+map <leader><leader> :Ranger<CR>
