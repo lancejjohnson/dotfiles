@@ -1,5 +1,6 @@
 " Heavily inspired/stolen from Drew Neil
 " https://github.com/nelstrom/dotfiles
+let g:has_async = v:version >= 800 || has('nvim')
 
 if !exists('*minpac#init')
   finish
@@ -12,12 +13,15 @@ call minpac#add('k-takata/minpac', {'type': 'opt'})
 
 " General enhancements
 call minpac#add('ctrlpvim/ctrlp.vim')
+call minpac#add('francoiscabrol/ranger.vim')
 call minpac#add('janko-m/vim-test')
-call minpac#add('junegunn/vim-easy-align')
 call minpac#add('junegunn/fzf')
+call minpac#add('junegunn/vim-easy-align')
 call minpac#add('kana/vim-smartinput')
 call minpac#add('neomake/neomake')
 call minpac#add('ntpeters/vim-better-whitespace')
+call minpac#add('pbrisbin/vim-mkdir')
+call minpac#add('rbgrouleff/bclose.vim') "Required for ranger in neovim
 call minpac#add('scrooloose/nerdtree')
 call minpac#add('scrooloose/syntastic')
 call minpac#add('tpope/vim-characterize')
@@ -29,12 +33,16 @@ call minpac#add('tpope/vim-fugitive')
 call minpac#add('tpope/vim-projectionist')
 call minpac#add('tpope/vim-ragtag')
 call minpac#add('tpope/vim-repeat')
+call minpac#add('tpope/vim-rhubarb')
 call minpac#add('tpope/vim-surround')
 call minpac#add('tpope/vim-unimpaired')
 
+if g:has_async
+  call minpac#add('w0rp/ale')
+endif
+
 " General enhancements plugins to consider
-" call minpac#add('tommcdo/vim-exchange') " direction commands for exchanging
-" text places
+" call minpac#add('tommcdo/vim-exchange') " direction commands for exchanging text places
 " call minpac#add('tpope/vim-tbone') " tmux commands for vim
 " call minpac#add('SirVer/ultisnips') " install later
 " call minpac#add('jiangmiao/auto-pairs') " vim-smartinput same behavior?
