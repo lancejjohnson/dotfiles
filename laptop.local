@@ -1,0 +1,13 @@
+#!/bin/sh
+
+fancy_echo "brew bundling Brewfile ..."
+brew bundle --file ~/dotfiles-local/Brewfile
+
+fancy_echo "Cleaning up brew ..."
+brew cleanup
+
+fancy_echo "brew bundling Caskfile ..."
+brew bundle --file ~/dotfiles-local/Caskfile
+
+fancy_echo "Cleaning up brew cask ..."
+brew cask cleanup
