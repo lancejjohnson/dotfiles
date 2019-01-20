@@ -51,6 +51,9 @@ set visualbell
 set wildmenu
 set winwidth=105
 
+" Display extra whitespace; thoughbot
+set list listchars=tab:»·,trail:·,nbsp:·
+
 " Case-insensitive searching if the search pattern is all lowercase
 set ignorecase
 set smartcase
