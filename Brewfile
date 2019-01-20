@@ -1,10 +1,8 @@
 tap "caskroom/cask"
 tap "caskroom/fonts"
-tap "caskroom/versions"
 tap "homebrew/bundle"
 tap "homebrew/core"
 tap "homebrew/services"
-tap "homebrew/versions"
 tap "thoughtbot/formulae"
 tap "universal-ctags/universal-ctags"
 
@@ -18,7 +16,6 @@ brew "moreutils"
 
 brew "bash" # Install bash 4
 brew "bash-completion2"
-brew "chromedriver", restart_service: true
 brew "dark-mode"
 brew "exercism"
 brew "fzf"
@@ -49,32 +46,31 @@ brew "socat"
 
 # Editors
 # brew "macvim", args: ["with-override-system-vim"]
-brew neovim
-brew "emacs", args: ["with-cocoa"]
+brew "neovim"
+# brew "emacs", args: ["with-cocoa"]
 
 # Ruby
-brew "chruby"
-brew "ruby-install"
+# brew "chruby"
+# brew "ruby-install"
 
 # Python
 brew "python"
 brew "python3"
 
 # Elixir
-brew "erlang"
+# brew "erlang"
 
 # Golang
 brew "go"
 
 # JavaScript
-brew "node"
-brew "phantomjs"
+# brew "node"
 brew "yarn"
 
 # Datastores
 brew "mysql"
-brew "postgresql", restart_service: :changed
-brew "redis", restart_service: :changed
+# brew "postgresql", restart_service: :changed
+# brew "redis", restart_service: :changed
 
 # Other
 brew "exercism"
