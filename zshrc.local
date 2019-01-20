@@ -44,3 +44,5 @@ export FZF_DEFAULT_COMMAND='rg --files'
 
 source "$HOME/.aliases"
 ctags=/usr/local/bin/ctags
+
+export PATH="$HOME/.bin:$PATH"
