@@ -1,3 +1,10 @@
+# Unix
+alias ll="ls -al"
+alias ln="ln -v"
+alias mkdir="mkdir -p"
+alias e="$EDITOR"
+alias v="$VISUAL"
+
 # Git
 alias gs="git status"
 alias gb="git branch"
@@ -27,6 +34,13 @@ alias ber="bundle exec rspec"
 alias bern="bundle exec rspec --no-profile"
 alias rbcp="bundle exec rubocop"
 alias rbcpo="bundle exec rubocop --only"
+
+# Bundler
+alias b="bundle"
+
+# Rails
+alias migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
+alias s="rspec"
 
 # Elixir
 alias mtf="mix test --only focus"
