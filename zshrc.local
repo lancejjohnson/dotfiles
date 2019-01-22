@@ -42,6 +42,10 @@ export PGHOST=localhost
 # FZF
 export FZF_DEFAULT_COMMAND='rg --files'
 
+# asdf
+source $HOME/.asdf/asdf.sh
+source $HOME/.asdf/completions/asdf.bash
+
 source "$HOME/.aliases"
 ctags=/usr/local/bin/ctags
 
