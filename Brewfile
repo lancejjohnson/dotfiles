@@ -57,6 +57,10 @@ brew "neovim"
 brew "python"
 brew "python3"
 
+# Erlang
+brew "kerl" # Erlang installations
+brew "wxmac" # Erlang
+
 # Elixir
 # brew "erlang"
 
