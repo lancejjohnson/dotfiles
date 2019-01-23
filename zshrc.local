@@ -1,9 +1,14 @@
+# vi: ft=sh
+
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH="$HOME/.cask/bin:$PATH"
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 
 zstyle ':completion:*' hosts off
+
+# Use "emacs" mode
+bindkey -e
 
 # Ruby
 if [ -f /usr/local/share/chruby/chruby.sh ]
@@ -42,11 +47,12 @@ export PGHOST=localhost
 # FZF
 export FZF_DEFAULT_COMMAND='rg --files'
 
-# asdf
-source $HOME/.asdf/asdf.sh
-source $HOME/.asdf/completions/asdf.bash
-
 source "$HOME/.aliases"
 ctags=/usr/local/bin/ctags
 
 export PATH="$HOME/.bin:$PATH"
+
+# asdf (readme insists this be after path export)
+source $HOME/.asdf/asdf.sh
+source $HOME/.asdf/completions/asdf.bash
+
