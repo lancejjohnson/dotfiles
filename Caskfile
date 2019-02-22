@@ -42,6 +42,7 @@ cask "kitty"
 # cask "limechat"
 # cask "mdrp" # Need to specify the version for this
 cask "monodraw"
+cask "mysqlworkbench"
 cask "ngrok"
 cask "nvalt"
 cask "pastor"

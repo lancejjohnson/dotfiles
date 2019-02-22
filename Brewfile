@@ -28,6 +28,7 @@ brew "heroku"
 brew "imagemagick"
 brew "libyaml" # should come after openssl
 brew "pandoc"
+brew "ranger"
 brew "rcm"
 brew "reattach-to-user-namespace" # Fixes tmux macOS issues
 brew "the_silver_searcher"
