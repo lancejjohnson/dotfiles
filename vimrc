@@ -10,13 +10,14 @@ source ~/.packages.vim
 
 " Colors
 set bg=dark
+" set bg=light
 "" See https://github.com/lifepillar/vimrc/blob/master/vimrc
 if has('termguicolors') && $COLORTERM ==# 'truecolor'
+  set termguicolors
   let &t_8f = "\<esc>[38;2;%lu;%lu;%lum" " Needed in tmux
   let &t_8b = "\<esc>[48;2;%lu;%lu;%lum" " Ditto
-  set termguicolors
 endif
-let g:solarized_use16 = 1
+" let g:solarized_use16 = 1
 colorscheme solarized8
 
 
@@ -52,7 +53,7 @@ set wildmenu
 set winwidth=105
 
 " Display extra whitespace; thoughbot
-set list listchars=tab:»·,trail:·,nbsp:·
+" set list listchars=tab:»·,trail:·,nbsp:·
 
 " Case-insensitive searching if the search pattern is all lowercase
 set ignorecase
@@ -248,6 +249,7 @@ endfunction
 
 command! AtomThis :call OpenInOtherEditor('atom')
 command! SublimeThis :call OpenInOtherEditor('subl')
+command! CodeThis :call OpenInOtherEditor('code')
 
 " Rubocop
 let g:vimrubocop_config = "$HOME/source/style-guides/ruby/.rubocop.yml"
