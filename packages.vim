@@ -23,7 +23,8 @@ call minpac#add('ntpeters/vim-better-whitespace')
 call minpac#add('pbrisbin/vim-mkdir')
 call minpac#add('rbgrouleff/bclose.vim') "Required for ranger in neovim
 call minpac#add('scrooloose/nerdtree')
-call minpac#add('scrooloose/syntastic')
+"" Experimenting with ALE for a bit
+" call minpac#add('scrooloose/syntastic')
 call minpac#add('tpope/vim-characterize')
 call minpac#add('tpope/vim-commentary')
 call minpac#add('tpope/vim-cucumber')
@@ -36,6 +37,10 @@ call minpac#add('tpope/vim-repeat')
 call minpac#add('tpope/vim-rhubarb')
 call minpac#add('tpope/vim-surround')
 call minpac#add('tpope/vim-unimpaired')
+
+" UI
+call minpac#add('vim-airline/vim-airline')
+call minpac#add('vim-airline/vim-airline-themes')
 
 if g:has_async
   call minpac#add('w0rp/ale')
@@ -59,6 +64,8 @@ call minpac#add('b4winckler/vim-angry')
 call minpac#add('altercation/vim-colors-solarized', {'type': 'opt'})
 call minpac#add('lifepillar/vim-solarized8', {'type': 'opt'})
 call minpac#add('rakr/vim-one', {'type': 'opt'})
+call minpac#add('ayu-theme/ayu-vim', {'type': 'opt'})
+call minpac#add('junegunn/seoul256.vim', {'type': 'opt'})
 
 " Clojure
 call minpac#add('guns/vim-clojure-highlight')
@@ -74,18 +81,26 @@ call minpac#add('venantius/vim-cljfmt')
 call minpac#add('fatih/vim-go')
 
 " Elixir
-call minpac#add('elixir-lang/vim-elixir')
 call minpac#add('avdgaag/vim-phoenix')
+call minpac#add('elixir-lang/vim-elixir')
+call minpac#add('mhinz/vim-mix-format')
 
 " JavaScript
 call minpac#add('pangloss/vim-javascript')
 call minpac#add('elzr/vim-json')
 call minpac#add('mxw/vim-jsx')
 
+" Kotlin
+call minpac#add('udalov/kotlin-vim')
+
 " Markdown
 call minpac#add('tpope/vim-markdown')
 call minpac#add('nelstrom/vim-markdown-folding')
 call minpac#add('junegunn/vim-emoji', {'type': 'opt'})
+
+" Python
+call minpac#add('Vimjas/vim-python-pep8-indent')
+call minpac#add('lepture/vim-jinja')
 
 " Ruby
 call minpac#add('tpope/vim-bundler')
