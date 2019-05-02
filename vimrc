@@ -11,15 +11,29 @@ source ~/.packages.vim
 " Colors
 set bg=dark
 " set bg=light
+
+"" Solarized
 "" See https://github.com/lifepillar/vimrc/blob/master/vimrc
 if has('termguicolors') && $COLORTERM ==# 'truecolor'
   set termguicolors
   let &t_8f = "\<esc>[38;2;%lu;%lu;%lum" " Needed in tmux
   let &t_8b = "\<esc>[48;2;%lu;%lu;%lum" " Ditto
 endif
-" let g:solarized_use16 = 1
 colorscheme solarized8
+" colorscheme solarized8_flat
 
+"" Ayu
+" let ayucolor="light"  " for light version of theme
+" let ayucolor="mirage" " for mirage version of theme
+" let ayucolor="dark"   " for dark version of theme
+" colorscheme ayu
+
+"" Seoul 256
+" seoul256 (light):
+"   Range:   252 (darkest) ~ 256 (lightest)
+"   Default: 253
+" let g:seoul256_background = 253
+" colorscheme seoul256
 
 " General settings
 let mapleader = ","
@@ -72,6 +86,7 @@ function! ToggleRelativeNumber()
   endif
 endfunc
 command! ToggleRelativeNumber call ToggleRelativeNumber()
+nmap <leader>3 :ToggleRelativeNumber<CR>
 
 " Open new split panes to right and bottom
 set splitbelow
@@ -96,14 +111,22 @@ augroup vimrcEx
   autocmd!
   autocmd FileType text setlocal textwidth=78
   autocmd FileType ruby,haml,eruby,yaml,html,javascript,sass,cucumber,elixir set ai sw=2 sts=2 et
-  autocmd FileType ruby,eruby,yaml,javascript,sass set colorcolumn=80,100
-  autocmd FileType elixir set colorcolumn=80,100 foldmethod=syntax foldlevel=99
+  autocmd FileType ruby,eruby,yaml,javascript,sass set colorcolumn=80
+  autocmd FileType elixir set colorcolumn=100 foldmethod=syntax foldlevel=99
   " Make ?s part of words (see r00k)
   autocmd FileType elixir,ruby,eruby,yaml set iskeyword+=?
   autocmd FileType elixir,ruby,eruby,yaml set iskeyword+=!
   autocmd FileType elixir,ruby set nomodeline
   autocmd FileType ruby,haml,eruby,yaml,html,slim,javascript,sass,cucumber,elixir,clojure autocmd BufWritePre <buffer> StripWhitespace
   autocmd! BufNewFile,BufRead *.md set ft=markdown
+  " autocmd BufNewFile,BufRead *.py
+  "   \ set tabstop=4
+  "   \ set softtabstop=4
+  "   \ set shiftwidth=4
+  "   \ set textwidth=79
+  "   \ set expandtab
+  "   \ set autoindent
+  "   \ set fileformat=unix
 augroup END
 
 " Omnicomplete
@@ -210,22 +233,31 @@ endfunction
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-n>
 
-" Syntastic
-let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
-let g:syntastic_error_symbol = '✗'
-let g:syntastic_warning_symbol = '!'
-let g:syntastic_javascript_checkers=['eslint']
-let g:syntastic_ruby_mri_exec = "$RUBY_ROOT/bin/ruby"
-let g:syntastic_ruby_checkers = ['mri', 'rubocop']
-let g:syntastic_elixir_checkers=['elixir']
-let g:syntastic_elixir_elixir_exe = 'elixirc'
-let g:syntastic_mode_map = {
-      \ "mode": "passive",
-      \ "active_filetypes": [],
-      \ "passive_filetypes": [] }
+" ALE
+let g:ale_lint_on_text_changed=0
+let g:ale_lint_on_insert_leave=0
+let g:ale_lint_on_enter=0
+let g:ale_lint_on_save=0
+let g:ale_lint_on_filetype_changed=0
 
-nnoremap <leader>x :SyntasticCheck<CR>
-nnoremap <leader>r :SyntasticReset<CR>
+noremap <leader>x :ALELint<CR>
+
+" Syntastic
+" let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
+" let g:syntastic_error_symbol = '✗'
+" let g:syntastic_warning_symbol = '!'
+" let g:syntastic_javascript_checkers=['eslint']
+" let g:syntastic_ruby_mri_exec = "$RUBY_ROOT/bin/ruby"
+" let g:syntastic_ruby_checkers = ['mri', 'rubocop']
+" let g:syntastic_elixir_checkers=['elixir']
+" let g:syntastic_elixir_elixir_exe = 'elixirc'
+" let g:syntastic_mode_map = {
+"       \ "mode": "passive",
+"       \ "active_filetypes": [],
+"       \ "passive_filetypes": [] }
+
+" nnoremap <leader>x :SyntasticCheck<CR>
+" nnoremap <leader>r :SyntasticReset<CR>
 
 " NERDTree
 let NERDTreeIgnore = ['\.pyc$','\.sublime-workspace','\.sublime-project','\.beam$']
@@ -303,6 +335,9 @@ let g:go_fmt_command = "goimports"
 " JSON
 let g:vim_json_syntax_conceal = 0
 
+" Python
+let g:python_pep8_indent_hang_closing = 0
+
 " EasyAlign
 
 "" Start interactive EasyAlign in visual mode (e.g. vipga)
@@ -319,3 +354,14 @@ vmap <Leader><Bslash> :EasyAlign*<Bar><Enter>
 " Ranger
 let g:ranger_map_keys = 0
 map <leader><leader> :Ranger<CR>
+
+" airline
+let g:airline_theme = 'solarized'
+let g:bufferline_echo = 0
+let g:airline_powerline_fonts=0
+let g:airline_enable_branch=1
+let g:airline_enable_syntastic=1
+let g:airline_branch_prefix = '⎇ '
+let g:airline_paste_symbol = '∥'
+let g:airline#extensions#tabline#enabled = 0
+let g:airline#extensions#ale#enabled = 1
