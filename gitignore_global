@@ -24,6 +24,7 @@ coverage.data
 *.orig
 /node_modules
 node_modules
+*.pem
 
 # Elixir
 /_build

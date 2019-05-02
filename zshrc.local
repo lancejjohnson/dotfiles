@@ -17,6 +17,10 @@ then
   source /usr/local/share/chruby/auto.sh
 fi
 
+# Erlang
+export PATH="$HOME/.kerl/installs/21.2/bin:$PATH"
+
+
 # Elixir and Erlang
 if [ -d $HOME/.exenv ]
 then
