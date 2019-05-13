@@ -365,3 +365,4 @@ let g:airline_branch_prefix = '⎇ '
 let g:airline_paste_symbol = '∥'
 let g:airline#extensions#tabline#enabled = 0
 let g:airline#extensions#ale#enabled = 1
+let g:airline#extensions#branch#displayed_head_limit = 10
