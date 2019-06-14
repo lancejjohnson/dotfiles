@@ -9,8 +9,8 @@ packadd minpac
 source ~/.packages.vim
 
 " Colors
-" set bg=dark
-set bg=light
+set bg=dark
+" set bg=light
 
 "" Solarized
 "" See https://github.com/lifepillar/vimrc/blob/master/vimrc
