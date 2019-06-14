@@ -1,5 +1,9 @@
 # vi: ft=sh
 
+autoload -U promptinit; promptinit
+# prompt spaceship
+prompt pure
+
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH="$HOME/.cask/bin:$PATH"
