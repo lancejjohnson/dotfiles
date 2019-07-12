@@ -119,6 +119,7 @@ augroup vimrcEx
   autocmd FileType elixir,ruby set nomodeline
   autocmd FileType ruby,haml,eruby,yaml,html,slim,javascript,sass,cucumber,elixir,clojure autocmd BufWritePre <buffer> StripWhitespace
   autocmd! BufNewFile,BufRead *.md set ft=markdown
+  autocmd VimResized * :wincmd =
   " autocmd BufNewFile,BufRead *.py
   "   \ set tabstop=4
   "   \ set softtabstop=4
