@@ -46,6 +46,9 @@ if g:has_async
   call minpac#add('w0rp/ale')
 endif
 
+" tmux
+call minpac#add('christoomey/vim-tmux-runner')
+
 " General enhancements plugins to consider
 " call minpac#add('tommcdo/vim-exchange') " direction commands for exchanging text places
 " call minpac#add('tpope/vim-tbone') " tmux commands for vim
