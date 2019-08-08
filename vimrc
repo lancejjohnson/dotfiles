@@ -130,6 +130,9 @@ augroup vimrcEx
   "   \ set fileformat=unix
 augroup END
 
+" tmux
+nnoremap <leader>pry :VtrOpenRunner {'orientation': 'v', 'percentage': 30, 'cmd': 'pry'}<cr>
+
 " Omnicomplete
 set omnifunc=syntaxcomplete#Complete
 
@@ -213,6 +216,14 @@ nnoremap <c-l> <c-w>l
 " Make closing a window easier
 nnoremap <Leader>c <c-w>c
 nnoremap <Leader>q :cclose<cr>
+
+" Make resizing windows easier
+if bufwinnr(1)
+  map <silent> <A-h> <C-w>>
+  map <silent> <A-j> <C-W>+
+  map <silent> <A-k> <C-W>-
+  map <silent> <A-l> <C-w><
+endif
 
 " Shift Enter adds new line above cursor
 imap <S-CR> <C-o><S-o>
@@ -303,7 +314,7 @@ nmap <silent> <leader>T :TestNearest<CR>
 nmap <silent> <leader>t :TestFile<CR>
 nmap <silent> <leader>a :TestSuite<CR>
 nmap <silent> <leader>l :TestLast<CR>
-nmap <silent> <leader>g :TestVisit<CR>"
+nmap <silent> <leader>g :TestVisit<CR>
 
 " React
 let g:jsx_ext_required=0
