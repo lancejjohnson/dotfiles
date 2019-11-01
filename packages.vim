@@ -39,12 +39,15 @@ call minpac#add('tpope/vim-surround')
 call minpac#add('tpope/vim-unimpaired')
 
 " UI
-call minpac#add('vim-airline/vim-airline')
-call minpac#add('vim-airline/vim-airline-themes')
+" call minpac#add('vim-airline/vim-airline')
+" call minpac#add('vim-airline/vim-airline-themes')
 
 if g:has_async
   call minpac#add('w0rp/ale')
 endif
+
+" Colorscheme development
+call minpac#add('lifepillar/vim-colortemplate')
 
 " tmux
 call minpac#add('christoomey/vim-tmux-runner')
@@ -104,6 +107,9 @@ call minpac#add('junegunn/vim-emoji', {'type': 'opt'})
 " Python
 call minpac#add('Vimjas/vim-python-pep8-indent')
 call minpac#add('lepture/vim-jinja')
+
+" Racket
+call minpac#add('wlangstroth/vim-racket')
 
 " Ruby
 call minpac#add('tpope/vim-bundler')

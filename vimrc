@@ -21,6 +21,7 @@ if has('termguicolors') && $COLORTERM ==# 'truecolor'
 endif
 colorscheme solarized8
 " colorscheme solarized8_flat
+" colorscheme one
 
 "" Ayu
 " let ayucolor="light"  " for light version of theme
@@ -32,8 +33,14 @@ colorscheme solarized8
 " seoul256 (light):
 "   Range:   252 (darkest) ~ 256 (lightest)
 "   Default: 253
-" let g:seoul256_background = 253
+" let g:seoul256_background = 256
 " colorscheme seoul256
+" seoul256 (dark):
+"   Range:   233 (darkest) ~ 239 (lightest)
+"   Default: 237
+" let g:seoul256_background = 233
+" colorscheme seoul256
+" set bg=dark
 
 " General settings
 let mapleader = ","
@@ -111,13 +118,13 @@ augroup vimrcEx
   autocmd!
   autocmd FileType text setlocal textwidth=78
   autocmd FileType ruby,haml,eruby,yaml,html,javascript,sass,cucumber,elixir set ai sw=2 sts=2 et
-  autocmd FileType ruby,eruby,yaml,javascript,sass set colorcolumn=80
+  autocmd FileType ruby,eruby,yaml,javascript,sass,python set colorcolumn=80
   autocmd FileType elixir set colorcolumn=100 foldmethod=syntax foldlevel=99
   " Make ?s part of words (see r00k)
   autocmd FileType elixir,ruby,eruby,yaml set iskeyword+=?
   autocmd FileType elixir,ruby,eruby,yaml set iskeyword+=!
   autocmd FileType elixir,ruby set nomodeline
-  autocmd FileType ruby,haml,eruby,yaml,html,slim,javascript,sass,cucumber,elixir,clojure autocmd BufWritePre <buffer> StripWhitespace
+  autocmd FileType ruby,haml,eruby,yaml,html,slim,javascript,sass,cucumber,elixir,clojure,python autocmd BufWritePre <buffer> StripWhitespace
   autocmd! BufNewFile,BufRead *.md set ft=markdown
   autocmd VimResized * :wincmd =
   " autocmd BufNewFile,BufRead *.py
@@ -164,6 +171,9 @@ inoremap <right> <nop>
 nnoremap j gj
 nnoremap k gk
 
+" Alternate Esc
+inoremap kj <ESC>
+
 " Sick of accidentally opening help when hitting esc
 nnoremap <F1> <nop>
 inoremap <F1> <nop>
@@ -208,10 +218,14 @@ map <Leader>pn :sp ~/Dropbox/notes/project_notes.txt<cr>
 map <Leader>= gg=G''
 
 " Move around splits with <c-hjkl>
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-h> <c-w>h
-nnoremap <c-l> <c-w>l
+" nnoremap <c-j> <c-w>j
+" nnoremap <c-k> <c-w>k
+" nnoremap <c-h> <c-w>h
+" nnoremap <c-l> <c-w>l
+nnoremap gj <c-w>j
+nnoremap gk <c-w>k
+nnoremap gh <c-w>h
+nnoremap gl <c-w>l
 
 " Make closing a window easier
 nnoremap <Leader>c <c-w>c
@@ -368,13 +382,13 @@ let g:ranger_map_keys = 0
 map <leader><leader> :Ranger<CR>
 
 " airline
-let g:airline_theme = 'solarized'
-let g:bufferline_echo = 0
-let g:airline_powerline_fonts=0
-let g:airline_enable_branch=1
-let g:airline_enable_syntastic=1
-let g:airline_branch_prefix = '⎇ '
-let g:airline_paste_symbol = '∥'
-let g:airline#extensions#tabline#enabled = 0
-let g:airline#extensions#ale#enabled = 1
-let g:airline#extensions#branch#displayed_head_limit = 10
+" let g:airline_theme = 'solarized'
+" let g:bufferline_echo = 0
+" let g:airline_powerline_fonts=0
+" let g:airline_enable_branch=1
+" let g:airline_enable_syntastic=1
+" let g:airline_branch_prefix = '⎇ '
+" let g:airline_paste_symbol = '∥'
+" let g:airline#extensions#tabline#enabled = 0
+" let g:airline#extensions#ale#enabled = 1
+" let g:airline#extensions#branch#displayed_head_limit = 10
