@@ -42,9 +42,9 @@ call minpac#add('tpope/vim-unimpaired')
 " call minpac#add('vim-airline/vim-airline')
 " call minpac#add('vim-airline/vim-airline-themes')
 
-if g:has_async
-  call minpac#add('w0rp/ale')
-endif
+" if g:has_async
+"   call minpac#add('w0rp/ale')
+" endif
 
 " Colorscheme development
 call minpac#add('lifepillar/vim-colortemplate')
