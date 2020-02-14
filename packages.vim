@@ -38,6 +38,12 @@ call minpac#add('tpope/vim-rhubarb')
 call minpac#add('tpope/vim-surround')
 call minpac#add('tpope/vim-unimpaired')
 
+" Language Server Protocol (LSP)
+call minpac#add('natebosch/vim-lsc')
+
+" Completion
+call minpac#add('ajh17/VimCompletesMe')
+
 " UI
 " call minpac#add('vim-airline/vim-airline')
 " call minpac#add('vim-airline/vim-airline-themes')
