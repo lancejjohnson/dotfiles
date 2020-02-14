@@ -19,28 +19,44 @@ if has('termguicolors') && $COLORTERM ==# 'truecolor'
   let &t_8f = "\<esc>[38;2;%lu;%lu;%lum" " Needed in tmux
   let &t_8b = "\<esc>[48;2;%lu;%lu;%lum" " Ditto
 endif
-colorscheme solarized8
+" colorscheme solarized8
+" colorscheme solarized8_high
 " colorscheme solarized8_flat
 " colorscheme one
 
-"" Ayu
-" let ayucolor="light"  " for light version of theme
-" let ayucolor="mirage" " for mirage version of theme
-" let ayucolor="dark"   " for dark version of theme
-" colorscheme ayu
+"" Gruvbox
+" let g:gruvbox_bold=0
+let g:gruvbox_contrast_dark="medium"
+" let g:gruvbox_contrast_light=hard
+colorscheme gruvbox
+
 
 "" Seoul 256
+" seoul256 (unified):
+" let g:seoul256_background = 233
+" let g:seoul256_light_background = 256
+" colorscheme seoul256
+"
 " seoul256 (light):
 "   Range:   252 (darkest) ~ 256 (lightest)
 "   Default: 253
 " let g:seoul256_background = 256
-" colorscheme seoul256
+" colorscheme seoul256-light
+
 " seoul256 (dark):
 "   Range:   233 (darkest) ~ 239 (lightest)
 "   Default: 237
 " let g:seoul256_background = 233
 " colorscheme seoul256
 " set bg=dark
+" let g:seoul256_background = 233
+" colorscheme seoul256
+
+" Two Firewatch
+" colorscheme two-firewatch
+
+" One
+" colorscheme one
 
 " General settings
 let mapleader = ","
@@ -354,6 +370,10 @@ let g:rbpt_colorpairs = [
     \ ]
 let g:rbpt_max = 16
 let g:rbpt_loadcmd_toggle = 0
+
+" Elixir
+nmap <silent> <leader>m :MixFormat<CR>
+
 
 " golang
 let g:go_fmt_command = "goimports"
