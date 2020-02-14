@@ -2,7 +2,8 @@
 
 autoload -U promptinit; promptinit
 # prompt spaceship
-prompt pure
+# prompt pure
+eval "$(starship init zsh)"
 
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
