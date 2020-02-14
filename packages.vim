@@ -53,7 +53,7 @@ call minpac#add('lifepillar/vim-colortemplate')
 call minpac#add('christoomey/vim-tmux-runner')
 
 " General enhancements plugins to consider
-" call minpac#add('tommcdo/vim-exchange') " direction commands for exchanging text places
+call minpac#add('tommcdo/vim-exchange') " direction commands for exchanging text places
 " call minpac#add('tpope/vim-tbone') " tmux commands for vim
 " call minpac#add('SirVer/ultisnips') " install later
 " call minpac#add('jiangmiao/auto-pairs') " vim-smartinput same behavior?
@@ -67,11 +67,11 @@ call minpac#add('nelstrom/vim-textobj-rubyblock')
 call minpac#add('b4winckler/vim-angry')
 
 " Colors
-call minpac#add('altercation/vim-colors-solarized', {'type': 'opt'})
 call minpac#add('lifepillar/vim-solarized8', {'type': 'opt'})
 call minpac#add('rakr/vim-one', {'type': 'opt'})
-call minpac#add('ayu-theme/ayu-vim', {'type': 'opt'})
+call minpac#add('rakr/vim-two-firewatch', {'type': 'opt'})
 call minpac#add('junegunn/seoul256.vim', {'type': 'opt'})
+call minpac#add('morhetz/gruvbox', {'type': 'opt'})
 
 " Clojure
 call minpac#add('guns/vim-clojure-highlight')
@@ -119,4 +119,3 @@ call minpac#add('tpope/vim-rake')
 call minpac#add('vim-ruby/vim-ruby')
 call minpac#add('slim-template/vim-slim')
 call minpac#add('ngmy/vim-rubocop')
-
