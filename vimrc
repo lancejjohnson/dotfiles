@@ -412,3 +412,38 @@ map <leader><leader> :Ranger<CR>
 " let g:airline#extensions#tabline#enabled = 0
 " let g:airline#extensions#ale#enabled = 1
 " let g:airline#extensions#branch#displayed_head_limit = 10
+
+" Completion
+set completeopt=menu,menuone,noinsert,noselect
+
+" Language Server Protocol (LSP)
+let g:lsc_server_commands = {
+  \ 'ruby': {
+  \    'command': 'solargraph stdio',
+  \    'log_level': -1,
+  \    'suppress_stderr': v:true,
+  \ },
+  \ 'elixir': {
+  \    'command': 'elixir-ls',
+  \    'log_level': -1,
+  \    'suppress_stderr': v:true,
+  \ },
+  \ 'javascript': {
+  \    'command': 'typescript-language-server --stdio',
+  \    'log_level': -1,
+  \    'suppress_stderr': v:true,
+  \ }
+\}
+let g:lsc_auto_map = {
+ \ 'GoToDefinition': 'gd',
+ \ 'FindReferences': 'gr',
+ \ 'Rename': 'gR',
+ \ 'ShowHover': 'K',
+ \ 'FindCodeActions': 'ga',
+ \ 'Completion': 'omnifunc',
+\}
+"" set to v:false to disable
+let g:lsc_enable_autocomplete = v:true
+let g:lsc_enable_diagnostics = v:false
+let g:lsc_reference_highlights = v:false
+let g:lsc_trace_level = 'off'
