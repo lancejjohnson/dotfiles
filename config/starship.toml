@@ -1,0 +1,24 @@
+[package]
+disabled = true
+[dotnet]
+disabled = true
+[elm]
+disabled = true
+[golang]
+disabled = true
+[haskell]
+disabled = true
+[java]
+disabled = true
+[nodejs]
+disabled = true
+[php]
+disabled = true
+[python]
+disabled = true
+[ruby]
+disabled = true
+[rust]
+disabled = true
+[terraform]
+disabled = true
