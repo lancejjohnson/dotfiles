@@ -15,24 +15,6 @@ zstyle ':completion:*' hosts off
 # Use "emacs" mode
 bindkey -e
 
-# Ruby
-if [ -f /usr/local/share/chruby/chruby.sh ]
-then
-  source /usr/local/share/chruby/chruby.sh
-  source /usr/local/share/chruby/auto.sh
-fi
-
-# Erlang
-export PATH="$HOME/.kerl/installs/21.2/bin:$PATH"
-
-
-# Elixir and Erlang
-if [ -d $HOME/.exenv ]
-then
-  export PATH="$HOME/.exenv/bin:$PATH"
-  eval "$(exenv init -)"
-fi
-
 # Golang
 if [ -d $HOME/Code/go ]
 then
@@ -66,5 +48,3 @@ export DISABLE_SPRING=1
 
 # asdf (readme insists this be after path export)
 source $HOME/.asdf/asdf.sh
-source $HOME/.asdf/completions/asdf.bash
-

@@ -26,10 +26,12 @@ endif
 
 "" Gruvbox
 " let g:gruvbox_bold=0
-let g:gruvbox_contrast_dark="medium"
-" let g:gruvbox_contrast_light=hard
-colorscheme gruvbox
+" let g:gruvbox_contrast_light="hard"
+" let g:gruvbox_contrast_dark="medium"
+" colorscheme gruvbox
 
+"" Nord
+colorscheme nord
 
 "" Seoul 256
 " seoul256 (unified):
@@ -89,6 +91,37 @@ set visualbell
 set wildmenu
 set winwidth=105
 
+" COC Recommended Configuration
+" set cmdheight=2
+" set nobackup
+" set nowritebackup
+" set updatetime=300
+" set shortmess+=c
+" set signcolumn=yes
+" inoremap <silent><expr> <c-space> coc#refresh()
+
+" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current
+" position. Coc only does snippet and additional edit on confirm.
+" <cr> could be remapped by other vim plugin, try `:verbose imap <CR>`.
+" if exists('*complete_info')
+"   inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+" else
+"   inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+" endif
+
+" " Use `[g` and `]g` to navigate diagnostics
+" nmap <silent> [g <Plug>(coc-diagnostic-prev)
+" nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+" " GoTo code navigation.
+" nmap <silent> gd <Plug>(coc-definition)
+" nmap <silent> gy <Plug>(coc-type-definition)
+" nmap <silent> gi <Plug>(coc-implementation)
+" nmap <silent> gr <Plug>(coc-references)
+
+" " Symbol renaming.
+" nmap <leader>rn <Plug>(coc-rename)
+
 " Display extra whitespace; thoughbot
 " set list listchars=tab:»·,trail:·,nbsp:·
 
@@ -126,7 +159,7 @@ highlight ExtraWhitespace ctermbg=61 guibg=#6c71c4
 " Turn off highlighting after search
 map <C-n> :nohl<cr>
 " Search project for word under cursor
-map <leader>\ :Ag <C-R><C-W> -Q<CR>
+map <leader>\ :Rg <C-R><C-W><CR>
 
 " Autocmds
 augroup vimrcEx
@@ -134,14 +167,14 @@ augroup vimrcEx
   autocmd!
   autocmd FileType text setlocal textwidth=78
   autocmd FileType ruby,haml,eruby,yaml,html,javascript,sass,cucumber,elixir set ai sw=2 sts=2 et
-  autocmd FileType ruby,eruby,yaml,javascript,sass,python set colorcolumn=80
+  autocmd FileType ruby,eruby,yaml,javascript,sass,python,markdown set colorcolumn=81
   autocmd FileType elixir set colorcolumn=100 foldmethod=syntax foldlevel=99
   " Make ?s part of words (see r00k)
   autocmd FileType elixir,ruby,eruby,yaml set iskeyword+=?
   autocmd FileType elixir,ruby,eruby,yaml set iskeyword+=!
   autocmd FileType elixir,ruby set nomodeline
   autocmd FileType ruby,haml,eruby,yaml,html,slim,javascript,sass,cucumber,elixir,clojure,python autocmd BufWritePre <buffer> StripWhitespace
-  autocmd! BufNewFile,BufRead *.md set ft=markdown
+  autocmd! BufNewFile,BufRead *.md set ft=markdown textwidth=80
   autocmd VimResized * :wincmd =
   " autocmd BufNewFile,BufRead *.py
   "   \ set tabstop=4
@@ -162,16 +195,16 @@ set omnifunc=syntaxcomplete#Complete
 " Searching
 " Use The Silver Searcher instead of grep
 " See http://robots.thoughtbot.com/faster-grepping-in-vim
-if executable('ag')
-  " Use ag over grep
-  set grepprg=ag\ --nogroup\ --nocolor
+" if executable('ag')
+"   " Use ag over grep
+"   set grepprg=ag\ --nogroup\ --nocolor
 
-  " Use ag in CtrlP for listing files. Lightning fast and respect .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+"   " Use ag in CtrlP for listing files. Lightning fast and respect .gitignore
+"   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 
-  " ag is fast enough that CtrlP doesn't need to cache
-  let g:ctrlp_use_caching = 0
-endif
+"   " ag is fast enough that CtrlP doesn't need to cache
+"   let g:ctrlp_use_caching = 0
+" endif
 
 " Key Mapping and Bindings
 
@@ -195,6 +228,7 @@ nnoremap <F1> <nop>
 inoremap <F1> <nop>
 
 " NERDTree mapping
+let NERDTreeHijackNetrw=1
 nmap <leader>n :NERDTreeToggle<CR>
 
 " Ctags
@@ -223,8 +257,8 @@ vmap <Leader>p "+p
 vmap <Leader>P "+P
 
 " bind \ to grep shortcut
-command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
-nnoremap \ :Ag<Space>
+" command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+nnoremap \ :Rg<Space>
 
 " My vim cheatsheet
 map <Leader>vch :e ~/Dropbox/Documents/Software\ Development/Vim/my_vim_cheatsheet.txt<cr>
@@ -315,6 +349,7 @@ imap <c-l> <space>=><space>
 
 " Insert an Elixir pipe
 imap <c-p> \|><space>
+imap <c-f> fn<space>-><space>end
 
 function! OpenInOtherEditor(editor)
   let file = @%
@@ -324,6 +359,12 @@ endfunction
 command! AtomThis :call OpenInOtherEditor('atom')
 command! SublimeThis :call OpenInOtherEditor('subl')
 command! CodeThis :call OpenInOtherEditor('code')
+
+function! CopyFilePathToClipboard()
+  let @+ = expand("%")
+endfunction
+nnoremap <leader>r :call CopyFilePathToClipboard()<CR>
+
 
 " Rubocop
 let g:vimrubocop_config = "$HOME/source/style-guides/ruby/.rubocop.yml"
@@ -338,7 +379,8 @@ let g:vimrubocop_config = "$HOME/source/style-guides/ruby/.rubocop.yml"
 " autocmd! BufReadPost,BufNewFile * call UseRentPathRubocop()
 
 " vim-test
-let test#strategy = "basic"
+" let test#strategy = "basic"
+let test#strategy = "dispatch"
 let test#go#runner = "gotest"
 nmap <silent> <leader>T :TestNearest<CR>
 nmap <silent> <leader>t :TestFile<CR>
@@ -347,7 +389,8 @@ nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
 
 " React
-let g:jsx_ext_required=0
+" let g:jsx_ext_required=0
+" command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 " Clojure
 let g:rbpt_colorpairs = [
@@ -396,10 +439,6 @@ nmap ga <Plug>(EasyAlign)
 
 "" Align GitHub-flavored Markdown tables
 vmap <Leader><Bslash> :EasyAlign*<Bar><Enter>
-
-" Ranger
-let g:ranger_map_keys = 0
-map <leader><leader> :Ranger<CR>
 
 " airline
 " let g:airline_theme = 'solarized'

@@ -2,6 +2,8 @@
 disabled = true
 [dotnet]
 disabled = true
+[elixir]
+disabled = true
 [elm]
 disabled = true
 [golang]
