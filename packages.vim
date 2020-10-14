@@ -59,7 +59,6 @@ call minpac#add('tommcdo/vim-exchange') " direction commands for exchanging text
 call minpac#add('kana/vim-textobj-user') " Must precede other textobj plugins
 call minpac#add('kana/vim-textobj-entire')
 call minpac#add('kana/vim-textobj-indent')
-call minpac#add('andyl/vim-textobj-elixir')
 call minpac#add('nelstrom/vim-textobj-rubyblock')
 call minpac#add('b4winckler/vim-angry')
 
