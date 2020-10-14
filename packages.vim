@@ -2,7 +2,8 @@
 " https://github.com/nelstrom/dotfiles
 let g:has_async = v:version >= 800 || has('nvim')
 
-if !exists('*minpac#init')
+if !exists('g:loaded_minpac')
+  echo("minpac does not exist")
   finish
 endif
 
