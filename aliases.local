@@ -1,0 +1,63 @@
+# Unix
+alias ll="ls -al"
+alias ln="ln -v"
+alias mkdir="mkdir -p"
+alias e="$EDITOR"
+alias v="$VISUAL"
+
+# Git
+alias ga="git add"
+alias gaa="git add ."
+alias gb="git branch"
+alias gbehind="git rev-list --left-right --count master...HEAD"
+alias gc="git commit"
+alias gcan="git commit --amend --no-edit"
+alias gcm="git commit -m"
+alias gco="git checkout"
+alias gd="git diff"
+alias gdt="git difftool"
+alias gdtm="git difftool master..HEAD"
+alias gfum="git fetch upstream master"
+alias gl="git log"
+alias glgraph="git log --graph --oneline --decorate --date=relative --all"
+alias gpf="git push --force"
+alias gpr="git difftool master..HEAD"
+alias gpr="git pull --rebase"
+alias gpull="git pull"
+alias gpush="git push"
+alias gr="git restore"
+alias grs="git restore --staged"
+alias grum="git rebase upstream/master"
+alias gs="git status"
+alias gsl="git stash list"
+alias gss="git show -p stash@{0}"
+
+# Ruby
+alias be="bundle exec"
+alias ber="bundle exec rspec"
+alias bern="bundle exec rspec --no-profile"
+alias rbcp="bundle exec rubocop"
+alias rbcpo="bundle exec rubocop --only"
+
+# Bundler
+alias b="bundle"
+
+# Rails
+alias migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
+
+# Elixir
+alias mt="mix test"
+alias mtf="mix test --only focus"
+alias mto="mix test --only"
+alias mtu="mix test --exclude feature"
+
+# System
+alias path="echo $PATH | tr -s ':' '\n'"
+alias hg="history | ag "
+
+# Utilities
+alias speedtest="curl http://speedtest.wdc01.softlayer.com/downloads/test100.zip > /dev/null"
+
+# Overrides
+alias vim="nvim"
+alias vi="nvim"

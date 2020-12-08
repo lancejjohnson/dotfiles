@@ -3,7 +3,6 @@
 /db/*.sqlite3-journal
 /log/*.log
 /tmp
-database.yml
 doc/
 *.swp
 *~
@@ -24,6 +23,7 @@ coverage.data
 *.orig
 /node_modules
 node_modules
+*.pem
 
 # Elixir
 /_build
@@ -36,3 +36,4 @@ erl_crash.dump
 *.ez
 
 undodir
+.env
