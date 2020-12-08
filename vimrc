@@ -8,6 +8,14 @@ syntax on
 packadd minpac
 source ~/.packages.vim
 
+" Define user commands for updating/cleaning the plugins.
+" Each of them calls PackInit() to load minpac and register
+" the information of plugins, then performs the task.
+" (See https://github.com/k-takata/minpac/blob/master/README.md)
+command! PackUpdate call minpac#update()
+command! PackClean  call minpac#clean()
+command! PackStatus call minpac#status()
+
 " Colors
 set bg=dark
 " set bg=light
