@@ -1,2 +1,2 @@
-EXCLUDES="README*.md LICENSE Brewfile Caskfile Fontfile iterm2 subl emacs_backup"
+EXCLUDES="README*.md LICENSE Brewfile Caskfile Fontfile iterm2 subl *.backup *.bak"
 DOTFILES_DIRS="$HOME/Code/lancejjohnson/dotfiles-local $HOME/Code/thoughtbot/dotfiles"

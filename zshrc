@@ -47,4 +47,7 @@ export PATH="$HOME/.bin:$PATH"
 export DISABLE_SPRING=1
 
 # asdf (readme insists this be after path export)
-source $HOME/.asdf/asdf.sh
+if [ -d $HOME/.asdf ]
+then
+  source $HOME/.asdf/asdf.sh
+fi
