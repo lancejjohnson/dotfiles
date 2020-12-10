@@ -1,34 +1,21 @@
-[user]
-	name = Lance Johnson
-	email = lancejjohnson@gmail.com
+[alias]
+	ksreview = "!f() { local SHA=${1:-HEAD}; local BRANCH=${2:-master}; if [ $SHA == $BRANCH ]; then SHA=HEAD; fi; git difftool -y -t Kaleidoscope $BRANCH...$SHA; }; f"
 [color]
-  ui = true
-[mergetool "Kaleidoscope"]
-	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-	trustexitcode = true
-[merge]
-	tool = Kaleidoscope
+  ui = auto
+# [commit]
+#  template = ~/.gitmessage
+[core]
+	excludesfile = ~/.gitignore_global
+	editor = nvim
 [difftool "Kaleidoscope"]
 	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 [difftool]
 	prompt = false
-[mergetool]
-	prompt = false
 [diff]
+  colorMoved = zebra
 	tool = Kaleidoscope
-[alias]
-	ksreview = "!f() { local SHA=${1:-HEAD}; local BRANCH=${2:-master}; if [ $SHA == $BRANCH ]; then SHA=HEAD; fi; git difftool -y -t Kaleidoscope $BRANCH...$SHA; }; f"
-[push]
-	default = simple
-[core]
-	excludesfile = ~/.gitignore_global
-	editor = nvim
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+[fetch]
+  prune = true
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f
@@ -38,3 +25,18 @@
 	user = lancejjohnson
 [ghi]
 	token = !security find-internet-password -a lancejjohnson -s github.com -l 'ghi token' -w
+[init]
+  templatedir = ~/.git_template
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustexitcode = true
+[mergetool]
+	prompt = false
+[merge]
+  ff = only
+	tool = Kaleidoscope
+[push]
+	default = current
+[user]
+	name = Lance Johnson
+	email = lancejjohnson@gmail.com
