@@ -1,3 +1,5 @@
+[battery]
+disabled = true
 [package]
 disabled = true
 [dotnet]
