@@ -22,11 +22,12 @@ set bg=dark
 
 "" Solarized
 "" See https://github.com/lifepillar/vimrc/blob/master/vimrc
-if has('termguicolors') && $COLORTERM ==# 'truecolor'
-  set termguicolors
+" if has('termguicolors') && $COLORTERM ==# 'truecolor'
+"   set termguicolors
   let &t_8f = "\<esc>[38;2;%lu;%lu;%lum" " Needed in tmux
   let &t_8b = "\<esc>[48;2;%lu;%lu;%lum" " Ditto
-endif
+" endif
+
 " colorscheme solarized8
 " colorscheme solarized8_high
 " colorscheme solarized8_flat
