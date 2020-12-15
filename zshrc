@@ -9,11 +9,13 @@ export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH="$HOME/.cask/bin:$PATH"
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 zstyle ':completion:*' hosts off
 
 # Use "emacs" mode
 bindkey -e
+set -o emacs
 
 ################################################################################
 # Pulled from thoughtbot dotfiles
@@ -59,20 +61,20 @@ _load_settings "$HOME/.zsh/configs"
 ################################################################################
 
 # Golang
-if [ -d $HOME/Code/go ]
-then
-  export GOPATH=$HOME/Code/go
-else
-  export GOPATH=$HOME/go
-fi
-if [ -d /usr/local/opt/go/libexec ]
-then
-  export GOROOT=/usr/local/opt/go/libexec
-else
-  export GOROOT=/usr/lib/golang
-fi
-export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:$GOROOT/bin
+# if [ -d $HOME/Code/go ]
+# then
+#   export GOPATH=$HOME/Code/go
+# else
+#   export GOPATH=$HOME/go
+# fi
+# if [ -d /usr/local/opt/go/libexec ]
+# then
+#   export GOROOT=/usr/local/opt/go/libexec
+# else
+#   export GOROOT=/usr/lib/golang
+# fi
+# export PATH=$PATH:$GOPATH/bin
+# export PATH=$PATH:$GOROOT/bin
 
 # Postgres
 export PGDATA='/usr/local/var/postgres'
@@ -82,7 +84,7 @@ export PGHOST=localhost
 export FZF_DEFAULT_COMMAND='rg --files'
 
 source "$HOME/.aliases"
-ctags=/usr/local/bin/ctags
+# ctags=/usr/local/bin/ctags
 
 export PATH="$HOME/.bin:$PATH"
 
