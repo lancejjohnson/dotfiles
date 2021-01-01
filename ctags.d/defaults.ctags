@@ -1,0 +1,13 @@
+--recurse=yes
+
+--exclude=*.css
+--exclude=*.json
+--exclude=*.scss
+--exclude=.git
+--exclude=_build
+--exclude=assets/node_modules
+--exclude=deps
+--exclude=log
+--exclude=node_modules
+--exclude=priv
+--exclude=vendor
