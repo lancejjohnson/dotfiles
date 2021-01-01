@@ -19,6 +19,7 @@ call minpac#add('junegunn/fzf')
 call minpac#add('junegunn/fzf.vim')
 call minpac#add('junegunn/vim-easy-align')
 call minpac#add('kana/vim-smartinput')
+call minpac#add('ludovicchabant/vim-gutentags')
 " call minpac#add('neoclide/coc.nvim', {'branch': 'release'})
 call minpac#add('neomake/neomake')
 call minpac#add('ntpeters/vim-better-whitespace')
@@ -41,15 +42,15 @@ call minpac#add('tpope/vim-vinegar')
 " call minpac#add('vim-airline/vim-airline')
 " call minpac#add('vim-airline/vim-airline-themes')
 
-if g:has_async
-  call minpac#add('w0rp/ale')
-endif
+" if g:has_async
+"   call minpac#add('w0rp/ale')
+" endif
 
 " Colorscheme development
-call minpac#add('lifepillar/vim-colortemplate')
+" call minpac#add('lifepillar/vim-colortemplate')
 
 " tmux
-call minpac#add('christoomey/vim-tmux-runner')
+" call minpac#add('christoomey/vim-tmux-runner')
 
 " General enhancements plugins to consider
 call minpac#add('tommcdo/vim-exchange') " direction commands for exchanging text places

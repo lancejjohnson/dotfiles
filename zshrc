@@ -11,10 +11,15 @@ export PATH="$HOME/.cask/bin:$PATH"
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 
-zstyle ':completion:*' hosts off
+fpath=(~/.zsh $fpath)
+
+# zstyle ':completion:*' hosts off
+# Git
+zstyle ':completion:*:*:git:*' script ~/.zsh/completions/git-completion.bash
+
 
 # Use "emacs" mode
-bindkey -e
+# bindkey -e
 set -o emacs
 
 ################################################################################

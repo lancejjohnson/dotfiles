@@ -449,6 +449,9 @@ nmap ga <Plug>(EasyAlign)
 "" Align GitHub-flavored Markdown tables
 vmap <Leader><Bslash> :EasyAlign*<Bar><Enter>
 
+" gutentags
+" let g:gutentags_file_list_command = 'rg --files'
+
 " airline
 " let g:airline_theme = 'solarized'
 " let g:bufferline_echo = 0
