@@ -6,11 +6,7 @@ syntax on
 
 " Packages
 packadd minpac
-if filereadable("~/.packages.vim") 
-  source ~/.packages.vim
-elseif filereadable("~/.config/nvim/packages.vim")
-  source ~/.config/nvim/packages.vim
-endif
+source ~/.config/nvim/packages.vim
 
 " Define user commands for updating/cleaning the plugins.
 " Each of them calls PackInit() to load minpac and register
