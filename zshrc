@@ -11,12 +11,13 @@ export PATH="$HOME/.cask/bin:$PATH"
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 
-fpath=(~/.zsh $fpath)
 
 # zstyle ':completion:*' hosts off
 # Git
-zstyle ':completion:*:*:git:*' script ~/.zsh/completions/git-completion.bash
+zstyle ':completion:*:*:git:*' script "$HOME/.zsh/completions/git-completion.bash"
+fpath=("$HOME/.zsh" $fpath)
 
+autoload -Uz compinit && compinit
 
 # Use "emacs" mode
 # bindkey -e
@@ -89,7 +90,6 @@ export PGHOST=localhost
 export FZF_DEFAULT_COMMAND='rg --files'
 
 source "$HOME/.aliases"
-# ctags=/usr/local/bin/ctags
 
 export PATH="$HOME/.bin:$PATH"
 
