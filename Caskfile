@@ -67,7 +67,7 @@ cask "vscodium"
 brew "mas"
 
 mas "Alinof Timer", id: 627545560 # Alinof Timer (4.1.2)
-mas "MindNode" id: 1289197285 # MindNode (2020.6.1)
+mas "MindNode", id: 1289197285 # MindNode (2020.6.1)
 mas "Pixelmator", id: 407963104 # Pixelmator (3.7)
 mas "PixelStick", id: 415158530 # PixelStick (2.12.0)
 mas "Shush", id: 496437906 # Shush (1.2.1)
