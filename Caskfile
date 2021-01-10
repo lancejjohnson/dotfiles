@@ -61,6 +61,7 @@ cask "the-unarchiver"
 cask "vagrant"
 cask "virtualbox"
 cask "vlc"
+cask "vscodium"
 
 # Mac App Store Apps
 brew "mas"
