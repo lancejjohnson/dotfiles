@@ -3,83 +3,70 @@ tap "caskroom/cask"
 cask_args appdir: "/Applications"
 
 cask "1password"
-cask "adium"
+cask "alacritty"
 cask "alfred"
-cask "android-file-transfer"
+cask "android-studio"
 cask "anki"
 cask "appcleaner"
 cask "atext"
-cask "atom"
 cask "balsamiq-mockups"
 cask "brave-browser"
 cask "caffeine"
+cask "chromedriver"
 # cask "cleanmymac" # Need to specify the version for this
 cask "db-browser-for-sqlite"
 cask "daisydisk"
 cask "dash"
-# cask "digikam"
-# cask "divvy"
+cask "discord"
+cask "divvy"
 cask "dropbox"
+cask "etcher"
 cask "evernote"
-# cask "etcher" # Burn images to SD cards
 cask "firefox"
 cask "fluid" # Make mac apps from web pages
 cask "gifox"
-# cask "gimp"
 cask "github"
 cask "google-chrome"
 cask "gpg-suite"
-# cask "xquartz" # Must precede inkscape
-# cask "inkscape"
-# cask "intellij-idea-ce"
+cask "graphiql"
+cask "insomnia"
 cask "iterm2"
-# cask "java7"
+cask "joplin"
 cask "kaleidoscope"
 cask "keybase"
 cask "kindle"
 cask "kitty"
-# cask "lastpass"
-# cask "limechat"
+cask "lastpass"
+cask "libreoffice"
 # cask "mdrp" # Need to specify the version for this
 cask "monodraw"
 cask "mysqlworkbench"
 cask "ngrok"
 cask "nvalt"
-cask "pastor"
-cask "phantomjs"
 cask "postico"
 cask "postman"
+cask "qfinder-pro"
 cask "remember-the-milk"
-# cask "renamer"
 cask "scrivener"
-# cask "scummvm"
-# cask "sdformatter"
 cask "sequel-pro"
 cask "slack"
 cask "skim"
-# cask "sourcetree"
+cask "sourcetree"
 cask "spectacle"
 cask "spotify"
-# cask "steam"
-# cask "sublime-text"
+cask "steam"
+cask "sublime-text"
 cask "textual"
 cask "the-unarchiver"
 cask "vagrant"
 cask "virtualbox"
-# cask "viscosity"
 cask "vlc"
 
 # Mac App Store Apps
 brew "mas"
 
-mas "PixelStick", id: 415158530 # PixelStick (2.12.0)
+mas "Alinof Timer", id: 627545560 # Alinof Timer (4.1.2)
+mas "MindNode" id: 1289197285 # MindNode (2020.6.1)
 mas "Pixelmator", id: 407963104 # Pixelmator (3.7)
-# mas "Growl", id: 467939042 # Growl (2.1.3)
-# mas "Marked", id: 448925439 # Marked (1.4.3)
+mas "PixelStick", id: 415158530 # PixelStick (2.12.0)
 mas "Shush", id: 496437906 # Shush (1.2.1)
-mas "Alinof Timer", id: 512464723 # Alinof Timer (4.1.2)
-# mas "Gemini", id: 463541543 # Gemini (1.5.17)
-# mas "MindNode", id: 992076693 # MindNode (2.5.7)
-# mas "Divvy", id: 413857545 # Divvy (1.5.1)
-# mas "GIPHY Capture", id: 668208984 # GIPHY Capture
-# mas "Xcode", id: 497799835 # Xcode

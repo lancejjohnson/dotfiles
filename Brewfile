@@ -1,10 +1,14 @@
 tap "caskroom/cask"
 tap "caskroom/fonts"
+tap "codeclimate/formulae"
+tap "gigalixir/brew"
+tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "thoughtbot/formulae"
 tap "universal-ctags/universal-ctags"
+
 
 # System
 # TODO: Add this as a command to add to bashrc or zshrc if it's not there
@@ -14,71 +18,52 @@ brew "coreutils"
 brew "findutils"
 brew "moreutils"
 
+brew "asciidoctor"
 brew "bash" # Install bash 4
 brew "bash-completion2"
-brew "dark-mode"
+brew "codeclimate/formulae/codeclimate"
+brew "curl"
 brew "exercism"
+brew "ffmpeg"
 brew "fzf"
+brew "ghi"
+brew "gigalixir"
 brew "git"
 brew "git-lfs"
-brew "ghi"
 brew "gnu-sed", args: ["with-default-names"]
+brew "gnupg"
 brew "graphviz"
 brew "heroku"
+brew "htop"
+brew "hugo"
 brew "imagemagick"
+brew "libssh2"
 brew "libyaml" # should come after openssl
+brew "neovim"
+brew "openjdk"
 brew "pandoc"
-brew "ranger"
-brew "rcm"
+brew "poppler"
+brew "readline"
 brew "reattach-to-user-namespace" # Fixes tmux macOS issues
-brew "the_silver_searcher"
+brew "ripgrep"
+brew "starship"
+brew "rcm"
 brew "tmux"
 brew "tree"
 brew "universal-ctags", args: ["HEAD"]
 brew "watchman"
 brew "webkit2png"
 brew "wget", args: ["with-iri"]
+brew "wxmac" # Erlang
+brew "youtube-dl"
 brew "zsh"
 
-# Containers and VMs
-# brew "docker" # Prefer Docker for Mac for now
-brew "openshift-cli"
-brew "socat"
-
-# Editors
-# brew "macvim", args: ["with-override-system-vim"]
-brew "neovim"
-# brew "emacs", args: ["with-cocoa"]
-
-# Ruby
-# brew "chruby"
-# brew "ruby-install"
-
-# Python
-brew "python"
-brew "python3"
-
-# Erlang
-brew "kerl" # Erlang installations
-brew "wxmac" # Erlang
-
-# Elixir
-# brew "erlang"
-
-# Golang
-brew "go"
-
-# JavaScript
-# brew "node"
-brew "yarn"
 
 # Datastores
-brew "mysql"
-# brew "postgresql", restart_service: :changed
-# brew "redis", restart_service: :changed
-
-# Other
-brew "exercism"
+brew "mysql", restart_service: :changed
+brew "postgresql", restart_service: :changed
+brew "redis", restart_service: :changed
+brew "sqlite"
 
 # Misc I had installed
 # brew "gmp@4"
