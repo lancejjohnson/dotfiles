@@ -35,6 +35,8 @@
 [merge]
   ff = only
 	tool = Kaleidoscope
+[pull]
+  ff = only
 [push]
 	default = current
 [user]
