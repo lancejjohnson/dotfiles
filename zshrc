@@ -82,6 +82,9 @@ _load_settings "$HOME/.zsh/configs"
 # export PATH=$PATH:$GOPATH/bin
 # export PATH=$PATH:$GOROOT/bin
 
+# Elixir
+export KERL_BUILD_DOCS="yes"
+
 # Postgres
 export PGDATA='/usr/local/var/postgres'
 export PGHOST=localhost
@@ -95,6 +98,9 @@ export PATH="$HOME/.bin:$PATH"
 
 # Ruby
 export DISABLE_SPRING=1
+
+# Rust
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # asdf (readme insists this be after path export)
 if [ -d $HOME/.asdf ]

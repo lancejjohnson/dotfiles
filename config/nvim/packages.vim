@@ -38,6 +38,10 @@ call minpac#add('tpope/vim-surround')
 call minpac#add('tpope/vim-unimpaired')
 call minpac#add('tpope/vim-vinegar')
 
+" Ranger
+" call minpac#add('francoiscabrol/ranger.vim')
+call minpac#add('kevinhwang91/rnvimr')
+
 " UI
 " call minpac#add('vim-airline/vim-airline')
 " call minpac#add('vim-airline/vim-airline-themes')
@@ -124,6 +128,9 @@ call minpac#add('tpope/vim-rake')
 call minpac#add('vim-ruby/vim-ruby')
 call minpac#add('slim-template/vim-slim')
 call minpac#add('ngmy/vim-rubocop')
+
+" Rust
+call minpac#add('rust-lang/rust.vim')
 
 " Writing
 call minpac#add('junegunn/goyo.vim')
