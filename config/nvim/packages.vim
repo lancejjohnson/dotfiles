@@ -77,7 +77,7 @@ call minpac#add('logico/typewriter-vim', {'type': 'opt'})
 call minpac#add('morhetz/gruvbox', {'type': 'opt'})
 call minpac#add('nightsense/snow', {'type': 'opt'})
 call minpac#add('sonph/onehalf', {'name': 'onehalf', 'type': 'opt', 'subdir': 'vim'})
-
+call minpac#add('cocopon/iceberg.vim', {'type': 'opt'})
 
 " Clojure
 call minpac#add('guns/vim-clojure-highlight')
