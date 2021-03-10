@@ -71,8 +71,13 @@ call minpac#add('b4winckler/vim-angry')
 
 " Colors
 call minpac#add('arcticicestudio/nord-vim', {'type': 'opt'})
+call minpac#add('jeffkreeftmeijer/vim-dim', {'type': 'opt'})
 call minpac#add('lifepillar/vim-solarized8', {'type': 'opt'})
+call minpac#add('logico/typewriter-vim', {'type': 'opt'})
 call minpac#add('morhetz/gruvbox', {'type': 'opt'})
+call minpac#add('nightsense/snow', {'type': 'opt'})
+call minpac#add('sonph/onehalf', {'name': 'onehalf', 'type': 'opt', 'subdir': 'vim'})
+
 
 " Clojure
 call minpac#add('guns/vim-clojure-highlight')

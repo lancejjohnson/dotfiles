@@ -17,8 +17,8 @@ command! PackClean  call minpac#clean()
 command! PackStatus call minpac#status()
 
 " Colors
-set bg=dark
-" set bg=light
+" set bg=dark
+set bg=light
 
 "" Solarized
 "" See https://github.com/lifepillar/vimrc/blob/master/vimrc
@@ -40,7 +40,22 @@ set bg=dark
 " colorscheme gruvbox
 
 "" Nord
-colorscheme nord
+" colorscheme nord
+
+"" One Half
+colorscheme onehalflight
+" colorscheme onehalfdark
+
+"" Typewriter
+" colorscheme typewriter
+" colorscheme typewriter-night
+" Change the cursor from block to i-beam in INSERT mode
+let &t_SI = "\e[5 q"
+let &t_EI = "\e[1 q"
+augroup myCmds
+  au!
+  autocmd VimEnter * silent !echo -ne "\e[1 q"
+augroup END
 
 "" Seoul 256
 " seoul256 (unified):

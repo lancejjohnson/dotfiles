@@ -14,7 +14,7 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # zstyle ':completion:*' hosts off
 # Git
-zstyle ':completion:*:*:git:*' script "$HOME/.zsh/completions/git-completion.bash"
+zstyle ':completion:*:*:git:*' script "$HOME/.zsh/completion/git-completion.bash"
 fpath=("$HOME/.zsh" $fpath)
 
 autoload -Uz compinit && compinit
@@ -98,6 +98,7 @@ export PATH="$HOME/.bin:$PATH"
 
 # Ruby
 export DISABLE_SPRING=1
+export PATH="/usr/local/opt/libpq/bin:$PATH"
 
 # Rust
 export PATH="$HOME/.cargo/bin:$PATH"
