@@ -36,4 +36,5 @@ undodir
 _build
 deps
 erl_crash.dump
-
+priv/plts
+.projections.json
