@@ -6,6 +6,8 @@ autoload -U promptinit; promptinit
 # prompt pure
 eval "$(starship init zsh)"
 
+export KITTY_CONFIG_DIRECTORY="$HOME/.config/kitty"
+
 export PATH=/usr/local/sbin:$PATH
 export PATH="$HOME/.cask/bin:$PATH"
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"

@@ -17,8 +17,8 @@ command! PackClean  call minpac#clean()
 command! PackStatus call minpac#status()
 
 " Colors
-" set bg=dark
-set bg=light
+set bg=dark
+" set bg=light
 
 "" Solarized
 "" See https://github.com/lifepillar/vimrc/blob/master/vimrc
@@ -40,10 +40,10 @@ set bg=light
 " colorscheme gruvbox
 
 "" Nord
-" colorscheme nord
+colorscheme nord
 
 "" Iceberg
-colorscheme iceberg
+" colorscheme iceberg
 
 "" One Half
 " colorscheme onehalflight
