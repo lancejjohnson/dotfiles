@@ -24,8 +24,8 @@ set bg=dark
 "" See https://github.com/lifepillar/vimrc/blob/master/vimrc
 " if has('termguicolors') && $COLORTERM ==# 'truecolor'
 "   set termguicolors
-  " let &t_8f = "\<esc>[38;2;%lu;%lu;%lum" " Needed in tmux
-  " let &t_8b = "\<esc>[48;2;%lu;%lu;%lum" " Ditto
+"   let &t_8f = "\<esc>[38;2;%lu;%lu;%lum" " Needed in tmux
+"   let &t_8b = "\<esc>[48;2;%lu;%lu;%lum" " Ditto
 " endif
 
 " colorscheme solarized8
@@ -40,6 +40,7 @@ set bg=dark
 " colorscheme gruvbox
 
 "" Nord
+set termguicolors
 colorscheme nord
 
 "" Iceberg
@@ -51,6 +52,7 @@ colorscheme nord
 
 "" Typewriter
 " colorscheme typewriter
+" set termguicolors
 " colorscheme typewriter-night
 " Change the cursor from block to i-beam in INSERT mode
 " let &t_SI = "\e[5 q"
