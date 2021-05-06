@@ -250,7 +250,7 @@ nnoremap j gj
 nnoremap k gk
 
 " Alternate Esc
-inoremap kj <ESC>
+inoremap kk <ESC>
 
 " Sick of accidentally opening help when hitting esc
 nnoremap <F1> <nop>

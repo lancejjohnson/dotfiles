@@ -61,3 +61,7 @@ alias speedtest="curl http://speedtest.wdc01.softlayer.com/downloads/test100.zip
 # Overrides
 alias vim="nvim"
 alias vi="nvim"
+
+# AWS
+alias awsume=". awsume"
+
