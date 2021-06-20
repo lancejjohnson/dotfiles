@@ -30,7 +30,7 @@ brew "ghi"
 brew "gigalixir"
 brew "git"
 brew "git-lfs"
-brew "gnu-sed", args: ["with-default-names"]
+# brew "gnu-sed", args: ["with-default-names"]
 brew "gnupg"
 brew "graphviz"
 brew "heroku"

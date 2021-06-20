@@ -1,5 +1,6 @@
 # vi: ft=sh
 
+export PATH=/opt/homebrew/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 autoload -U promptinit; promptinit
 # prompt spaceship
@@ -7,6 +8,7 @@ autoload -U promptinit; promptinit
 eval "$(starship init zsh)"
 
 export KITTY_CONFIG_DIRECTORY="$HOME/.config/kitty"
+
 
 export PATH=/usr/local/sbin:$PATH
 export PATH="$HOME/.cask/bin:$PATH"
@@ -110,4 +112,10 @@ if [ -d $HOME/.asdf ]
 then
   source $HOME/.asdf/asdf.sh
   source $HOME/.asdf/completions/asdf.bash
+
+  ## append completions to fpath
+  fpath=(${ASDF_DIR}/completions $fpath)
+  ## initialise completions with ZSH's compinit
+  autoload -Uz compinit
+  compinit
 fi

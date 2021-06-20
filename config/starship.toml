@@ -10,8 +10,6 @@ disabled = true
 disabled = true
 [golang]
 disabled = true
-[haskell]
-disabled = true
 [java]
 disabled = true
 [nodejs]
