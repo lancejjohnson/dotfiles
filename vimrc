@@ -40,7 +40,7 @@ set bg=dark
 " colorscheme gruvbox
 
 "" Nord
-set termguicolors
+" set termguicolors
 colorscheme nord
 
 "" Iceberg

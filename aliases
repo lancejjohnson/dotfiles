@@ -8,6 +8,7 @@ alias v="$VISUAL"
 # Git
 alias ga="git add"
 alias gaa="git add ."
+alias gap="git add -p"
 alias gb="git branch"
 alias gbehind="git rev-list --left-right --count master...HEAD"
 alias gc="git commit"
@@ -65,3 +66,5 @@ alias vi="nvim"
 # AWS
 alias awsume=". awsume"
 
+# Override psql
+alias psql="/usr/pgsql-9.6/bin/psql"
