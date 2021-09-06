@@ -113,6 +113,13 @@ call minpac#add('prettier/vim-prettier')
 " Kotlin
 call minpac#add('udalov/kotlin-vim')
 
+" Language Server Protocol (lsp)
+call minpac#add('neovim/nvim-lspconfig')
+"" Plugins recommended in https://www.mitchellhanberg.com/how-to-set-up-neovim-for-elixir-development/
+" call minpac#add('hrsh7th/nvim-compe')
+" call minpac#add('hrsh7th/vim-vsnip')
+" call minpac#add('hrsh7th/vim-vsnip-integ')
+
 " Markdown
 call minpac#add('tpope/vim-markdown')
 call minpac#add('nelstrom/vim-markdown-folding')
