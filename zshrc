@@ -1,27 +1,38 @@
 # vi: ft=sh
 
-export PATH=/opt/homebrew/bin:$PATH
-export PATH=/usr/local/bin:$PATH
-autoload -U promptinit; promptinit
-# prompt spaceship
+autoload -Uz promptinit; promptinit
+autoload -Uz compinit; compinit
+autoload -Uz bashcompinit; bashcompinit
+
+# Stripe specific
+source ~/.bash_profile
+source ~/.bashrc
+eval "$(nodenv init -)"
+compdef _g stripe-git=git # this line specifically will fix git autocompletion
+compdef _git stripe-git=git # this line specifically will fix git autocompletion
+# end - Strip specific
+
+# Deduplicating $PATH in tmux
+typeset -aU path
+
 # prompt pure
 eval "$(starship init zsh)"
 
 export KITTY_CONFIG_DIRECTORY="$HOME/.config/kitty"
 
-
+export PATH=/opt/homebrew/bin:$PATH
+export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH="$HOME/.cask/bin:$PATH"
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.bin:$PATH"
 
 
 # zstyle ':completion:*' hosts off
 # Git
 zstyle ':completion:*:*:git:*' script "$HOME/.zsh/completion/git-completion.bash"
 fpath=("$HOME/.zsh" $fpath)
-
-autoload -Uz compinit && compinit
 
 # Use "emacs" mode
 # bindkey -e
@@ -70,6 +81,9 @@ _load_settings "$HOME/.zsh/configs"
 # End - Pulled from thoughtbot dotfiles
 ################################################################################
 
+# Git
+export GIT_EDITOR=nvim
+
 # Golang
 # if [ -d $HOME/Code/go ]
 # then
@@ -90,15 +104,11 @@ _load_settings "$HOME/.zsh/configs"
 export KERL_BUILD_DOCS="yes"
 
 # Postgres
-export PGDATA='/usr/local/var/postgres'
-export PGHOST=localhost
+# export PGDATA='/usr/local/var/postgres'
+# export PGHOST=localhost
 
 # FZF
 export FZF_DEFAULT_COMMAND='rg --files'
-
-source "$HOME/.aliases"
-
-export PATH="$HOME/.bin:$PATH"
 
 # Ruby
 export DISABLE_SPRING=1
@@ -106,6 +116,11 @@ export PATH="/usr/local/opt/libpq/bin:$PATH"
 
 # Rust
 export PATH="$HOME/.cargo/bin:$PATH"
+
+
+source "$HOME/.aliases"
+
+complete -F _todo t
 
 # asdf (readme insists this be after path export)
 if [ -d $HOME/.asdf ]

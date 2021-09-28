@@ -17,16 +17,16 @@ command! PackClean  call minpac#clean()
 command! PackStatus call minpac#status()
 
 " Colors
-set bg=dark
-" set bg=light
+" set bg=dark
+set bg=light
 
 "" Solarized
 "" See https://github.com/lifepillar/vimrc/blob/master/vimrc
-" if has('termguicolors') && $COLORTERM ==# 'truecolor'
-"   set termguicolors
-"   let &t_8f = "\<esc>[38;2;%lu;%lu;%lum" " Needed in tmux
-"   let &t_8b = "\<esc>[48;2;%lu;%lu;%lum" " Ditto
-" endif
+if has('termguicolors') && $COLORTERM ==# 'truecolor'
+  set termguicolors
+  let &t_8f = "\<esc>[38;2;%lu;%lu;%lum" " Needed in tmux
+  let &t_8b = "\<esc>[48;2;%lu;%lu;%lum" " Ditto
+endif
 
 " colorscheme solarized8
 " colorscheme solarized8_high
@@ -34,14 +34,18 @@ set bg=dark
 " colorscheme one
 
 "" Gruvbox
-" let g:gruvbox_bold=0
+let g:gruvbox_bold=0
 " let g:gruvbox_contrast_light="hard"
-" let g:gruvbox_contrast_dark="medium"
-" colorscheme gruvbox
+let g:gruvbox_contrast_dark="medium"
+colorscheme gruvbox
 
 "" Nord
 " set termguicolors
-colorscheme nord
+" colorscheme nord
+
+"" Selenized
+" set termguicolors
+" colorscheme selenized
 
 "" Iceberg
 " colorscheme iceberg
@@ -470,7 +474,7 @@ nmap ga <Plug>(EasyAlign)
 vmap <Leader><Bslash> :EasyAlign*<Bar><Enter>
 
 " gutentags
-" let g:gutentags_file_list_command = 'rg --files'
+let g:gutentags_file_list_command = 'rg --files'
 
 " airline
 " let g:airline_theme = 'solarized'
