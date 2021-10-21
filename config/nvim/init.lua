@@ -32,6 +32,7 @@ global.hidden = true
 -- buffer settings
 buffer.autoindent = true
 buffer.expandtab = true
+buffer.filetype = "on"
 buffer.shiftwidth = 2
 buffer.softtabstop = 2
 buffer.spelllang = "en_us"
