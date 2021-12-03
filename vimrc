@@ -4,21 +4,9 @@ scriptencoding utf-8
 filetype plugin indent on
 syntax on
 
-" Packages
-packadd minpac
-source ~/.config/nvim/packages.vim
-
-" Define user commands for updating/cleaning the plugins.
-" Each of them calls PackInit() to load minpac and register
-" the information of plugins, then performs the task.
-" (See https://github.com/k-takata/minpac/blob/master/README.md)
-command! PackUpdate call minpac#update()
-command! PackClean  call minpac#clean()
-command! PackStatus call minpac#status()
-
 " Colors
 " set bg=dark
-set bg=light
+" set bg=light
 
 "" Solarized
 "" See https://github.com/lifepillar/vimrc/blob/master/vimrc
@@ -35,9 +23,10 @@ endif
 
 "" Gruvbox
 let g:gruvbox_bold=0
-" let g:gruvbox_contrast_light="hard"
+let g:gruvbox_contrast_light="hard"
 let g:gruvbox_contrast_dark="medium"
 colorscheme gruvbox
+set bg=light
 
 "" Nord
 " set termguicolors
