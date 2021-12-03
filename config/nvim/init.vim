@@ -38,6 +38,7 @@ set undofile
 set undolevels=1000
 set undoreload=10000
 set visualbell
+set winwidth=105
 "
 " Kill the arrow keys in normal mode to force movement keys
 nnoremap <up> <nop>
