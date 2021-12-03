@@ -4,11 +4,11 @@ return require('packer').startup(function()
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
-  use 'vim-test/vim-test'
   use 'jremmen/vim-ripgrep'
   use 'junegunn/fzf'
   use 'junegunn/fzf.vim'
   use 'junegunn/vim-easy-align'
+  use 'kana/vim-smartinput'
   use 'ludovicchabant/vim-gutentags'
   use 'ntpeters/vim-better-whitespace'
   use 'pbrisbin/vim-mkdir'
@@ -26,6 +26,8 @@ return require('packer').startup(function()
   use 'tpope/vim-surround'
   use 'tpope/vim-unimpaired'
   use 'tpope/vim-vinegar'
+  use 'vim-test/vim-test'
+  use {'chrisbra/matchit', opt = true}
 
   -- Colors
   use {'arcticicestudio/nord-vim', opt = true}

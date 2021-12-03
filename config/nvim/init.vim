@@ -38,7 +38,8 @@ set undofile
 set undolevels=1000
 set undoreload=10000
 set visualbell
-"
+set winwidth=105
+
 " Kill the arrow keys in normal mode to force movement keys
 nnoremap <up> <nop>
 nnoremap <down> <nop>
@@ -78,7 +79,7 @@ nmap <Leader>P "+P
 vmap <Leader>p "+p
 vmap <Leader>P "+P
 
-# Search
+" Search
 nnoremap \ :Rg<Space>
 " Search project for word under cursor
 map <leader>\ :Rg <C-R><C-W><CR>
@@ -221,3 +222,7 @@ function! InsertTabWrapper()
 endfunction
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-n>
+
+lua <<EOF
+print('hello from lua')
+EOF
