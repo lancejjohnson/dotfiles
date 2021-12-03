@@ -5,12 +5,15 @@ autoload -Uz compinit; compinit
 autoload -Uz bashcompinit; bashcompinit
 
 # Stripe specific
-source ~/.bash_profile
-source ~/.bashrc
-eval "$(nodenv init -)"
-compdef _g stripe-git=git # this line specifically will fix git autocompletion
-compdef _git stripe-git=git # this line specifically will fix git autocompletion
-# end - Strip specific
+if [ -d "~/stripe" ]
+then
+  [ -f "~/.bash_profile" ] && source ~/.bash_profile
+  [ -f "~/.bashrc" ] && source ~/.bashrc
+  eval "$(nodenv init -)"
+  compdef _g stripe-git=git # this line specifically will fix git autocompletion
+  compdef _git stripe-git=git # this line specifically will fix git autocompletion
+fi
+# end - Stripe specific
 
 # Deduplicating $PATH in tmux
 typeset -aU path
@@ -20,13 +23,15 @@ eval "$(starship init zsh)"
 
 export KITTY_CONFIG_DIRECTORY="$HOME/.config/kitty"
 
-export PATH=/opt/homebrew/bin:$PATH
+export PATH="/opt/homebrew/bin:$PATH"
+export PATH="/opt/homebrew/sbin:$PATH"
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH="$HOME/.cask/bin:$PATH"
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.bin:$PATH"
+export PATH=/etc/paths.d:$PATH
 
 
 # zstyle ':completion:*' hosts off
