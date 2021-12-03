@@ -78,7 +78,7 @@ nmap <Leader>P "+P
 vmap <Leader>p "+p
 vmap <Leader>P "+P
 
-# Search
+" Search
 nnoremap \ :Rg<Space>
 " Search project for word under cursor
 map <leader>\ :Rg <C-R><C-W><CR>
