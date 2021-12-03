@@ -66,9 +66,6 @@ alias vi="nvim"
 # AWS
 alias awsume=". awsume"
 
-# Override psql
-alias psql="/usr/pgsql-9.6/bin/psql"
-
 # todo-txt
 alias td="todo.sh"
 alias todo="todo.sh"
