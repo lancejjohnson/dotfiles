@@ -1,7 +1,7 @@
 lua require('plugins')
 scriptencoding utf-8
 
-filetype plugin indent on " Auto-detect file type, load plugin and indent files for that type
+filetype plugin indent on
 syntax on
 
 runtime ftplugin/man.vim
@@ -35,16 +35,10 @@ set splitright
 set softtabstop=2
 set tabstop=2
 set undofile
-set undolevels=1000 " max changes that can be undone
-set undoreload=10000 "max lines to save for undo on a buffer reload
+set undolevels=1000
+set undoreload=10000
 set visualbell
-
-
-" Turn off highlighting after search
-map <C-n> :nohl<cr>
-" Search project for word under cursor
-map <leader>\ :Rg <C-R><C-W><CR>
-
+"
 " Kill the arrow keys in normal mode to force movement keys
 nnoremap <up> <nop>
 nnoremap <down> <nop>
@@ -56,13 +50,21 @@ inoremap <left> <nop>
 inoremap <right> <nop>
 nnoremap j gj
 nnoremap k gk
-
-" Alternate escape
-inoremap kk <ESC>
-
+"
 " Sick of accidentally opening help when hitting esc
 nnoremap <F1> <nop>
 inoremap <F1> <nop>
+
+" Turn off highlighting after search
+map <C-n> :nohl<cr>
+" Search project for word under cursor
+map <leader>\ :Rg <C-R><C-W><CR>
+" Alternate escape
+inoremap kk <ESC>
+
+" Make closing a window easier
+nnoremap <Leader>c <c-w>c
+nnoremap <Leader>q :cclose<cr>
 
 " Make saving easier
 nnoremap <Leader>w :w<CR>
@@ -76,7 +78,10 @@ nmap <Leader>P "+P
 vmap <Leader>p "+p
 vmap <Leader>P "+P
 
+# Search
 nnoremap \ :Rg<Space>
+" Search project for word under cursor
+map <leader>\ :Rg <C-R><C-W><CR>
 
 " Indent the whole document and return cursor to staring position
 map <Leader>= gg=G''
@@ -86,10 +91,6 @@ nnoremap gj <c-w>j
 nnoremap gk <c-w>k
 nnoremap gh <c-w>h
 nnoremap gl <c-w>l
-
-" Make closing a window easier
-nnoremap <Leader>c <c-w>c
-nnoremap <Leader>q :cclose<cr>
 
 " Make resizing windows easier
 if bufwinnr(1)
@@ -105,41 +106,17 @@ imap <S-CR> <C-o><S-o>
 " Autoclose html tags with </
 iabbrev </ </<C-X><C-O>
 
-" MULTIPURPOSE TAB KEY - Stolen shamelessly from Gary Bernhardt
-" Indent if we're at the beginning of a line. Else, do completion.
-function! InsertTabWrapper()
-    let col = col('.') - 1
-    if !col || getline('.')[col - 1] !~ '\k'
-        return "\<tab>"
-    else
-        return "\<c-p>"
-    endif
-endfunction
-inoremap <tab> <c-r>=InsertTabWrapper()<cr>
-inoremap <s-tab> <c-n>
-
 " FZF
 nnoremap <leader>f :<C-u>FZF<CR>
 
 " Commands
 com! FormatJSON %!jq .
 
+" Ctags
+let g:gutentags_file_list_command = 'rg --files'
+
 " Insert a hash rocket
 imap <c-l> <space>=><space>
-
-function! OpenInOtherEditor(editor)
-  let file = @%
-  exec(':!'.a:editor.' '.file)
-endfunction
-
-command! AtomThis :call OpenInOtherEditor('atom')
-command! SublimeThis :call OpenInOtherEditor('subl')
-command! CodeThis :call OpenInOtherEditor('code')
-
-function! CopyFilePathToClipboard()
-  let @+ = expand("%")
-endfunction
-nnoremap <leader>r :call CopyFilePathToClipboard()<CR>
 
 " vim-test
 " let test#strategy = "basic"
@@ -151,13 +128,10 @@ nmap <silent> <leader>a :TestSuite<CR>
 nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
 
-
 " Elixir
 nmap <silent> <leader>m :MixFormat<CR>
 imap <c-p> \|><space>
 imap <c-f> fn<space>-><space>end
-
-let g:gutentags_file_list_command = 'rg --files'
 
 " golang
 let g:go_fmt_command = "goimports"
@@ -181,25 +155,12 @@ nmap ga <Plug>(EasyAlign)
 "" Align GitHub-flavored Markdown tables
 vmap <Leader><Bslash> :EasyAlign*<Bar><Enter>
 
-" Line numbers
-function! ToggleRelativeNumber()
-  if(&relativenumber == 1)
-    set norelativenumber
-  else
-    set relativenumber
-  endif
-endfunc
-command! ToggleRelativeNumber call ToggleRelativeNumber()
-nmap <leader>3 :ToggleRelativeNumber<CR>
-
-"White space
+" White space
 nmap <leader>S :StripWhitespace<CR>
 highlight ExtraWhitespace ctermbg=61 guibg=#6c71c4
 
 " Turn off highlighting after search
 map <C-n> :nohl<cr>
-" Search project for word under cursor
-map <leader>\ :Rg <C-R><C-W><CR>
 
 augroup vimrcEx
   " Clear all autocms in the group
@@ -225,3 +186,38 @@ augroup vimrcEx
   "   \ set fileformat=unix
 augroup END
 
+function! OpenInOtherEditor(editor)
+  let file = @%
+  exec(':!'.a:editor.' '.file)
+endfunction
+command! AtomThis :call OpenInOtherEditor('atom')
+command! SublimeThis :call OpenInOtherEditor('subl')
+command! CodeThis :call OpenInOtherEditor('code')
+
+function! CopyFilePathToClipboard()
+  let @+ = expand("%")
+endfunction
+nnoremap <leader>r :call CopyFilePathToClipboard()<CR>
+
+function! ToggleRelativeNumber()
+  if(&relativenumber == 1)
+    set norelativenumber
+  else
+    set relativenumber
+  endif
+endfunc
+command! ToggleRelativeNumber call ToggleRelativeNumber()
+nmap <leader>3 :ToggleRelativeNumber<CR>
+
+" MULTIPURPOSE TAB KEY - Stolen shamelessly from Gary Bernhardt
+" Indent if we're at the beginning of a line. Else, do completion.
+function! InsertTabWrapper()
+    let col = col('.') - 1
+    if !col || getline('.')[col - 1] !~ '\k'
+        return "\<tab>"
+    else
+        return "\<c-p>"
+    endif
+endfunction
+inoremap <tab> <c-r>=InsertTabWrapper()<cr>
+inoremap <s-tab> <c-n>
