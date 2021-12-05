@@ -20,3 +20,10 @@ Use stow to link your dotfiles
 Preview any changes without making them.
 
     stow -n 
+
+## Neovim
+
+### Packer
+
+To find the location of installed packer packages, look at
+`~/.config/nvim/plugin/packer_compiled.lua`.
