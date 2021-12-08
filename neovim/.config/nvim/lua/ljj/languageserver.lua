@@ -116,11 +116,11 @@ for server, config in pairs(servers) do
       "--enable-all-experimental-lsp-features",
       "--enable-experimental-lsp-document-formatting-rubyfmt"
     }
-  elseif lsp_server == 'solargraph' and vim.fn.glob("scripts/bin/typecheck") ~= "" then
+  elseif server == 'solargraph' and vim.fn.glob("scripts/bin/typecheck") ~= "" then
     config.filetypes = {}
-  elseif lsp_server == 'solargraph' and vim.fn.glob("sorbet") ~= "" then
+  elseif server == 'solargraph' and vim.fn.glob("sorbet") ~= "" then
     config.filestypes = {}
-  elseif lsp_server == 'sorbet' then
+  elseif server == 'sorbet' then
     local local_sorbet_build = vim.fn.glob(vim.fn.environ().HOME.."/stripe/sorbet/bazel-bin/main/sorbet")
     if local_sorbet_build ~= "" then
       -- prefer a local build of sorbet if it's available
@@ -134,7 +134,7 @@ for server, config in pairs(servers) do
     end
   end
 
-  lspconfig[lsp_server].setup(config)
+  lspconfig[server].setup(config)
 end
 
 -- require('lspfuzzy').setup({})
