@@ -59,6 +59,7 @@ return require('packer').startup(function()
 
   -- Language Server Protocol
   use {'neovim/nvim-lspconfig'}
+  use {'williamboman/nvim-lsp-installer'}
 
   -- Ruby
   use {'tpope/vim-bundler'}

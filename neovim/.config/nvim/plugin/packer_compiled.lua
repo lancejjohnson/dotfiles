@@ -102,6 +102,11 @@ _G.packer_plugins = {
     path = "/Users/lance/.local/share/nvim/site/pack/packer/opt/nord-vim",
     url = "https://github.com/arcticicestudio/nord-vim"
   },
+  ["nvim-lsp-installer"] = {
+    loaded = true,
+    path = "/Users/lance/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
+    url = "https://github.com/williamboman/nvim-lsp-installer"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/Users/lance/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
