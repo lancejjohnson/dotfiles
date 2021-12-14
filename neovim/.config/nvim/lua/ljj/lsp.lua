@@ -1,4 +1,10 @@
+--[[
+Resources consulted:
+https://github.com/ThePrimeagen/.dotfiles/blob/master/nvim/.config/nvim/plugin/lsp.vim
+https://github.com/kabouzeid/dotfiles/blob/40495c7e47e6864ecc87ea44d585a5087cb0173c/nvim/lua/lsp-settings.lua
+]]--
 local M = {}
+
 -- from lsp-installer: https://github.com/williamboman/nvim-lsp-installer/wiki/Advanced-Configuration#overriding-the-default-lsp-server-options
 local lsp_installer = require "nvim-lsp-installer"
 lsp_installer.settings({ log_level = vim.log.levels.DEBUG })
@@ -60,8 +66,11 @@ local on_attach = function(client, bufnr)
   buf_set_keymap("n", "<Leader>vll", "<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>", opts)
   buf_set_keymap("n", "<leader>gs", "<cmd>lua vim.lsp.buf.document_symbol()<cr>", opts)
   buf_set_keymap("n", "<leader>gw", "<cmd>lua vim.lsp.buf.workspace_symbol()<cr>", opts)
-  buf_set_keymap("n", "[d", "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>", opts)
-  buf_set_keymap("n", "]d", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>", opts)
+  buf_set_keymap("n", "[d", "<cmd>lua vim.diagnostic.get_next()<CR>", opts)
+  buf_set_keymap("n", "]d", "<cmd>lua vim.diagnostic.get_prev()<CR>", opts)
+  buf_set_keymap("n", "<leader>dh", "<cmd>lua vim.diagnostic.hide()<CR>", opts)
+  buf_set_keymap("n", "<leader>ds", "<cmd>lua vim.diagnostic.show()<CR>", opts)
+  buf_set_keymap("n", "<leader>dq", "<cmd>lua vim.diagnostic.setqflist()<CR>", opts)
 
   -- vim already has builtin docs
   if vim.bo.ft ~= "vim" then buf_set_keymap("n", "K", "<Cmd>lua vim.lsp.buf.hover()<CR>", opts) end
@@ -86,9 +95,9 @@ local on_attach = function(client, bufnr)
   --   ]]
   -- end
 
-  if client.server_capabilities.colorProvider then
-    require("lsp-documentcolors").buf_attach(bufnr, { single_column = true })
-  end
+  -- if client.server_capabilities.colorProvider then
+  --   require("lsp-documentcolors").buf_attach(bufnr, { single_column = true })
+  -- end
 end
 
 -- config that activates keymaps and enables snippet support
@@ -188,7 +197,6 @@ end)
 -- UI just like `:LspInfo` to show which capabilities each attached server has
 vim.api.nvim_command("command! LspCapabilities lua require'lsp-capabilities'()")
 vim.api.nvim_command("command! LspInspect lua print(vim.inspect(vim.lsp.buf_get_clients()))")
-
 
 -- require('lspfuzzy').setup({})
 
