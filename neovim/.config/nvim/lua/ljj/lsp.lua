@@ -47,30 +47,40 @@ local on_attach = function(client, bufnr)
   buf_set_option("omnifunc", "v:lua.vim.lsp.omnifunc")
 
   -- Mappings.
+  -- These keymappings are inspired by [Follow my leader](http://vimcasts.org/blog/2014/02/follow-my-leader/) and Tim Pope's unimpaired.
+  -- I've listed my mnemonics after the mapping.
   local opts = { noremap = true, silent = true }
-  buf_set_keymap("n", "<C-]>", "<Cmd>lua vim.lsp.buf.definition()<CR>", opts)
-  buf_set_keymap("n", "<Leader>ca", "<Cmd>lua vim.lsp.buf.code_action()<CR>", opts)
-  buf_set_keymap("n", "<Leader>ff", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
-  buf_set_keymap("n", "<Leader>fr", "<cmd>lua vim.lsp.buf.range_formatting()<CR>", opts)
-  buf_set_keymap("n", "<Leader>gD", "<Cmd>lua vim.lsp.buf.declaration()<CR>", opts)
-  buf_set_keymap("n", "<Leader>gd", "<Cmd>lua vim.lsp.buf.definition()<CR>", opts)
-  buf_set_keymap("n", "<Leader>gi", "<Cmd>lua vim.lsp.buf.incoming_calls()<CR>", opts)
-  buf_set_keymap("n", "<Leader>gk", "<Cmd>lua vim.lsp.buf.hover()<CR>", opts)
-  buf_set_keymap("n", "<Leader>go", "<Cmd>lua vim.lsp.buf.outgoing_calls()<CR>", opts)
-  buf_set_keymap("n", "<Leader>gp", "<Cmd>lua vim.lsp.buf.implementation()<CR>", opts)
-  buf_set_keymap("n", "<Leader>gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
-  buf_set_keymap("n", "<Leader>gt", "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts)
-  buf_set_keymap("n", "<Leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
-  buf_set_keymap("n", "<Leader>sh", "<Cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
-  buf_set_keymap("n", "<Leader>vd", "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>", opts)
-  buf_set_keymap("n", "<Leader>vll", "<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>", opts)
-  buf_set_keymap("n", "<leader>gs", "<cmd>lua vim.lsp.buf.document_symbol()<cr>", opts)
-  buf_set_keymap("n", "<leader>gw", "<cmd>lua vim.lsp.buf.workspace_symbol()<cr>", opts)
+  -- Doing things to the buffer
+  buf_set_keymap("n", "cdf", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)                     -- c[hange]d[ocument]f[ormatting]
+  buf_set_keymap("n", "cdr", "<cmd>lua vim.lsp.buf.range_formatting()<CR>", opts)               -- c[hange]d[ocument]r[ange formatting]
+  buf_set_keymap("n", "cdn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)                         -- c[hange]d[ocument]n[ame]
+
+  -- Go places via the server
+  -- buf_set_keymap("n", "<C-]>", "<Cmd>lua vim.lsp.buf.definition()<CR>", opts)
+  buf_set_keymap("n", "csn",  "<Cmd>lua vim.lsp.buf.definition()<CR>", opts)                    -- c[hange to]s[erver][defi]n[ition]
+  buf_set_keymap("n", "csl",  "<Cmd>lua vim.lsp.buf.declaration()<CR>", opts)                   -- c[hange to]s[erver][dec]l[aration]
+  buf_set_keymap("n", "csp",  "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts)               -- c[hance to]s[erver][ty]p[e definition]
+
+  -- Displaying things from the server in the Quickfix window
+  buf_set_keymap("n", "dym", "<Cmd>lua vim.lsp.buf.implementation()<CR>", opts)                 -- d[isplay]y[our][i]m[plemnation]
+  buf_set_keymap("n", "dyi", "<Cmd>lua vim.lsp.buf.incoming_calls()<CR>", opts)                 -- d[isplay]y[our]i[ncoming calls]
+  buf_set_keymap("n", "dyo", "<Cmd>lua vim.lsp.buf.outgoing_calls()<CR>", opts)                 -- d[isplay]y[our]o[utgoing calls]
+  buf_set_keymap("n", "dyr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)                     -- d[isplay]y[our]r[eferences]
+  buf_set_keymap("n", "dyw", "<cmd>lua vim.lsp.buf.workspace_symbol()<cr>", opts)               -- d[isplay]y[our]w[orkspace symbols]
+  buf_set_keymap("n", "dyd", "<cmd>lua vim.lsp.buf.document_symbol()<cr>", opts)                -- d[isplay]y[our]d[ocument symbols]
+
+  -- Displaying things in the buffer
+  buf_set_keymap("n", "dya", "<Cmd>lua vim.lsp.buf.code_action()<CR>", opts)                    -- d[isplay]y[our code]a[ctions]
+  buf_set_keymap("n", "dyh", "<Cmd>lua vim.lsp.buf.hover()<CR>", opts)                          -- d[isplay]y[our]h[over message]
+  buf_set_keymap("n", "dys", "<Cmd>lua vim.lsp.buf.signature_help()<CR>", opts)                 -- d[isplay]y[our]s[signature help]
+
+  -- Display diagnostic information
   buf_set_keymap("n", "[d", "<cmd>lua vim.diagnostic.get_next()<CR>", opts)
   buf_set_keymap("n", "]d", "<cmd>lua vim.diagnostic.get_prev()<CR>", opts)
-  buf_set_keymap("n", "<leader>dh", "<cmd>lua vim.diagnostic.hide()<CR>", opts)
-  buf_set_keymap("n", "<leader>ds", "<cmd>lua vim.diagnostic.show()<CR>", opts)
-  buf_set_keymap("n", "<leader>dq", "<cmd>lua vim.diagnostic.setqflist()<CR>", opts)
+  buf_set_keymap("n", "cdl", "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>", opts)   -- c[heck]d[iagnostics]l[ine]
+  buf_set_keymap("n", "cdh", "<cmd>lua vim.diagnostic.hide()<CR>", opts)                        -- c[heck]d[iagnostics]h[ide]
+  buf_set_keymap("n", "cds", "<cmd>lua vim.diagnostic.show()<CR>", opts)                        -- c[heck]d[iagnostics]s[how]
+  buf_set_keymap("n", "cdq", "<cmd>lua vim.diagnostic.setqflist()<CR>", opts)                   -- c[heck]d[iagnostics]q[uickfix list]
 
   -- vim already has builtin docs
   if vim.bo.ft ~= "vim" then buf_set_keymap("n", "K", "<Cmd>lua vim.lsp.buf.hover()<CR>", opts) end
