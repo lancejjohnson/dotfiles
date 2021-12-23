@@ -9,6 +9,7 @@ return require('packer').startup(function()
   use 'junegunn/fzf'
   use 'junegunn/fzf.vim'
   use 'junegunn/vim-easy-align'
+  use 'kana/vim-smartinput'
   use 'ludovicchabant/vim-gutentags'
   use 'ntpeters/vim-better-whitespace'
   use 'pbrisbin/vim-mkdir'
