@@ -77,10 +77,12 @@ local on_attach = function(client, bufnr)
   -- Display diagnostic information
   buf_set_keymap("n", "[d", "<cmd>lua vim.diagnostic.get_next()<CR>", opts)
   buf_set_keymap("n", "]d", "<cmd>lua vim.diagnostic.get_prev()<CR>", opts)
-  buf_set_keymap("n", "cdl", "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>", opts)   -- c[heck]d[iagnostics]l[ine]
+  buf_set_keymap("n", "cdd", "<cmd>lua vim.diagnostic.disable()<CR>", opts)                     -- c[heck]d[iagnostics]d[isable]
+  buf_set_keymap("n", "cde", "<cmd>lua vim.diagnostic.enable()<CR>", opts)                      -- c[heck]d[iagnostics]e[nable]
   buf_set_keymap("n", "cdh", "<cmd>lua vim.diagnostic.hide()<CR>", opts)                        -- c[heck]d[iagnostics]h[ide]
-  buf_set_keymap("n", "cds", "<cmd>lua vim.diagnostic.show()<CR>", opts)                        -- c[heck]d[iagnostics]s[how]
+  buf_set_keymap("n", "cdl", "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>", opts)   -- c[heck]d[iagnostics]l[ine]
   buf_set_keymap("n", "cdq", "<cmd>lua vim.diagnostic.setqflist()<CR>", opts)                   -- c[heck]d[iagnostics]q[uickfix list]
+  buf_set_keymap("n", "cds", "<cmd>lua vim.diagnostic.show()<CR>", opts)                        -- c[heck]d[iagnostics]s[how]
 
   -- vim already has builtin docs
   if vim.bo.ft ~= "vim" then buf_set_keymap("n", "K", "<Cmd>lua vim.lsp.buf.hover()<CR>", opts) end

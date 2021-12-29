@@ -174,7 +174,7 @@ augroup vimrcEx
   autocmd FileType elixir,ruby,eruby,yaml set iskeyword+=?
   autocmd FileType elixir,ruby,eruby,yaml set iskeyword+=!
   autocmd FileType elixir,ruby set nomodeline
-  autocmd FileType ruby,haml,eruby,yaml,html,slim,javascript,sass,cucumber,elixir,clojure,python autocmd BufWritePre <buffer> StripWhitespace
+  autocmd FileType rust,ruby,haml,eruby,yaml,html,slim,javascript,sass,cucumber,elixir,clojure,python autocmd BufWritePre <buffer> StripWhitespace
   autocmd! BufNewFile,BufRead *.md set ft=markdown textwidth=80
   autocmd VimResized * :wincmd =
   " autocmd BufNewFile,BufRead *.py
