@@ -299,6 +299,11 @@ _G.packer_plugins = {
     path = "/Users/lance/.local/share/nvim/site/pack/packer/start/vim-slim",
     url = "https://github.com/slim-template/vim-slim"
   },
+  ["vim-smartinput"] = {
+    loaded = true,
+    path = "/Users/lance/.local/share/nvim/site/pack/packer/start/vim-smartinput",
+    url = "https://github.com/kana/vim-smartinput"
+  },
   ["vim-solarized8"] = {
     loaded = false,
     needs_bufread = false,
