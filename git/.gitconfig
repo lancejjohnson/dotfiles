@@ -25,8 +25,8 @@
 	user = lancejjohnson
 [ghi]
 	token = !security find-internet-password -a lancejjohnson -s github.com -l 'ghi token' -w
-[init]
-  templatedir = ~/.git_template
+; [init]
+  ; templatedir = ~/.git_template
 [mergetool "Kaleidoscope"]
 	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
 	trustexitcode = true

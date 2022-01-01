@@ -102,6 +102,11 @@ _G.packer_plugins = {
     path = "/Users/lance/.local/share/nvim/site/pack/packer/opt/nord-vim",
     url = "https://github.com/arcticicestudio/nord-vim"
   },
+  ["nvim-lsp-installer"] = {
+    loaded = true,
+    path = "/Users/lance/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
+    url = "https://github.com/williamboman/nvim-lsp-installer"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/Users/lance/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
@@ -293,6 +298,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/lance/.local/share/nvim/site/pack/packer/start/vim-slim",
     url = "https://github.com/slim-template/vim-slim"
+  },
+  ["vim-smartinput"] = {
+    loaded = true,
+    path = "/Users/lance/.local/share/nvim/site/pack/packer/start/vim-smartinput",
+    url = "https://github.com/kana/vim-smartinput"
   },
   ["vim-solarized8"] = {
     loaded = false,

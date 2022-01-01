@@ -9,6 +9,7 @@ return require('packer').startup(function()
   use 'junegunn/fzf'
   use 'junegunn/fzf.vim'
   use 'junegunn/vim-easy-align'
+  use 'kana/vim-smartinput'
   use 'ludovicchabant/vim-gutentags'
   use 'ntpeters/vim-better-whitespace'
   use 'pbrisbin/vim-mkdir'
@@ -59,6 +60,7 @@ return require('packer').startup(function()
 
   -- Language Server Protocol
   use {'neovim/nvim-lspconfig'}
+  use {'williamboman/nvim-lsp-installer'}
 
   -- Ruby
   use {'tpope/vim-bundler'}
