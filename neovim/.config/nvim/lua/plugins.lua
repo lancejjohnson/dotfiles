@@ -37,6 +37,17 @@ return require('packer').startup(function()
   use {'morhetz/gruvbox', opt = true}
   use {'nightsense/snow', opt = true}
 
+  -- Completion
+  use {'hrsh7th/nvim-cmp'}
+  use {'hrsh7th/cmp-buffer'}
+  use {'hrsh7th/cmp-cmdline'}
+  use {'hrsh7th/cmp-nvim-lsp'}
+  use {'hrsh7th/cmp-nvim-lsp-document-symbol'}
+  use {'hrsh7th/cmp-nvim-lua'}
+  use {'hrsh7th/cmp-path'}
+  use {'saadparwaiz1/cmp_luasnip'}
+  use {'Saecki/crates.nvim'}
+
   -- Custom textobjects
   use {'kana/vim-textobj-user'} -- Must precede other textobj plugins
   use {'kana/vim-textobj-entire'}
@@ -74,4 +85,7 @@ return require('packer').startup(function()
 
   -- Rust
   use {'rust-lang/rust.vim'}
+
+  -- Snippets
+  use {'L3MON4D3/LuaSnip'}
 end)
