@@ -46,7 +46,6 @@ return require('packer').startup(function()
   use {'hrsh7th/cmp-nvim-lua'}
   use {'hrsh7th/cmp-path'}
   use {'saadparwaiz1/cmp_luasnip'}
-  use {'Saecki/crates.nvim'}
 
   -- Custom textobjects
   use {'kana/vim-textobj-user'} -- Must precede other textobj plugins
