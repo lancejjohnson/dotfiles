@@ -5,10 +5,10 @@ autoload -Uz compinit; compinit
 autoload -Uz bashcompinit; bashcompinit
 
 # Stripe specific
-if [ -d "~/stripe" ]
+if [ -d ~/stripe ]
 then
-  [ -f "~/.bash_profile" ] && source ~/.bash_profile
-  [ -f "~/.bashrc" ] && source ~/.bashrc
+  [ -f ~/.bash_profile ] && source ~/.bash_profile
+  [ -f ~/.bashrc ] && source ~/.bashrc
   eval "$(nodenv init -)"
   compdef _g stripe-git=git # this line specifically will fix git autocompletion
   compdef _git stripe-git=git # this line specifically will fix git autocompletion
