@@ -13,6 +13,7 @@ cmp.setup({
   snippet = {
     -- REQUIRED - you must specify a snippet engine
     expand = function(args)
+      print("Hi there, I'm loading the completion stuff")
       require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
     end,
   },
@@ -30,12 +31,16 @@ cmp.setup({
 
     ["<Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
+        print("cmp visible")
         cmp.select_next_item()
       elseif luasnip.expand_or_jumpable() then
+        print("luasnip.expand_or_jumpable")
         luasnip.expand_or_jump()
       elseif has_words_before() then
+        print("has_words_before")
         cmp.complete()
       else
+        print("fallback")
         fallback()
       end
     end, { "i", "s" }),
@@ -55,10 +60,18 @@ cmp.setup({
     { name = 'nvim_lsp' },
     { name = 'luasnip' },
     { name = 'nvim_lsp_document_symbol' },
-  }, {
+  },
+
+  {
     { name = 'buffer' },
   })
 })
+
+cmp.setup {
+  completion = {
+    autocomplete = false
+  }
+}
 
 -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
 cmp.setup.cmdline('/', {
