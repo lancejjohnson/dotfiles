@@ -147,6 +147,11 @@ _G.packer_plugins = {
     path = "/Users/lance/.local/share/nvim/site/pack/packer/opt/nord-vim",
     url = "https://github.com/arcticicestudio/nord-vim"
   },
+  ["nvim-autopairs"] = {
+    loaded = true,
+    path = "/Users/lance/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
+    url = "https://github.com/windwp/nvim-autopairs"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/Users/lance/.local/share/nvim/site/pack/packer/start/nvim-cmp",
@@ -273,11 +278,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/lance/.local/share/nvim/site/pack/packer/start/vim-liquid",
     url = "https://github.com/tpope/vim-liquid"
-  },
-  ["vim-matchup"] = {
-    loaded = true,
-    path = "/Users/lance/.local/share/nvim/site/pack/packer/start/vim-matchup",
-    url = "https://github.com/andymass/vim-matchup"
   },
   ["vim-mix-format"] = {
     loaded = true,

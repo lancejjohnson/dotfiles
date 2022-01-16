@@ -27,7 +27,8 @@ return require('packer').startup(function()
   use 'tpope/vim-surround'
   use 'tpope/vim-unimpaired'
   use 'tpope/vim-vinegar'
-  use 'andymass/vim-matchup'
+  -- use 'andymass/vim-matchup'
+  use 'windwp/nvim-autopairs'
 
   -- Colors
   use {'arcticicestudio/nord-vim', opt = true}
