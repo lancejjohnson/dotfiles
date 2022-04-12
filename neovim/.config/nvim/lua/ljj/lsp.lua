@@ -148,23 +148,11 @@ lsp_installer.on_server_ready(function(server)
         client.notify("workspace/didChangeConfiguration")
         return true
       end
-    elseif server.name == 'solargraph' and vim.fn.glob("scripts/bin/typecheck") ~= "" then
-      config.filetypes = {}
-    elseif server.name == 'solargraph' and vim.fn.glob("sorbet") ~= "" then
-      config.filestypes = {}
-    elseif server.name == 'sorbet' and vim.fn.glob("scripts/bin/typecheck") ~= "" then
-      config.cmd = {
-        "scripts/dev_productivity/while_pay_up_connected.sh",
-        "pay",
-        "exec",
-        "scripts/bin/typecheck",
-        "--lsp",
-        "--enable-all-experimental-lsp-features",
-        "--enable-experimental-lsp-document-formatting-rubyfmt"
-      }
     elseif server.name == 'sorbet' then
+      print("checking for local sorbet")
       local local_sorbet_build = vim.fn.glob(vim.fn.environ().HOME.."/stripe/sorbet/bazel-bin/main/sorbet")
       if local_sorbet_build ~= "" then
+        print("local sorbet")
         -- prefer a local build of sorbet if it's available
         config.cmd = {
           local_sorbet_build,
@@ -174,6 +162,23 @@ lsp_installer.on_server_ready(function(server)
           "--enable-experimental-lsp-document-formatting-rubyfmt"
         }
       end
+    elseif server.name == 'solargraph' and vim.fn.glob("scripts/bin/typecheck") ~= "" then
+      print("solargraph + scripts/bin/typecheck")
+      config.filetypes = {}
+    elseif server.name == 'solargraph' and vim.fn.glob("sorbet") ~= "" then
+      print("solargraph + sorbet")
+      config.filetypes = {}
+    -- elseif server.name == 'sorbet' and vim.fn.glob("scripts/bin/typecheck") ~= "" then
+    --   print("sorbet + scripts/bin/typecheck")
+    --   config.cmd = {
+    --     "scripts/dev_productivity/while_pay_up_connected.sh",
+    --     "pay",
+    --     "exec",
+    --     "scripts/bin/typecheck",
+    --     "--lsp",
+    --     "--enable-all-experimental-lsp-features",
+    --     "--enable-experimental-lsp-document-formatting-rubyfmt"
+    --   }
     elseif server.name == "sumneko_lua" then
       config.settings = {
         Lua = {

@@ -31,11 +31,11 @@ return require('packer').startup(function()
   use 'windwp/nvim-autopairs'
 
   -- Colors
-  use {'arcticicestudio/nord-vim', opt = true}
+  use {'arcticicestudio/nord-vim'}
   use {'cocopon/iceberg.vim', opt = true}
   use {'jeffkreeftmeijer/vim-dim', opt = true}
   use {'lifepillar/vim-solarized8', opt = true}
-  use {'morhetz/gruvbox', opt = true}
+  use {'morhetz/gruvbox'}
   use {'nightsense/snow', opt = true}
 
   -- Completion

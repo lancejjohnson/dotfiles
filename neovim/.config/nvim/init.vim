@@ -7,14 +7,17 @@ syntax on
 runtime ftplugin/man.vim
 
 "" Gruvbox
-" let g:gruvbox_bold=0
-" let g:gruvbox_contrast_light="hard"
-" set bg=light
-" colorscheme gruvbox
+set termguicolors
+let g:gruvbox_bold=0
+let g:gruvbox_contrast_light="hard"
+set bg=light
+colorscheme gruvbox
+"" end Gruvbox
 
 "" Nord
-set termguicolors
-colorscheme nord
+" set termguicolors
+" colorscheme nord
+"" end Nord
 
 let mapleader = ","
 
@@ -169,6 +172,7 @@ augroup vimrcEx
   autocmd FileType text setlocal textwidth=78
   autocmd FileType ruby,haml,eruby,yaml,html,javascript,sass,cucumber,elixir set autoindent sw=2 sts=2 expandtab
   autocmd FileType ruby,eruby,yaml,javascript,sass,python,markdown set colorcolumn=81
+  autocmd FileType java set colorcolumn=101
   autocmd FileType elixir set colorcolumn=100 foldmethod=syntax foldlevel=99
   " Make ?s part of words (see r00k)
   autocmd FileType elixir,ruby,eruby,yaml set iskeyword+=?

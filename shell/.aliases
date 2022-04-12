@@ -69,3 +69,5 @@ alias awsume=". awsume"
 # todo-txt
 alias td="todo.sh"
 alias todo="todo.sh"
+
+source ~/.stripe_aliases

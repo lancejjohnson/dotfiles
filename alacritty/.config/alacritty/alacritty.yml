@@ -100,7 +100,7 @@ font:
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
     # family: "Hack"
-    family: "FiraCode Nerd Font"
+    family: "Hack"
 
     # The `style` can be specified to pick a specific face.
     style: Regular
@@ -313,7 +313,8 @@ colorschemes:
       cyan: '#6d96a5'
       white: '#aeb3bb'
 
-colors: *norddark
+# colors: *norddark
+colors: *gruvboxlight
 
   # Vi mode cursor colors
   #
