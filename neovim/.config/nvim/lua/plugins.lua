@@ -37,6 +37,7 @@ return require('packer').startup(function()
   use {'lifepillar/vim-solarized8', opt = true}
   use {'morhetz/gruvbox'}
   use {'nightsense/snow', opt = true}
+  use {'rktjmp/lush.nvim'}
 
   -- Completion
   use {'hrsh7th/nvim-cmp'}
@@ -89,4 +90,7 @@ return require('packer').startup(function()
   -- Snippets
   use {'L3MON4D3/LuaSnip'}
   use {'rafamadriz/friendly-snippets'}
+
+  -- WASM
+  use {'rhysd/vim-wasm'}
 end)
