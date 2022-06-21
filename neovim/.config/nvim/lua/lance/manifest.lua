@@ -3,3 +3,4 @@
 require("lance.keymaps")
 require("lance.plugins")
 require("lance.colorscheme")
+require("lance.cmp")
