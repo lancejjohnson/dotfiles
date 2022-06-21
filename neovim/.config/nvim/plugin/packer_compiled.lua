@@ -175,6 +175,16 @@ _G.packer_plugins = {
     path = "/Users/lance/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
+  ["plenary.nvim"] = {
+    loaded = true,
+    path = "/Users/lance/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+    url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["popup.nvim"] = {
+    loaded = true,
+    path = "/Users/lance/.local/share/nvim/site/pack/packer/start/popup.nvim",
+    url = "https://github.com/nvim-lua/popup.nvim"
+  },
   ["rust.vim"] = {
     loaded = true,
     path = "/Users/lance/.local/share/nvim/site/pack/packer/start/rust.vim",
@@ -402,6 +412,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/lance/.local/share/nvim/site/pack/packer/start/vim-vinegar",
     url = "https://github.com/tpope/vim-vinegar"
+  },
+  ["vim-wasm"] = {
+    loaded = true,
+    path = "/Users/lance/.local/share/nvim/site/pack/packer/start/vim-wasm",
+    url = "https://github.com/rhysd/vim-wasm"
   }
 }
 
