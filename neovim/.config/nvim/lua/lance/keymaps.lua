@@ -62,7 +62,7 @@ set_keymap("v", "<Leader>d", "+d", opts)
 set_keymap("v", "<Leader>p", "+p", opts)
 set_keymap("v", "<Leader>P", "+P", opts)
 set_keymap("n", "<Leader>p", "+p", opts)
-set_keymap("n", "<Leader>P", "+p", opts)
+set_keymap("n", "<Leader>P", "+P", opts)
 
 -- Search
 ------------------------------------------------------------
@@ -99,7 +99,7 @@ set_keymap("n", "<leader>g", ":TestVisit<CR>", opts)
 -- Misc
 ------------------------------------------------------------
 set_keymap("i", "jk", "<ESC>", opts) -- Esc with jk
-set_keymap("", "<C-n>", ":nohl", opts) -- Turn off highlight after search
+set_keymap("", "<C-n>", ":nohl<CR>", opts) -- Turn off highlight after search
 set_keymap("i", "<S-CR>", "<C-o><S-o>", opts) -- Shift enter adds new line above
 set_keymap("n", "<Leader>f", ":<C-u>FZF<CR>", opts) -- Open FZF
 set_keymap("n", "<Leader>S", ":StripWhitespace<CR>", opts)
