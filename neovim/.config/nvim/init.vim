@@ -1,4 +1,4 @@
-lua require('plugins')
+lua require("lua.lance.manifest")
 scriptencoding utf-8
 
 filetype plugin indent on
@@ -127,4 +127,3 @@ inoremap <s-tab> <c-n>
 
 set completeopt=menu,menuone,noselect
 
-lua require("lua.lance.manifest")
