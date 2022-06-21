@@ -1,1 +1,1 @@
-lua require('ljj.completion')
+lua require('lance.completion')

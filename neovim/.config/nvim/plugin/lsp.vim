@@ -1,1 +1,1 @@
-lua require('ljj.lsp')
+lua require('lance.lsp')
