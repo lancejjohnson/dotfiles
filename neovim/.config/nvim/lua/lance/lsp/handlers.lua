@@ -85,7 +85,6 @@ local function lsp_highlight_document(client)
   end
 end
 
--- TODO: Update
 local function lsp_keymaps(bufnr)
 
   local buf_set_keymap = vim.api.nvim_buf_set_keymap
@@ -105,7 +104,6 @@ local function lsp_keymaps(bufnr)
   buf_set_keymap("n", "cdn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)                         -- c[hange]d[ocument]n[ame]
 
   -- Go places via the server
-  -- buf_set_keymap("n", "<C-]>", "<Cmd>lua vim.lsp.buf.definition()<CR>", opts)
   buf_set_keymap(bufnr, "n", "csn",  "<Cmd>lua vim.lsp.buf.definition()<CR>", opts)                    -- c[hange to]s[erver][defi]n[ition]
   buf_set_keymap(bufnr, "n", "csl",  "<Cmd>lua vim.lsp.buf.declaration()<CR>", opts)                   -- c[hange to]s[erver][dec]l[aration]
   buf_set_keymap(bufnr, "n", "csp",  "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts)               -- c[hance to]s[erver][ty]p[e definition]
@@ -149,6 +147,7 @@ M.on_attach = function(client, bufnr)
   lsp_highlight_document(client)
 end
 
+-- TODO: I don't understand why chris@machine has the capabilities in this file
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 
 local status_ok, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
