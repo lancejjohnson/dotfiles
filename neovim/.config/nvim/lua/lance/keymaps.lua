@@ -57,12 +57,12 @@ set_keymap("", "<C-Right>", ":vertical resize +2<CR>", opts)
 -- Speed up system clipboard
 -- (http://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity/)
 ------------------------------------------------------------
-set_keymap("v", "<Leader>y", "+y", opts)
-set_keymap("v", "<Leader>d", "+d", opts)
-set_keymap("v", "<Leader>p", "+p", opts)
-set_keymap("v", "<Leader>P", "+P", opts)
-set_keymap("n", "<Leader>p", "+p", opts)
-set_keymap("n", "<Leader>P", "+P", opts)
+set_keymap("v", "<Leader>y", "\"+y", opts)
+set_keymap("v", "<Leader>d", "\"+d", opts)
+set_keymap("v", "<Leader>p", "\"+p", opts)
+set_keymap("v", "<Leader>P", "\"+P", opts)
+set_keymap("n", "<Leader>p", "\"+p", opts)
+set_keymap("n", "<Leader>P", "\"+P", opts)
 
 -- Search
 ------------------------------------------------------------
