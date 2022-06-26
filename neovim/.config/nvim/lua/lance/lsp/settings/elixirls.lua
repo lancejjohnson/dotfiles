@@ -5,11 +5,9 @@ return {
       fetchDeps = false
     },
   },
-  on_init = {
-    function(client)
+  on_init = function(client)
       vim.notify("Calling ElixirLS init function")
       client.notify("workspace/didChangeConfiguration")
       return true
     end,
-  },
 }
