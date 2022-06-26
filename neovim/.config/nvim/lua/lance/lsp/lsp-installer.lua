@@ -18,7 +18,6 @@ lsp_installer.on_server_ready(function(server)
     capabilities = require("lance.lsp.handlers").capabilities,
   }
 
-  -- TODO: Copy over language server specific settings from lua/lance/lsp
   if server.name == "elixirls" then
     local server_opts = require("lance.lsp.settings.elixirls")
     opts = vim.tbl_deep_extend("force", server_opts, opts)
@@ -32,10 +31,6 @@ lsp_installer.on_server_ready(function(server)
   if server.name == "sumneko_lua" then
     local server_opts = require("lance.lsp.settings.sumneko_lua")
     opts = vim.tbl_deep_extend("force", server_opts, opts)
-    opts.on_init = function(client)
-      client.notify("workspace/didChangeConfiguration")
-      return true
-    end
   end
 
   if server.name == 'sorbet' then
