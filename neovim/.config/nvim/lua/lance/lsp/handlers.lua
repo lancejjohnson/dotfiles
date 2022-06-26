@@ -99,9 +99,9 @@ local function lsp_keymaps(bufnr)
   -- I've listed my mnemonics after the mapping.
   local opts = { noremap = true, silent = true }
   -- Doing things to the buffer
-  buf_set_keymap("n", "cdf", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)                     -- c[hange]d[ocument]f[ormatting]
-  buf_set_keymap("n", "cdr", "<cmd>lua vim.lsp.buf.range_formatting()<CR>", opts)               -- c[hange]d[ocument]r[ange formatting]
-  buf_set_keymap("n", "cdn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)                         -- c[hange]d[ocument]n[ame]
+  buf_set_keymap(bufnr, "n", "cdf", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)                     -- c[hange]d[ocument]f[ormatting]
+  buf_set_keymap(bufnr, "n", "cdr", "<cmd>lua vim.lsp.buf.range_formatting()<CR>", opts)               -- c[hange]d[ocument]r[ange formatting]
+  buf_set_keymap(bufnr, "n", "cdn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)                         -- c[hange]d[ocument]n[ame]
 
   -- Go places via the server
   buf_set_keymap(bufnr, "n", "csn",  "<Cmd>lua vim.lsp.buf.definition()<CR>", opts)                    -- c[hange to]s[erver][defi]n[ition]
@@ -136,7 +136,7 @@ local function lsp_keymaps(bufnr)
   buf_set_keymap(bufnr, "n", "cds", "<cmd>lua vim.diagnostic.show()<CR>", opts)                        -- c[heck]d[iagnostics]s[how]
 
   -- vim already has builtin docs
-  if vim.bo.ft ~= "vim" then buf_set_keymap("n", "K", "<Cmd>lua vim.lsp.buf.hover()<CR>", opts) end
+  if vim.bo.ft ~= "vim" then buf_set_keymap(bufnr, "n", "K", "<Cmd>lua vim.lsp.buf.hover()<CR>", opts) end
 end
 
 M.on_attach = function(client, bufnr)
