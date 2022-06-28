@@ -15,8 +15,8 @@ runtime ftplugin/man.vim
 "" end Gruvbox
 
 "" Nord
-set termguicolors
-colorscheme nord
+" set termguicolors
+" colorscheme nord
 "" end Nord
 
 let mapleader = ","
@@ -51,7 +51,7 @@ iabbrev </ </<C-X><C-O>
 " com! FormatJSON %!jq .
 
 " Ctags
-let g:gutentags_file_list_command = 'rg --files'
+" let g:gutentags_file_list_command = 'rg --files'
 
 " golang
 let g:go_fmt_command = "goimports"
