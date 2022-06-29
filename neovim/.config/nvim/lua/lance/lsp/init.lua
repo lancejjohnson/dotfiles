@@ -5,3 +5,4 @@ end
 
 require("lance.lsp.lsp-installer")
 require("lance.lsp.handlers").setup()
+require("lance.lsp.null-ls")

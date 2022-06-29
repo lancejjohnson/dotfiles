@@ -34,13 +34,15 @@ return require('packer').startup(function()
   use 'nvim-lua/popup.nvim'
 
   -- use 'andymass/vim-matchup'
-  use 'jremmen/vim-ripgrep'
   -- use 'junegunn/fzf'
   -- use 'junegunn/fzf.vim'
+  -- use 'ludovicchabant/vim-gutentags'
+  use 'jose-elias-alvarez/null-ls.nvim'
+  use 'jremmen/vim-ripgrep'
   use 'junegunn/vim-easy-align'
   use 'kana/vim-smartinput'
-  -- use 'ludovicchabant/vim-gutentags'
   use 'ntpeters/vim-better-whitespace'
+  use 'nvim-telescope/telescope.nvim'
   use 'pbrisbin/vim-mkdir'
   use 'tommcdo/vim-exchange' -- direction commands for exchanging text places
   use 'tpope/vim-characterize'
@@ -58,8 +60,7 @@ return require('packer').startup(function()
   use 'tpope/vim-vinegar'
   use 'vim-test/vim-test'
   use 'windwp/nvim-autopairs'
-  use {'nvim-telescope/telescope.nvim'}
-  use {'nvim-treesitter/nvim-treesitter'}
+  use {'nvim-treesitter/nvim-treesitter', run = ":TSUpdate"}
 
   -- Colors
   use {'arcticicestudio/nord-vim'}

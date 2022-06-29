@@ -119,16 +119,6 @@ _G.packer_plugins = {
     path = "/Users/lance/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
-  fzf = {
-    loaded = true,
-    path = "/Users/lance/.local/share/nvim/site/pack/packer/start/fzf",
-    url = "https://github.com/junegunn/fzf"
-  },
-  ["fzf.vim"] = {
-    loaded = true,
-    path = "/Users/lance/.local/share/nvim/site/pack/packer/start/fzf.vim",
-    url = "https://github.com/junegunn/fzf.vim"
-  },
   gruvbox = {
     loaded = true,
     path = "/Users/lance/.local/share/nvim/site/pack/packer/start/gruvbox",
@@ -149,6 +139,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/lance/.local/share/nvim/site/pack/packer/start/nord-vim",
     url = "https://github.com/arcticicestudio/nord-vim"
+  },
+  ["null-ls.nvim"] = {
+    loaded = true,
+    path = "/Users/lance/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
+    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
