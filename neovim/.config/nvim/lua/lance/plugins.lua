@@ -1,17 +1,48 @@
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
+--
+-- Reload nvim anytime this file changes and sync Packer
+vim.cmd [[
+  augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost plugins.lua source <afile> | PackerSync
+  augroup end
+]]
+
+-- protected call to require packer to stop execution if not found
+local status_ok, packer = pcall(require, "packer")
+if not status_ok then
+  print("Packer not found")
+  return
+end
+
+-- Have packer use a popup window
+-- NOTE: Leaving this here in case I decide to change from the split behavior
+-- packer.init {
+--   display = {
+--     open_fn = function()
+--       return require("packer.util").float { border = "rounded" }
+--     end,
+--   },
+-- }
 
 return require('packer').startup(function()
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
-  use 'vim-test/vim-test'
+  -- Plugins that will eventually be a part of core but are necessary now
+  use 'nvim-lua/plenary.nvim'
+  use 'nvim-lua/popup.nvim'
+
+  -- use 'andymass/vim-matchup'
+  -- use 'junegunn/fzf'
+  -- use 'junegunn/fzf.vim'
+  -- use 'ludovicchabant/vim-gutentags'
+  use 'jose-elias-alvarez/null-ls.nvim'
   use 'jremmen/vim-ripgrep'
-  use 'junegunn/fzf'
-  use 'junegunn/fzf.vim'
   use 'junegunn/vim-easy-align'
   use 'kana/vim-smartinput'
-  use 'ludovicchabant/vim-gutentags'
   use 'ntpeters/vim-better-whitespace'
+  use 'nvim-telescope/telescope.nvim'
   use 'pbrisbin/vim-mkdir'
   use 'tommcdo/vim-exchange' -- direction commands for exchanging text places
   use 'tpope/vim-characterize'
@@ -27,8 +58,9 @@ return require('packer').startup(function()
   use 'tpope/vim-surround'
   use 'tpope/vim-unimpaired'
   use 'tpope/vim-vinegar'
-  -- use 'andymass/vim-matchup'
+  use 'vim-test/vim-test'
   use 'windwp/nvim-autopairs'
+  use {'nvim-treesitter/nvim-treesitter', run = ":TSUpdate"}
 
   -- Colors
   use {'arcticicestudio/nord-vim'}
