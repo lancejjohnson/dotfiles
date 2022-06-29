@@ -5,6 +5,7 @@ end
 
 local snip_status_ok, luasnip = pcall(require, "luasnip")
 if not snip_status_ok then
+  vim.notify("Could not load luasnip")
   return
 end
 
@@ -119,6 +120,8 @@ cmp.setup {
   },
 
   sources = {
+    { name = "nvim_lsp"},
+    { name = "nvim_lua"},
     { name = "luasnip" },
     { name = "buffer" },
     { name = "path" },
