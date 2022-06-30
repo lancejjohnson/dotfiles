@@ -97,17 +97,17 @@ set_keymap("n", "<leader>g", ":TestVisit<CR>", opts)
 
 -- Telescope
 ------------------------------------------------------------
-set_keymap("n", "<leader>ff", "<cmd>lua require('telescope.builtin').find_files()<cr>", opts)
-set_keymap("n", "<leader>fg", "<cmd>lua require('telescope.builtin').live_grep()<cr>", opts)
-set_keymap("n", "<leader>fb", "<cmd>lua require('telescope.builtin').buffers()<cr>", opts)
-set_keymap("n", "<leader>fh", "<cmd>lua require('telescope.builtin').help_tags()<cr>", opts)
+-- set_keymap("n", "<leader>ff", "<cmd>lua require('telescope.builtin').find_files()<cr>", opts)
+-- set_keymap("n", "<leader>fg", "<cmd>lua require('telescope.builtin').live_grep()<cr>", opts)
+-- set_keymap("n", "<leader>fb", "<cmd>lua require('telescope.builtin').buffers()<cr>", opts)
+-- set_keymap("n", "<leader>fh", "<cmd>lua require('telescope.builtin').help_tags()<cr>", opts)
 
 -- Misc
 ------------------------------------------------------------
 set_keymap("i", "jk", "<ESC>", opts) -- Esc with jk
 set_keymap("", "<C-n>", ":nohl<CR>", opts) -- Turn off highlight after search
 set_keymap("i", "<S-CR>", "<C-o><S-o>", opts) -- Shift enter adds new line above
--- set_keymap("n", "<Leader>f", ":<C-u>FZF<CR>", opts) -- Open FZF
+set_keymap("n", "<Leader>f", ":<C-u>FZF<CR>", opts) -- Open FZF
 set_keymap("n", "<Leader>S", ":StripWhitespace<CR>", opts)
 set_keymap("n", "<Leader>c", "<c-w>c", opts) -- Close window easier
 set_keymap("n", "<Leader>q", ":cclose", opts) -- Close window easier

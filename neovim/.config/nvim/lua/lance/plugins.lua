@@ -34,15 +34,15 @@ return require('packer').startup(function()
   use 'nvim-lua/popup.nvim'
 
   -- use 'andymass/vim-matchup'
-  -- use 'junegunn/fzf'
-  -- use 'junegunn/fzf.vim'
   -- use 'ludovicchabant/vim-gutentags'
   use 'jose-elias-alvarez/null-ls.nvim'
   use 'jremmen/vim-ripgrep'
+  use 'junegunn/fzf'
+  use 'junegunn/fzf.vim'
   use 'junegunn/vim-easy-align'
   use 'kana/vim-smartinput'
   use 'ntpeters/vim-better-whitespace'
-  use 'nvim-telescope/telescope.nvim'
+  -- use 'nvim-telescope/telescope.nvim'
   use 'pbrisbin/vim-mkdir'
   use 'tommcdo/vim-exchange' -- direction commands for exchanging text places
   use 'tpope/vim-characterize'
