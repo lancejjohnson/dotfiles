@@ -33,7 +33,6 @@ export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.bin:$PATH"
 export PATH=/etc/paths.d:$PATH
 
-
 # zstyle ':completion:*' hosts off
 # Git
 zstyle ':completion:*:*:git:*' script "$HOME/.zsh/completion/git-completion.bash"
@@ -121,6 +120,7 @@ export PATH="/usr/local/opt/libpq/bin:$PATH"
 
 # Rust
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME.asdf/installs/rust/1.63.0/bin:$PATH"
 
 
 source "$HOME/.aliases"

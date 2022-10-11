@@ -110,7 +110,7 @@ set_keymap("i", "<S-CR>", "<C-o><S-o>", opts) -- Shift enter adds new line above
 set_keymap("n", "<Leader>f", ":<C-u>FZF<CR>", opts) -- Open FZF
 set_keymap("n", "<Leader>S", ":StripWhitespace<CR>", opts)
 set_keymap("n", "<Leader>c", "<c-w>c", opts) -- Close window easier
-set_keymap("n", "<Leader>q", ":cclose", opts) -- Close window easier
+set_keymap("n", "<Leader>q", ":cclose<CR>", opts) -- Close window easier
 set_keymap("n", "<Leader>w", ":w<CR>", opts) -- Save easier
 set_keymap("n", ":W", ":w<CR>", opts) -- Save easier
 set_keymap("", "<Leader>=", "gg=G''", opts) -- Re-indent the whole document

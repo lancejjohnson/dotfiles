@@ -15,8 +15,8 @@ runtime ftplugin/man.vim
 "" end Gruvbox
 
 "" Nord
-" set termguicolors
-" colorscheme nord
+set termguicolors
+colorscheme nord
 "" end Nord
 
 let mapleader = ","
