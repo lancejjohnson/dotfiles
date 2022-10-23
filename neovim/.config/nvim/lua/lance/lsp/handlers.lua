@@ -71,7 +71,7 @@ end
 
 local function lsp_highlight_document(client)
   -- Set autocommands conditional on server_capabilities
-  if client.resolved_capabilities.document_highlight then
+  if client.server_capabilities.document_highlight then
     vim.api.nvim_exec(
       [[
       augroup lsp_document_highlight
@@ -99,7 +99,7 @@ local function lsp_keymaps(bufnr)
   -- I've listed my mnemonics after the mapping.
   local opts = { noremap = true, silent = true }
   -- Doing things to the buffer
-  buf_set_keymap(bufnr, "n", "cdf", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)                     -- c[hange]d[ocument]f[ormatting]
+  buf_set_keymap(bufnr, "n", "cdf", "<cmd>lua vim.lsp.buf.format { async=true } <CR>", opts)           -- c[hange]d[ocument]f[ormatting]
   buf_set_keymap(bufnr, "n", "cdr", "<cmd>lua vim.lsp.buf.range_formatting()<CR>", opts)               -- c[hange]d[ocument]r[ange formatting]
   buf_set_keymap(bufnr, "n", "cdn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)                         -- c[hange]d[ocument]n[ame]
 
@@ -141,7 +141,7 @@ end
 
 M.on_attach = function(client, bufnr)
   if client.name == "tsserver" then
-    client.resolved_capabilities.document_formatting = false
+    client.server_capabilities.document_formatting = false
   end
   lsp_keymaps(bufnr)
   lsp_highlight_document(client)
@@ -155,6 +155,7 @@ if not status_ok then
   return
 end
 
-M.capabilities = cmp_nvim_lsp.update_capabilities(capabilities)
+-- M.capabilities = cmp_nvim_lsp.update_capabilities(capabilities)
+M.capabilities = cmp_nvim_lsp.default_capabilities(capabilities)
 
 return M

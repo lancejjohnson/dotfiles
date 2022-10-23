@@ -142,7 +142,7 @@ local function make_on_attach(config)
     a.nvim_buf_set_keymap(0, 'n', '<leader>go', '<cmd>lua vim.lsp.buf.outgoing_calls()<cr>', opts)
     a.nvim_buf_set_keymap(0, 'n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
 
-    if client.resolved_capabilities.document_highlight == true then
+    if client.server_capabilities.document_highlight == true then
       a.nvim_command('augroup lsp_aucmds')
       a.nvim_command('au CursorHold <buffer> lua vim.lsp.buf.document_highlight()')
       a.nvim_command('au CursorMoved <buffer> lua vim.lsp.buf.clear_references()')
