@@ -116,6 +116,9 @@ return require('packer').startup(function()
   use {'slim-template/vim-slim'}
   use {'ngmy/vim-rubocop'}
 
+  -- Scala
+  use({'scalameta/nvim-metals', requires = { "nvim-lua/plenary.nvim" }})
+
   -- Rust
   use {'rust-lang/rust.vim'}
 

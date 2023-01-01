@@ -122,6 +122,9 @@ export PATH="/usr/local/opt/libpq/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME.asdf/installs/rust/1.63.0/bin:$PATH"
 
+# Scala
+export PATH="$HOME/Library/Application Support/Coursier/bin:$PATH"
+
 
 source "$HOME/.aliases"
 
