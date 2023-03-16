@@ -27,3 +27,19 @@ Preview any changes without making them.
 
 To find the location of installed packer packages, look at
 `~/.config/nvim/plugin/packer_compiled.lua`.
+
+### Migrating to Mason
+
+The `lsp-installer` program has been deprecated in favor of mason.nvim by the
+same author.
+
+- Remove lsp-installer from plugins.
+- Install the mason plugins
+
+Mason is an installer for various types of servers including language server
+protocol (lsp) servers. mason-lspconfig provides a bridge between the installer
+and the lsp configuration handled by lspconfig.
+
+This updates follows chris@machine:
+
+https://github.com/LunarVim/nvim-basic-ide
