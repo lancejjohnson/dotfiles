@@ -9,7 +9,7 @@ if not snip_status_ok then
   return
 end
 
-require("luasnip/loaders/from_vscode").lazy_load()
+require("luasnip/loaders/from_vscode").lazy_load({paths = "~/.config/nvim/snippets"})
 
 -- Used for "super tab"
 local check_backspace = function()

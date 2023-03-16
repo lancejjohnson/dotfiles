@@ -1,0 +1,9 @@
+{
+  "mytodo": {
+    "prefix": "tdljj",
+    "body": [
+      "# TODO(lancejjohnson): $0"
+    ],
+    "description": "TODO comment with full name"
+  }
+}
