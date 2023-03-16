@@ -120,7 +120,7 @@ local function lsp_keymaps(bufnr)
   buf_set_keymap(bufnr, "n", "dya", "<Cmd>lua vim.lsp.buf.code_action()<CR>", opts)                    -- d[isplay]y[our code]a[ctions]
   buf_set_keymap(bufnr, "n", "dyh", "<Cmd>lua vim.lsp.buf.hover()<CR>", opts)                          -- d[isplay]y[our]h[over message]
   buf_set_keymap(bufnr, "n", "dys", "<Cmd>lua vim.lsp.buf.signature_help()<CR>", opts)                 -- d[isplay]y[our]s[signature help]
-  buf_set_keymap(bufnr, "n", "dyl", "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics({ border = 'rounded' })<CR>", opts)   -- d[isplay]y[our]l[ine][iagnostics]
+  buf_set_keymap(bufnr, "n", "dyl", "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics({ border = 'rounded' })<CR>", opts)   -- d[isplay]y[our]l[ine][diagnostics]
 
   -- From chris@machine, what is this?
   -- vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>f", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)

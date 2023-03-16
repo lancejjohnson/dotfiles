@@ -49,6 +49,7 @@ set undolevels=1000
 set undoreload=10000
 set visualbell
 set winwidth=105
+let g:netrw_liststyle=3
 
 " Autoclose html tags with </
 iabbrev </ </<C-X><C-O>
