@@ -29,8 +29,8 @@ lsp_installer.on_server_ready(function(server)
     opts = vim.tbl_deep_extend("force", server_opts, opts)
   end
 
-  if server.name == "sumneko_lua" then
-    local server_opts = require("lance.lsp.settings.sumneko_lua")
+  if server.name == "lua_ls" then
+    local server_opts = require("lance.lsp.settings.lua_ls")
     opts = vim.tbl_deep_extend("force", server_opts, opts)
   end
 

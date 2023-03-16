@@ -94,7 +94,7 @@ local lsp_servers = {
   sqlls = {
     cmd = {"sql-language-server", "up", "--method", "stdio"},
   },
-  sumneko_lua = {
+  lua_ls = {
     cmd = { lua_lsp_bin, "-E", lua_lsp_root.."/main.lua" },
     settings = {
       Lua = {
