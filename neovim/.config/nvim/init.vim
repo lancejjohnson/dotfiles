@@ -19,6 +19,13 @@ set termguicolors
 colorscheme nord
 "" end Nord
 
+"" Xcode
+" set termguicolors
+" let g:green_comments=0
+" set bg=light
+" colorscheme xcodelight
+"" end Xcode
+
 let mapleader = ","
 
 set autowrite
