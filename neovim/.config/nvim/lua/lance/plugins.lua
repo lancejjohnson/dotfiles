@@ -41,7 +41,7 @@ return require('packer').startup(function()
   use 'junegunn/fzf.vim'
   use 'junegunn/vim-easy-align'
   use 'kana/vim-smartinput'
-  use 'ntpeters/vim-better-whitespace'
+  use 'echasnovski/mini.nvim'
   -- use 'nvim-telescope/telescope.nvim'
   use 'pbrisbin/vim-mkdir'
   use 'tommcdo/vim-exchange' -- direction commands for exchanging text places
