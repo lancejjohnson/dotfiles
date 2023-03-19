@@ -105,7 +105,8 @@ return require('packer').startup(function()
 
   -- Language Server Protocol
   use {'neovim/nvim-lspconfig'}
-  use {'williamboman/nvim-lsp-installer'}
+  use {'williamboman/mason-lspconfig.nvim'}
+  use {'williamboman/mason.nvim'}
 
   -- Ruby
   use {'tpope/vim-bundler'}

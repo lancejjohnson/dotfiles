@@ -14,7 +14,7 @@ local opts = { noremap = true, silent = true }
 local set_keymap = vim.api.nvim_set_keymap
 
 --Remap space as leader key
--- TODO: this should be in lua/lance/options
+-- TODO: this should be in lua/user/options
 vim.g.mapleader = ","
 vim.g.maplocalleader = ","
 

@@ -46,7 +46,8 @@ M.setup = function()
       active = signs,
     },
     update_in_insert = true,
-    underline = false,
+    -- toggling to true to see if I can see messages on hover
+    underline = true,
     severity_sort = true,
     float = {
       focusable = false,
@@ -69,6 +70,7 @@ M.setup = function()
   })
 end
 
+-- Automatically highlight text under cursor
 local function lsp_highlight_document(client)
   -- Set autocommands conditional on server_capabilities
   if client.server_capabilities.document_highlight then
@@ -152,6 +154,7 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 
 local status_ok, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
 if not status_ok then
+  vim.notify("could not require cmp_nvim_lsp")
   return
 end
 

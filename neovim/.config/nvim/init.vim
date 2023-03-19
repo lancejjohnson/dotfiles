@@ -1,4 +1,4 @@
-lua require("lance.manifest")
+lua require("user.manifest")
 scriptencoding utf-8
 
 filetype plugin indent on
