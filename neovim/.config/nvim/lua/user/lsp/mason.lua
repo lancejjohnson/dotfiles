@@ -65,14 +65,14 @@ local opts = {}
 for _, server in pairs(ensured_servers) do
 	-- Universal options
 	opts = {
-		on_attach = require("lance.lsp.handlers").on_attach,
-		capabilities = require("lance.lsp.handlers").capabilities,
+		on_attach = require("user.lsp.handlers").on_attach,
+		capabilities = require("user.lsp.handlers").capabilities,
 	}
 
 	server = vim.split(server, "@")[1]
 
 	-- User options for specific server
-	local require_ok, user_server_opts = pcall(require, "lance.lsp.settings." .. server)
+	local require_ok, user_server_opts = pcall(require, "user.lsp.settings." .. server)
 	if require_ok then
 		opts = vim.tbl_deep_extend("force", user_server_opts, opts)
 	end
