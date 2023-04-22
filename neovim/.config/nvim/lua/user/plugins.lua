@@ -71,6 +71,7 @@ return require('packer').startup(function()
   use {'nightsense/snow', opt = true}
   use {'rktjmp/lush.nvim'}
   use {'arzg/vim-colors-xcode', opt = true}
+  use {'lancejjohnson/nord-light-vim'}
 
   -- Completion
   use {'hrsh7th/nvim-cmp'}
