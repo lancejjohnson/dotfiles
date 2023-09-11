@@ -70,4 +70,9 @@ alias awsume=". awsume"
 alias td="todo.sh"
 alias todo="todo.sh"
 
-source ~/.stripe_aliases
+# python
+alias python="/usr/local/bin/python3"
+alias pip="/usr/local/bin/pip3"
+alias pm="python -m"
+alias pmg="python manage.py"
+

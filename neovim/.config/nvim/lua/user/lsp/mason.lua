@@ -31,6 +31,7 @@ local ensured_servers = {
 	"html",
 	"jsonls",
 	"lua_ls",
+  "pyright",
 	"rust_analyzer",
 	"solargraph",
 	"standardrb",

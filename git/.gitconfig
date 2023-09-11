@@ -11,6 +11,7 @@
 	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 [difftool]
 	prompt = false
+	trustExitCode = true
 [diff]
   colorMoved = zebra
 	tool = Kaleidoscope
@@ -30,6 +31,7 @@
 [mergetool "Kaleidoscope"]
 	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
 	trustexitcode = true
+	trustExitCode = true
 [mergetool]
 	prompt = false
 [merge]

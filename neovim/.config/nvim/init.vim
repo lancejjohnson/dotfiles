@@ -15,9 +15,12 @@ runtime ftplugin/man.vim
 "" end Gruvbox
 
 "" Nord
-set termguicolors
-colorscheme nord
+" set termguicolors
+" colorscheme nord
 "" end Nord
+
+" colorscheme github_light
+" colorscheme dim
 
 "" Xcode
 " set termguicolors
@@ -25,6 +28,12 @@ colorscheme nord
 " set bg=light
 " colorscheme xcodelight
 "" end Xcode
+
+"" github-colors
+set termguicolors
+set background=light " or set background=dark
+colorscheme github-colors
+"" end github-colors
 
 let mapleader = ","
 
@@ -113,7 +122,7 @@ command! CodeThis :call OpenInOtherEditor('code')
 function! CopyFilePathToClipboard()
   let @+ = expand("%")
 endfunction
-nnoremap <leader>r :call CopyFilePathToClipboard()<CR>
+nnoremap <leader>r :call CopyFilePathToClipboard()<Enter>
 
 function! ToggleRelativeNumber()
   if(&relativenumber == 1)

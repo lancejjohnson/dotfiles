@@ -85,24 +85,26 @@ _load_settings "$HOME/.zsh/configs"
 # End - Pulled from thoughtbot dotfiles
 ################################################################################
 
+export EDITOR=nvim
+
 # Git
 export GIT_EDITOR=nvim
 
 # Golang
-# if [ -d $HOME/Code/go ]
-# then
-#   export GOPATH=$HOME/Code/go
-# else
-#   export GOPATH=$HOME/go
-# fi
-# if [ -d /usr/local/opt/go/libexec ]
-# then
-#   export GOROOT=/usr/local/opt/go/libexec
-# else
-#   export GOROOT=/usr/lib/golang
-# fi
-# export PATH=$PATH:$GOPATH/bin
-# export PATH=$PATH:$GOROOT/bin
+if [ -d $HOME/code/go ]
+then
+  export GOPATH=$HOME/code/go
+else
+  export GOPATH=$HOME/go
+fi
+if [ -d /opt/homebrew/opt/go/libexec ]
+then
+  export GOROOT=/opt/homebrew/opt/go/libexec
+else
+  export GOROOT=/usr/lib/golang
+fi
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
 
 # Elixir
 export KERL_BUILD_DOCS="yes"
@@ -113,6 +115,9 @@ export KERL_BUILD_DOCS="yes"
 
 # FZF
 export FZF_DEFAULT_COMMAND='rg --files'
+
+# Python
+# export PATH="/opt/homebrew/anaconda3/bin:$PATH"  # commented out by conda initialize
 
 # Ruby
 export DISABLE_SPRING=1
@@ -142,3 +147,19 @@ then
   autoload -Uz compinit
   compinit
 fi
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/opt/homebrew/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/opt/homebrew/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/opt/homebrew/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/opt/homebrew/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+

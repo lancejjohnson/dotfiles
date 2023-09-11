@@ -1,8 +1,8 @@
 return {
   settings = {
     elixirLS = {
-      dialyzerEnabled = false,
-      fetchDeps = false
+      dialyzerEnabled = true,
+      fetchDeps = true
     },
   },
   on_init = function(client)

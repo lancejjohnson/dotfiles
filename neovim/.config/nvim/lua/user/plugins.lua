@@ -64,14 +64,15 @@ return require('packer').startup(function()
 
   -- Colors
   use {'arcticicestudio/nord-vim'}
+  use {'huytd/vim-nord-light-brighter', opt = true}
   use {'cocopon/iceberg.vim', opt = true}
-  use {'jeffkreeftmeijer/vim-dim', opt = true}
   use {'lifepillar/vim-solarized8', opt = true}
   use {'morhetz/gruvbox'}
   use {'nightsense/snow', opt = true}
   use {'rktjmp/lush.nvim'}
   use {'arzg/vim-colors-xcode', opt = true}
-  use {'lancejjohnson/nord-light-vim'}
+  use {'projekt0n/github-nvim-theme'}
+  use {'lourenci/github-colors'}
 
   -- Completion
   use {'hrsh7th/nvim-cmp'}

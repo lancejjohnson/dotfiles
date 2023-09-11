@@ -17,7 +17,7 @@ disabled = true
 [php]
 disabled = true
 [python]
-disabled = true
+disabled = false
 [ruby]
 disabled = true
 [rust]
