@@ -34,7 +34,6 @@ local ensured_servers = {
   "pyright",
 	"rust_analyzer",
 	"solargraph",
-	"standardrb",
 	"tailwindcss",
 	"terraformls",
 	"tsserver",

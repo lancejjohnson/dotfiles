@@ -4,16 +4,7 @@ autoload -Uz promptinit; promptinit
 autoload -Uz compinit; compinit
 autoload -Uz bashcompinit; bashcompinit
 
-# Stripe specific
-if [ -d ~/stripe ]
-then
-  [ -f ~/.bash_profile ] && source ~/.bash_profile
-  [ -f ~/.bashrc ] && source ~/.bashrc
-  eval "$(nodenv init -)"
-  compdef _g stripe-git=git # this line specifically will fix git autocompletion
-  compdef _git stripe-git=git # this line specifically will fix git autocompletion
-fi
-# end - Stripe specific
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Deduplicating $PATH in tmux
 typeset -aU path
@@ -130,16 +121,30 @@ export PATH="$HOME.asdf/installs/rust/1.63.0/bin:$PATH"
 # Scala
 export PATH="$HOME/Library/Application Support/Coursier/bin:$PATH"
 
+# Highwing
+export BUNDLE_GITHUB__COM="$(op read 'op://Engineering/Github Token/Engineering/credential')"
+export GITHUB_TOKEN=$BUNDLE_GITHUB__COM
 
 source "$HOME/.aliases"
 
 complete -F _todo t
 
+
+
+
+
 # asdf (readme insists this be after path export)
 if [ -d $HOME/.asdf ]
 then
-  source $HOME/.asdf/asdf.sh
-  source $HOME/.asdf/completions/asdf.bash
+  if test -f $HOME/.asdf/asdf.sh; then
+    source $HOME/.asdf/asdf.sh
+    source $HOME/.asdf/completions/asdf.bash
+  fi
+
+  if test -f "$(brew --prefix asdf)/libexec/asdf.sh"; then
+    source "$(brew --prefix asdf)/libexec/asdf.sh"
+    source "$(brew --prefix asdf)/etc/bash_completion.d/asdf.bash"
+  fi
 
   ## append completions to fpath
   fpath=(${ASDF_DIR}/completions $fpath)

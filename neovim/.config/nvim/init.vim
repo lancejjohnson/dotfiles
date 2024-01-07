@@ -30,10 +30,19 @@ runtime ftplugin/man.vim
 "" end Xcode
 
 "" github-colors
-set termguicolors
-set background=light " or set background=dark
-colorscheme github-colors
+" set termguicolors
+" set background=light " or set background=dark
+" colorscheme github-colors
 "" end github-colors
+
+"" dracula
+set termguicolors
+set background=dark
+let g:dracula_colorterm = 1
+colorscheme dracula_pro
+
+" set termguicolors
+" colorscheme catppuccin-latte " catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
 
 let mapleader = ","
 
@@ -84,6 +93,7 @@ highlight ExtraWhitespace ctermbg=61 guibg=#6c71c4
 augroup vimrcEx
   " Clear all autocms in the group
   autocmd!
+  autocmd FileType ruby setlocal indentkeys-=.
   autocmd FileType text setlocal textwidth=78
   autocmd FileType ruby,haml,eruby,yaml,html,javascript,sass,cucumber,elixir set autoindent sw=2 sts=2 expandtab
   autocmd FileType ruby,eruby,yaml,javascript,sass,python,markdown set colorcolumn=81

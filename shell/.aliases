@@ -71,8 +71,11 @@ alias td="todo.sh"
 alias todo="todo.sh"
 
 # python
-alias python="/usr/local/bin/python3"
-alias pip="/usr/local/bin/pip3"
-alias pm="python -m"
-alias pmg="python manage.py"
+# alias python="/usr/local/bin/python3"
+# alias pip="/usr/local/bin/pip3"
+# alias pm="python -m"
+# alias pmg="python manage.py"
 
+# AWS
+alias av="aws-vault"
+alias adb="aws dynamodb"

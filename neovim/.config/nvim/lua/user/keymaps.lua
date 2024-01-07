@@ -66,7 +66,7 @@ set_keymap("n", "<Leader>P", "\"+P", opts)
 
 -- Search
 ------------------------------------------------------------
-set_keymap("n", "\\", ":Rg<Space>", opts) -- Search project
+set_keymap("n", "\\", ":Rg<Space>", opts)                -- Search project
 set_keymap("", "<Leader>\\", ":Rg <C-R><C-W><CR>", opts) -- Search project for word under cursor
 
 -- Character inserts
@@ -82,8 +82,13 @@ set_keymap("v", "<Leader><Bslash>", ":EasyAlign*<Bar><Enter>", opts) -- Align Gi
 -- Elixir
 ------------------------------------------------------------
 set_keymap("n", "<leader>m", ":MixFormat<CR>", opts)
-set_keymap("i", "<c-p>", "|><space>", opts) -- Deprecated: prefer snippets
-set_keymap("i",  "<c-f>", "fn<space>-><space>end", opts) -- Deprecated: prefer snippets
+set_keymap("i", "<c-p>", "|><space>", opts)              -- Deprecated: prefer snippets
+set_keymap("i", "<c-f>", "fn<space>-><space>end", opts)  -- Deprecated: prefer snippets
+
+-- nvim-tree
+------------------------------------------------------------
+-- set_keymap("n", "<leader>-", ":NvimTreeToggle<CR>", opts)
+set_keymap("n", "<leader>b", ":NvimTreeToggle<CR>", opts)
 
 -- vim-test
 ------------------------------------------------------------
@@ -104,16 +109,22 @@ set_keymap("n", "<leader>g", ":TestVisit<CR>", opts)
 
 -- Misc
 ------------------------------------------------------------
-set_keymap("i", "jk", "<ESC>", opts) -- Esc with jk
-set_keymap("", "<C-n>", ":nohl<CR>", opts) -- Turn off highlight after search
-set_keymap("i", "<S-CR>", "<C-o><S-o>", opts) -- Shift enter adds new line above
+set_keymap("i", "jk", "<ESC>", opts)                -- Esc with jk
+set_keymap("", "<C-n>", ":nohl<CR>", opts)          -- Turn off highlight after search
+set_keymap("i", "<S-CR>", "<C-o><S-o>", opts)       -- Shift enter adds new line above
 set_keymap("n", "<Leader>f", ":<C-u>FZF<CR>", opts) -- Open FZF
 set_keymap("n", "<Leader>S", ":lua MiniTrailspace.trim()<CR>", opts)
-set_keymap("n", "<Leader>c", "<c-w>c", opts) -- Close window easier
-set_keymap("n", "<Leader>q", ":cclose<CR>", opts) -- Close window easier
-set_keymap("n", "<Leader>w", ":w<CR>", opts) -- Save easier
-set_keymap("n", ":W", ":w<CR>", opts) -- Save easier
-set_keymap("", "<Leader>=", "gg=G''", opts) -- Re-indent the whole document
+set_keymap("n", "<Leader>c", "<c-w>c", opts)        -- Close window easier
+set_keymap("n", "<Leader>q", ":cclose<CR>", opts)   -- Close window easier
+set_keymap("n", "<Leader>w", ":w<CR>", opts)        -- Save easier
+set_keymap("n", ":W", ":w<CR>", opts)               -- Save easier
+set_keymap("", "<Leader>=", "gg=G''", opts)         -- Re-indent the whole document
+
+
+-- Copilot
+------------------------------------------------------------
+-- set_keymap('i', '<C-CR>', "copilot#Accept('<CR>')",
+--   { expr = true, replace_keycodes = false, noremap = true, silent = true })
 
 -- Chris config ------------------------------------------------------------
 

@@ -1365,6 +1365,6 @@ include colors/github.conf
 
 
 # BEGIN_KITTY_THEME
-# GitHub Light
-# include current-theme.conf
+# Catppuccin-Latte
+include current-theme.conf
 # END_KITTY_THEME

@@ -42,6 +42,7 @@ return require('packer').startup(function()
   use 'junegunn/vim-easy-align'
   use 'kana/vim-smartinput'
   use 'echasnovski/mini.nvim'
+  use 'nvim-tree/nvim-tree.lua'
   -- use 'nvim-telescope/telescope.nvim'
   use 'pbrisbin/vim-mkdir'
   use 'tommcdo/vim-exchange' -- direction commands for exchanging text places
@@ -73,6 +74,7 @@ return require('packer').startup(function()
   use {'arzg/vim-colors-xcode', opt = true}
   use {'projekt0n/github-nvim-theme'}
   use {'lourenci/github-colors'}
+  use { "catppuccin/nvim", as = "catppuccin" }
 
   -- Completion
   use {'hrsh7th/nvim-cmp'}
@@ -83,6 +85,9 @@ return require('packer').startup(function()
   use {'hrsh7th/cmp-nvim-lua'}
   use {'hrsh7th/cmp-path'}
   use {'saadparwaiz1/cmp_luasnip'}
+
+  -- Copilot
+  use {'github/copilot.vim'}
 
   -- Custom textobjects
   use {'kana/vim-textobj-user'} -- Must precede other textobj plugins

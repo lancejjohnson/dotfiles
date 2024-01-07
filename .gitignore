@@ -3,3 +3,5 @@ subl/User/Package\ Control.cache
 subl/User/Package\ Control.last-run
 
 neovim/.config/nvim/plugin/packer_compiled.lua
+
+.idea
