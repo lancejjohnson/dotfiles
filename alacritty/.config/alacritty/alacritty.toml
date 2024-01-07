@@ -1,0 +1,20 @@
+import = ["~/.config/alacritty/colors/dracula-pro.toml"]
+
+[window]
+decorations = "full"
+option_as_alt = "OnlyLeft"
+decorations_theme_variant = "Dark" # "None" will use the system choice
+
+[font]
+size = 14.0
+
+[font.normal]
+family = "Hack Nerd Font"
+style = "Regular"
+
+[font.offset]
+x = 0
+y = 9 
+
+[selection]
+save_to_clipboard = true
