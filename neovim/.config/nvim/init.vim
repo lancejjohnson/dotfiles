@@ -31,15 +31,19 @@ runtime ftplugin/man.vim
 
 "" github-colors
 " set termguicolors
-" set background=light " or set background=dark
+" set background=dark " or set background=dark
 " colorscheme github-colors
-"" end github-colors
+
+"" github
+" set termguicolors
+" colorscheme github_light
+lua require("user.colorschemes.github_light")
 
 "" dracula
-set termguicolors
-set background=dark
-let g:dracula_colorterm = 1
-colorscheme dracula_pro
+" set termguicolors
+" set background=dark
+" let g:dracula_colorterm = 1
+" colorscheme dracula_pro
 
 " set termguicolors
 " colorscheme catppuccin-latte " catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
@@ -159,3 +163,9 @@ inoremap <s-tab> <c-n>
 
 set completeopt=menu,menuone,noselect
 
+" Terraform
+lua <<EOF
+  require'lspconfig'.terraformls.setup{}
+EOF
+autocmd BufWritePre *.tfvars lua vim.lsp.buf.format()
+autocmd BufWritePre *.tf lua vim.lsp.buf.format()

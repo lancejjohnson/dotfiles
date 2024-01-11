@@ -35,6 +35,7 @@ return require('packer').startup(function()
 
   -- use 'andymass/vim-matchup'
   -- use 'ludovicchabant/vim-gutentags'
+  use 'hashivim/vim-terraform'
   use 'jose-elias-alvarez/null-ls.nvim'
   use 'jremmen/vim-ripgrep'
   use 'junegunn/fzf'
@@ -73,7 +74,7 @@ return require('packer').startup(function()
   use {'rktjmp/lush.nvim'}
   use {'arzg/vim-colors-xcode', opt = true}
   use {'projekt0n/github-nvim-theme'}
-  use {'lourenci/github-colors'}
+  use {'lourenci/github-colors'} -- supports tree-sitter
   use { "catppuccin/nvim", as = "catppuccin" }
 
   -- Completion
