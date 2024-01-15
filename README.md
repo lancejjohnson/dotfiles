@@ -15,11 +15,31 @@ For example, if you want neovim's configuration files to be in `$XDG_HOME`, your
 neovim "package" directory needs to contain `neovim/.config/nvim/init.vim`, etc.
 When you `stow neovim` it will symlink inside `~/.config`
 
-Use stow to link your dotfiles
+#### Use stow to link your dotfiles
+
+Clone dotfiles into `~/.dotfiles`. 
+
+Change into the `~/.dofiles` directory. This is the directory stow assumes contains the files you are wanting to symlink.
+
+    cd ~/.dotfiles
+
+Run the stow command to link 
+
+
 
 Preview any changes without making them.
 
-    stow -n 
+    stow -n
+
+
+
+Specifiying directories
+
+-d the directory to find the files you are symlinking
+
+-t the directory into which the symlinks should go
+
+Stow assumes the "stow" directory (i.e. the directory containing the software images you are wanting to link) to be the current directory. It assumes the "target" directory to the parent directory of the "stow" directory.
 
 ## Neovim
 
