@@ -6,39 +6,9 @@ syntax on
 
 runtime ftplugin/man.vim
 
-"" Gruvbox
-" set termguicolors
-" let g:gruvbox_bold=0
-" let g:gruvbox_contrast_light="hard"
-" set bg=light
-" colorscheme gruvbox
-"" end Gruvbox
-
-"" Nord
-" set termguicolors
-" colorscheme nord
-"" end Nord
-
-" colorscheme github_light
-" colorscheme dim
-
-"" Xcode
-" set termguicolors
-" let g:green_comments=0
-" set bg=light
-" colorscheme xcodelight
-"" end Xcode
-
-"" github-colors
-" set termguicolors
-" set background=dark " or set background=dark
-" colorscheme github-colors
-
-"" github
-" set termguicolors
-" colorscheme github_light
 " lua require("user.colorschemes.github_light")
-lua require("user.colorschemes.github_dark")
+" lua require("user.colorschemes.github_dark")
+lua require("user.colorschemes.rose-pine")
 
 "" dracula
 " set termguicolors

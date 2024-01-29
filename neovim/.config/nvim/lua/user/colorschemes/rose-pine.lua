@@ -65,8 +65,6 @@ require("rose-pine").setup({
     end,
 })
 
-vim.opt.termguicolors = true
-
 local colorscheme = "rose-pine"
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not status_ok then
