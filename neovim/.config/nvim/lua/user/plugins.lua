@@ -65,17 +65,18 @@ return require('packer').startup(function()
   use {'nvim-treesitter/nvim-treesitter', run = ":TSUpdate"}
 
   -- Colors
+  use { "catppuccin/nvim", as = "catppuccin" }
+  use {"rose-pine/neovim", as = "rose-pine"}
   use {'arcticicestudio/nord-vim'}
-  use {'huytd/vim-nord-light-brighter', opt = true}
+  use {'arzg/vim-colors-xcode', opt = true}
   use {'cocopon/iceberg.vim', opt = true}
+  use {'huytd/vim-nord-light-brighter', opt = true}
   use {'lifepillar/vim-solarized8', opt = true}
+  use {'lourenci/github-colors'} -- supports tree-sitter
   use {'morhetz/gruvbox'}
   use {'nightsense/snow', opt = true}
-  use {'rktjmp/lush.nvim'}
-  use {'arzg/vim-colors-xcode', opt = true}
   use {'projekt0n/github-nvim-theme'}
-  use {'lourenci/github-colors'} -- supports tree-sitter
-  use { "catppuccin/nvim", as = "catppuccin" }
+  use {'rktjmp/lush.nvim'}
 
   -- Completion
   use {'hrsh7th/nvim-cmp'}

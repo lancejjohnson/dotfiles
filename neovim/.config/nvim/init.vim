@@ -37,7 +37,8 @@ runtime ftplugin/man.vim
 "" github
 " set termguicolors
 " colorscheme github_light
-lua require("user.colorschemes.github_light")
+" lua require("user.colorschemes.github_light")
+lua require("user.colorschemes.github_dark")
 
 "" dracula
 " set termguicolors
