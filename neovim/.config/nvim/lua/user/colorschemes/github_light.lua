@@ -1,6 +1,6 @@
 require('github-theme').setup({
   options = {
-    dim_inactive = true,
+    dim_inactive = false,
     hide_nc_statusline = false,
   },
   groups = {

@@ -65,7 +65,7 @@ require("rose-pine").setup({
     end,
 })
 
-local colorscheme = "rose-pine"
+local colorscheme = "rose-pine-dawn"
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not status_ok then
   vim.notify("colorscheme " .. colorscheme .. " not found!")

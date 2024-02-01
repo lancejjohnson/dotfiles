@@ -1,5 +1,5 @@
 # import = ["~/.config/alacritty/colors/dracula-pro.toml"]
-import = ["~/.config/alacritty/colors/rose-pine.toml"]
+import = ["~/.config/alacritty/colors/rose-pine-dawn.toml"]
 # import = ["~/.config/alacritty/themes/themes/github_light.toml"]
 # import = ["~/.config/alacritty/themes/themes/github_dark.toml"]
 # import = ["~/.config/alacritty/themes/themes/nord.toml"]

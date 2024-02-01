@@ -7,6 +7,7 @@ syntax on
 runtime ftplugin/man.vim
 
 " lua require("user.colorschemes.github_light")
+" lua require("user.colorschemes.dracula_pro")
 " lua require("user.colorschemes.github_dark")
 lua require("user.colorschemes.rose-pine")
 
