@@ -43,7 +43,7 @@ return require('packer').startup(function()
   use 'junegunn/vim-easy-align'
   use 'kana/vim-smartinput'
   use 'echasnovski/mini.nvim'
-  use 'nvim-tree/nvim-tree.lua'
+  -- use 'nvim-tree/nvim-tree.lua'
   -- use 'nvim-telescope/telescope.nvim'
   use 'pbrisbin/vim-mkdir'
   use 'tommcdo/vim-exchange' -- direction commands for exchanging text places
@@ -66,17 +66,11 @@ return require('packer').startup(function()
 
   -- Colors
   use { "catppuccin/nvim", as = "catppuccin" }
-  use {"rose-pine/neovim", as = "rose-pine"}
   use {'arcticicestudio/nord-vim'}
-  use {'arzg/vim-colors-xcode', opt = true}
-  use {'cocopon/iceberg.vim', opt = true}
-  use {'huytd/vim-nord-light-brighter', opt = true}
   use {'lifepillar/vim-solarized8', opt = true}
-  use {'lourenci/github-colors'} -- supports tree-sitter
-  use {'morhetz/gruvbox'}
-  use {'nightsense/snow', opt = true}
   use {'projekt0n/github-nvim-theme'}
   use {'rktjmp/lush.nvim'}
+  use {"sainnhe/gruvbox-material"}
 
   -- Completion
   use {'hrsh7th/nvim-cmp'}

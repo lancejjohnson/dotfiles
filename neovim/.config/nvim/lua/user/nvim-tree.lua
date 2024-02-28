@@ -5,11 +5,9 @@ vim.g.loaded_netrwPlugin = 1
 -- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
 
--- empty setup using defaults
-require("nvim-tree").setup()
-
 -- OR setup with some options
 require("nvim-tree").setup({
+  disable_netrw = true,
   sort = {
     sorter = "case_sensitive",
   },
@@ -20,6 +18,6 @@ require("nvim-tree").setup({
     group_empty = true,
   },
   filters = {
-    dotfiles = true,
+    dotfiles = false,
   },
 })

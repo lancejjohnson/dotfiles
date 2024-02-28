@@ -7,8 +7,12 @@ require('github-theme').setup({
     all = {
       StatusLineNC = { bg = 'bg3', fg = 'fg2', sp = 'fg3' },
     },
+    syntax = {
+      Todo = { bg = 'bg1', fg = 'fg1' },
+    }
   }
 })
+-- TODO: Add more customizations
 
 local colorscheme = "github_light"
 
