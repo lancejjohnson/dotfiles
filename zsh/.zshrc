@@ -124,6 +124,7 @@ export PATH="$HOME/Library/Application Support/Coursier/bin:$PATH"
 # Highwing
 export BUNDLE_GITHUB__COM="$(op read 'op://Engineering/Github Token/Engineering/credential')"
 export GITHUB_TOKEN=$BUNDLE_GITHUB__COM
+export BUNDLE_RUBYGEMS__PKG__GITHUB__COM=$BUNDLE_GITHUB__COM
 
 source "$HOME/.aliases"
 

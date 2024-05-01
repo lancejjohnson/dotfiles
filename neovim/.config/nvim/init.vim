@@ -6,8 +6,8 @@ syntax on
 
 runtime ftplugin/man.vim
 
-lua require("user.colorschemes.gruvbox_material")
-" lua require("user.colorschemes.github_light")
+" lua require("user.colorschemes.gruvbox_material")
+lua require("user.colorschemes.github_light")
 " lua require("user.colorschemes.dracula_pro")
 " lua require("user.colorschemes.github_dark")
 " lua require("user.colorschemes.rose-pine")
@@ -143,3 +143,6 @@ lua <<EOF
 EOF
 autocmd BufWritePre *.tfvars lua vim.lsp.buf.format()
 autocmd BufWritePre *.tf lua vim.lsp.buf.format()
+
+" Source the local vimrc
+nnoremap <Leader>si :source $MYVIMRC<CR>
