@@ -27,6 +27,7 @@ local ensured_servers = {
 	"docker_compose_language_service",
 	"dockerls",
 	"elixirls",
+  "gopls",
 	"graphql",
 	"html",
 	"jsonls",
