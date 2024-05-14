@@ -83,7 +83,7 @@ return require('packer').startup(function()
   use {'saadparwaiz1/cmp_luasnip'}
 
   -- Copilot
-  use {'github/copilot.vim'}
+  -- use {'github/copilot.vim'}
 
   -- Custom textobjects
   use {'kana/vim-textobj-user'} -- Must precede other textobj plugins
