@@ -7,11 +7,11 @@ syntax on
 runtime ftplugin/man.vim
 
 " lua require("user.colorschemes.gruvbox_material")
-lua require("user.colorschemes.github_light")
+" lua require("user.colorschemes.github_light")
 " lua require("user.colorschemes.dracula_pro")
 " lua require("user.colorschemes.github_dark")
 " lua require("user.colorschemes.rose-pine")
-" lua require("user.colorschemes.catppuccin")
+lua require("user.colorschemes.catppuccin")
 
 "" dracula
 " set termguicolors
@@ -76,7 +76,7 @@ augroup vimrcEx
   autocmd FileType ruby,haml,eruby,yaml,html,javascript,sass,cucumber,elixir set autoindent sw=2 sts=2 expandtab
   autocmd FileType ruby,eruby,yaml,javascript,sass,python,markdown set colorcolumn=81
   autocmd FileType java set colorcolumn=101
-  autocmd FileType elixir,rust set colorcolumn=100 foldmethod=syntax foldlevel=99
+  autocmd FileType elixir,rust,ruby set colorcolumn=100 foldmethod=syntax foldlevel=99
   " Make ?s part of words (see r00k)
   autocmd FileType elixir,ruby,eruby,yaml set iskeyword+=?
   autocmd FileType elixir,ruby,eruby,yaml set iskeyword+=!
