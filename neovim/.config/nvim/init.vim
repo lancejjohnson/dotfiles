@@ -7,11 +7,11 @@ syntax on
 runtime ftplugin/man.vim
 
 " lua require("user.colorschemes.gruvbox_material")
-" lua require("user.colorschemes.github_light")
+lua require("user.colorschemes.github_light")
 " lua require("user.colorschemes.dracula_pro")
 " lua require("user.colorschemes.github_dark")
 " lua require("user.colorschemes.rose-pine")
-lua require("user.colorschemes.catppuccin")
+" lua require("user.colorschemes.catppuccin")
 
 "" dracula
 " set termguicolors
