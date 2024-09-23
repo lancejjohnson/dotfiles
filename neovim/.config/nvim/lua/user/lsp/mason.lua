@@ -37,7 +37,7 @@ local ensured_servers = {
 	"solargraph",
 	"tailwindcss",
 	"terraformls",
-	"tsserver",
+	"ts_ls",
 	"yamlls",
 }
 

@@ -143,7 +143,7 @@ end
 
 M.on_attach = function(client, bufnr)
   vim.opt.signcolumn = "yes"
-  if client.name == "tsserver" then
+  if client.name == "ts_ls" then
     client.server_capabilities.document_formatting = false
   end
   lsp_keymaps(bufnr)
