@@ -40,7 +40,7 @@ M.setup = function()
   end
 
   local config = {
-    virtual_text = false, -- disable virtual text
+    virtual_text = true, -- disable virtual text
     -- show signs
     signs = {
       active = signs,
@@ -122,7 +122,7 @@ local function lsp_keymaps(bufnr)
   buf_set_keymap(bufnr, "n", "dya", "<Cmd>lua vim.lsp.buf.code_action()<CR>", opts)                    -- d[isplay]y[our code]a[ctions]
   buf_set_keymap(bufnr, "n", "dyh", "<Cmd>lua vim.lsp.buf.hover()<CR>", opts)                          -- d[isplay]y[our]h[over message]
   buf_set_keymap(bufnr, "n", "dys", "<Cmd>lua vim.lsp.buf.signature_help()<CR>", opts)                 -- d[isplay]y[our]s[signature help]
-  buf_set_keymap(bufnr, "n", "dyl", "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics({ border = 'rounded' })<CR>", opts)   -- d[isplay]y[our]l[ine][diagnostics]
+  buf_set_keymap(bufnr, "n", "dyl", "<cmd>lua vim.lsp.diagnostic.open_float({ border = 'rounded' })<CR>", opts)   -- d[isplay]y[our]l[ine][diagnostics]
 
   -- From chris@machine, what is this?
   -- vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>f", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)

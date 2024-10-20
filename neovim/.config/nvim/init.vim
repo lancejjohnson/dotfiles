@@ -27,6 +27,8 @@ let mapleader = ","
 set autowrite
 set backspace=indent,eol,start " Backspace deletes all
 set expandtab
+set foldmethod=syntax
+set foldlevel=99
 set ignorecase
 set noswapfile
 set nowrap
