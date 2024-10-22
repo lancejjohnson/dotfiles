@@ -4,6 +4,7 @@
 import = ["~/.config/alacritty/themes/themes/github_light.toml"]
 # import = ["~/.config/alacritty/themes/themes/github_dark.toml"]
 # import = ["~/.config/alacritty/themes/themes/nord.toml"]
+# import = ["~/.config/alacritty/themes/themes/catppuccin_frappe.toml"]
 # import = ["~/.config/alacritty/colors/catppuccin-latte.toml"]
 # import = ["~/.config/alacritty/colors/dracula-pro-alucard.toml"]
 
