@@ -17,21 +17,19 @@ When you `stow neovim` it will symlink inside `~/.config`
 
 #### Use stow to link your dotfiles
 
-Clone dotfiles into `~/.dotfiles`. 
+Clone dotfiles into `~/.dotfiles`.
 
 Change into the `~/.dofiles` directory. This is the directory stow assumes contains the files you are wanting to symlink.
 
     cd ~/.dotfiles
 
-Run the stow command to link 
+Run the stow command to link
 
-
+    stow neovim
 
 Preview any changes without making them.
 
-    stow -n
-
-
+    stow -nv
 
 Specifiying directories
 

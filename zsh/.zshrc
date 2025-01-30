@@ -12,17 +12,15 @@ typeset -aU path
 # prompt pure
 eval "$(starship init zsh)"
 
-export KITTY_CONFIG_DIRECTORY="$HOME/.config/kitty"
-
-export PATH="/opt/homebrew/bin:$PATH"
-export PATH="/opt/homebrew/sbin:$PATH"
+# Prefer GNU utils
+export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
-export PATH="$HOME/.cask/bin:$PATH"
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/.bin:$PATH"
 export PATH=/etc/paths.d:$PATH
+
+# Curl
+export PATH=$(brew --prefix curl)/bin:$PATH
+
 
 # zstyle ':completion:*' hosts off
 # Git
@@ -81,22 +79,6 @@ export EDITOR=nvim
 # Git
 export GIT_EDITOR=nvim
 
-# Golang
-if [ -d $HOME/code/go ]
-then
-  export GOPATH=$HOME/code/go
-else
-  export GOPATH=$HOME/go
-fi
-if [ -d /opt/homebrew/opt/go/libexec ]
-then
-  export GOROOT=/opt/homebrew/opt/go/libexec
-else
-  export GOROOT=/usr/lib/golang
-fi
-export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:$GOROOT/bin
-
 # Elixir
 export KERL_BUILD_DOCS="yes"
 
@@ -114,25 +96,12 @@ export FZF_DEFAULT_COMMAND='rg --files'
 export DISABLE_SPRING=1
 export PATH="/usr/local/opt/libpq/bin:$PATH"
 
-# Rust
-export PATH="$HOME/.cargo/bin:$PATH"
-export PATH="$HOME.asdf/installs/rust/1.63.0/bin:$PATH"
-
-# Scala
-export PATH="$HOME/Library/Application Support/Coursier/bin:$PATH"
-
 # Highwing
 export BUNDLE_GITHUB__COM="$(op read 'op://Engineering/Github Token/Engineering/credential')"
 export GITHUB_TOKEN=$BUNDLE_GITHUB__COM
 export BUNDLE_RUBYGEMS__PKG__GITHUB__COM=$BUNDLE_GITHUB__COM
 
 source "$HOME/.aliases"
-
-complete -F _todo t
-
-
-
-
 
 # asdf (readme insists this be after path export)
 if [ -d $HOME/.asdf ]
@@ -144,7 +113,7 @@ then
 
   if test -f "$(brew --prefix asdf)/libexec/asdf.sh"; then
     source "$(brew --prefix asdf)/libexec/asdf.sh"
-    source "$(brew --prefix asdf)/etc/bash_completion.d/asdf.bash"
+    source "$(brew --prefix asdf)/etc/bash_completion.d/asdf"
   fi
 
   ## append completions to fpath
@@ -153,19 +122,3 @@ then
   autoload -Uz compinit
   compinit
 fi
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/opt/homebrew/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/opt/homebrew/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/opt/homebrew/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/opt/homebrew/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
