@@ -1,7 +1,7 @@
 # import = ["~/.config/alacritty/colors/dracula-pro.toml"]
 # import = ["~/.config/alacritty/colors/rose-pine-dawn.toml"]
-# import = ["~/.config/alacritty/themes/themes/gruvbox_material_hard_light.toml"]
-import = ["~/.config/alacritty/themes/themes/github_light.toml"]
+import = ["~/.config/alacritty/themes/themes/gruvbox_material_hard_light.toml"]
+# import = ["~/.config/alacritty/themes/themes/github_light.toml"]
 # import = ["~/.config/alacritty/themes/themes/github_dark.toml"]
 # import = ["~/.config/alacritty/themes/themes/nord.toml"]
 # import = ["~/.config/alacritty/themes/themes/catppuccin_frappe.toml"]
@@ -17,19 +17,19 @@ decorations_theme_variant = "None" # "None" will use the system choice
 size = 15.0
 
 [font.normal]
-family = "RobotoMono Nerd Font"
+family = "FiraCode Nerd Font"
 style = "Regular"
 
 [font.bold]
-family = "RobotoMono Nerd Font"
+family = "FiraCode Nerd Font"
 style = "Bold"
 
 [font.italic]
-family = "RobotoMono Nerd Font"
+family = "FiraCode Nerd Font"
 style = "Light Italic"
 
 [font.bold_italic]
-family = "RobotoMono Nerd Font"
+family = "FiraCode Nerd Font"
 style = "Bold Italic"
 
 [font.offset]
