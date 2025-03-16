@@ -12,6 +12,9 @@ typeset -aU path
 # prompt pure
 eval "$(starship init zsh)"
 
+# activate mise
+eval "$(mise activate zsh)"
+
 # Prefer GNU utils
 export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
 export PATH=/usr/local/bin:$PATH
