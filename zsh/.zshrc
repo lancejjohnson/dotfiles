@@ -103,22 +103,3 @@ export BUNDLE_RUBYGEMS__PKG__GITHUB__COM=$BUNDLE_GITHUB__COM
 
 source "$HOME/.aliases"
 
-# asdf (readme insists this be after path export)
-if [ -d $HOME/.asdf ]
-then
-  if test -f $HOME/.asdf/asdf.sh; then
-    source $HOME/.asdf/asdf.sh
-    source $HOME/.asdf/completions/asdf.bash
-  fi
-
-  if test -f "$(brew --prefix asdf)/libexec/asdf.sh"; then
-    source "$(brew --prefix asdf)/libexec/asdf.sh"
-    source "$(brew --prefix asdf)/etc/bash_completion.d/asdf"
-  fi
-
-  ## append completions to fpath
-  fpath=(${ASDF_DIR}/completions $fpath)
-  ## initialise completions with ZSH's compinit
-  autoload -Uz compinit
-  compinit
-fi
