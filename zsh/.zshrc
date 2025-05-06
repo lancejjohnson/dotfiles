@@ -106,3 +106,8 @@ export BUNDLE_RUBYGEMS__PKG__GITHUB__COM=$BUNDLE_GITHUB__COM
 
 source "$HOME/.aliases"
 
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/lance/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
