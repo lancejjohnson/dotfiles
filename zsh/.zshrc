@@ -111,3 +111,5 @@ fpath=(/Users/lance/.docker/completions $fpath)
 autoload -Uz compinit
 compinit
 # End of Docker CLI completions
+export PATH="/opt/homebrew/opt/ffmpeg@6/bin:$PATH"
+export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
