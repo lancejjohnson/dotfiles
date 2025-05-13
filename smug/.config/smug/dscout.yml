@@ -1,0 +1,19 @@
+session: dscout
+
+root: ~/src/dscout/dscout
+
+windows:
+  - name: shell
+    commands: pwd
+
+  - name: axon
+    commands: pwd
+
+  - name: axon-iex
+    commands: pwd
+
+  - name: dendra
+    commands: pwd
+
+  - name: dendra-test
+    commands: pwd
