@@ -4,16 +4,21 @@ root: ~/src/dscout/dscout
 
 windows:
   - name: shell
-    commands: pwd
+    commands: 
+    - clear
 
   - name: axon
-    commands: pwd
+    commands: 
+    - clear
 
   - name: axon-iex
-    commands: pwd
+    commands: 
+    - clear
 
   - name: dendra
-    commands: pwd
+    commands: 
+    - clear
 
   - name: dendra-test
-    commands: pwd
+    commands: 
+    - clear
