@@ -1,6 +1,7 @@
-theme = light:GruvboxLightHard,dark:GruvboxDark
+copy-on-select = clipboard
 font-family = "FiraCode Nerd Font Mono"
+font-feature = "-calt, -liga, -dlig"
 font-size = 16
 maximize = true
-font-feature = "-calt, -liga, -dlig"
+theme = light:GruvboxLightHard,dark:GruvboxDark
 window-save-state = "always"
