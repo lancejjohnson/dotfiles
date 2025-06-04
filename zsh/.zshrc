@@ -115,3 +115,6 @@ compinit
 # End of Docker CLI completions
 export PATH="/opt/homebrew/opt/ffmpeg@6/bin:$PATH"
 export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
+
+# ASDF
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
