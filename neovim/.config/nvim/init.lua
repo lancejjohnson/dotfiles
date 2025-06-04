@@ -753,6 +753,7 @@ require('lazy').setup({
       --  into multiple repos for maintenance purposes.
       'hrsh7th/cmp-nvim-lsp',
       'hrsh7th/cmp-path',
+      'hrsh7th/cmp-buffer',
     },
     config = function()
       -- See `:help cmp`
@@ -829,6 +830,7 @@ require('lazy').setup({
           { name = 'nvim_lsp' },
           { name = 'luasnip' },
           { name = 'path' },
+          { name = 'buffer' },
         },
       }
     end,
@@ -877,7 +879,7 @@ require('lazy').setup({
       contrast = 'hard', -- can be "hard", "soft" or empty string
       palette_overrides = {},
       overrides = {},
-      dim_inactive = true,
+      dim_inactive = false,
       transparent_mode = false,
     },
     init = function()
