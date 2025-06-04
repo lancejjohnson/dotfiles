@@ -1,3 +1,4 @@
 [tools]
 ruby = '3.4.3'
 golang = '1.24.3'
+elixir = "1.17.3-otp-27"

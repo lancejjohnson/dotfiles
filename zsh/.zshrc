@@ -13,7 +13,9 @@ typeset -aU path
 eval "$(starship init zsh)"
 
 # activate mise
-eval "$(mise activate zsh)"
+if command -v mise >/dev/null 2>&1; then
+  eval "$(mise activate zsh)"
+fi
 
 # Prefer GNU utils
 export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
@@ -99,10 +101,10 @@ export FZF_DEFAULT_COMMAND='rg --files'
 export DISABLE_SPRING=1
 export PATH="/usr/local/opt/libpq/bin:$PATH"
 
-# Highwing
-export BUNDLE_GITHUB__COM="$(op read 'op://Engineering/Github Token/Engineering/credential')"
-export GITHUB_TOKEN=$BUNDLE_GITHUB__COM
-export BUNDLE_RUBYGEMS__PKG__GITHUB__COM=$BUNDLE_GITHUB__COM
+# # Highwing
+# export BUNDLE_GITHUB__COM="$(op read 'op://Engineering/Github Token/Engineering/credential')"
+# export GITHUB_TOKEN=$BUNDLE_GITHUB__COM
+# export BUNDLE_RUBYGEMS__PKG__GITHUB__COM=$BUNDLE_GITHUB__COM
 
 source "$HOME/.aliases"
 
