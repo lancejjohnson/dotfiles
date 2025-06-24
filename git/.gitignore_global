@@ -107,3 +107,7 @@ Cargo.lock
 # IDEs
 lance.code-workspace
 lance.workspace
+
+# Worktrees in git
+.worktrees/
+
