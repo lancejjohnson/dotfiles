@@ -32,6 +32,10 @@ alias grum="git rebase upstream/master"
 alias gs="git status"
 alias gsl="git stash list"
 alias gss="git show -p stash@{0}"
+alias gw="git worktree "
+alias gwa="git worktree add"
+alias gwl="git worktree list"
+alias gwr="git worktree remove"
 
 # Ruby
 alias be="bundle exec"
