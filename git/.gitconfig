@@ -1,48 +1,69 @@
 [alias]
-	ksreview = "!f() { local SHA=${1:-HEAD}; local BRANCH=${2:-master}; if [ $SHA == $BRANCH ]; then SHA=HEAD; fi; git difftool -y -t Kaleidoscope $BRANCH...$SHA; }; f"
+  ksreview = "!f() { local SHA=${1:-HEAD}; local BRANCH=${2:-master}; if [ $SHA == $BRANCH ]; then SHA=HEAD; fi; git difftool -y -t Kaleidoscope $BRANCH...$SHA; }; f"
+
 [color]
   ui = auto
-# [commit]
-#  template = ~/.gitmessage
+
 [core]
-	excludesfile = ~/.gitignore_global
-	editor = nvim
-[difftool "Kaleidoscope"]
-	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-[difftool]
-	prompt = false
-	trustExitCode = true
+  excludesfile = ~/.gitignore_global
+  editor = nvim
+  pager = delta
+
+[delta]
+  navigate = true  # use n and N to move between diff sections
+
 [diff]
   colorMoved = zebra
-	tool = Kaleidoscope
+  tool = Kaleidoscope
+
+[difftool]
+  prompt = false
+  trustExitCode = true
+
+[difftool "Kaleidoscope"]
+  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+
 [fetch]
   prune = true
+
 [filter "lfs"]
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+
 [github]
-	user = lancejjohnson
+  user = lancejjohnson
+
 [ghi]
-	token = !security find-internet-password -a lancejjohnson -s github.com -l 'ghi token' -w
-; [init]
-  ; templatedir = ~/.git_template
-[mergetool "Kaleidoscope"]
-	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-	trustexitcode = true
-	trustExitCode = true
-[mergetool]
-	prompt = false
+  token = !security find-internet-password -a lancejjohnson -s github.com -l 'ghi token' -w
+
+[init]
+  defaultBranch = main
+
+[interactive]
+  diffFilter = delta --color-only
+
 [merge]
   ff = only
-	tool = Kaleidoscope
+  tool = Kaleidoscope
+  conflictstyle = zdiff3
+
+[mergetool]
+  prompt = false
+
+[mergetool "Kaleidoscope"]
+  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+  trustexitcode = true
+  trustExitCode = true
+
 [pull]
   ff = only
+
 [push]
-	default = current
+  default = current
+
 [user]
-	name = Lance Johnson
-	email = lancejjohnson@gmail.com
-[init]
-	defaultBranch = main
+  name = Lance Johnson
+  email = lancejjohnson@gmail.com
+
