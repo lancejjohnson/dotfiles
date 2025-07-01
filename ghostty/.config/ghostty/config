@@ -1,7 +1,8 @@
 copy-on-select = clipboard
-font-family = "FiraCode Nerd Font Mono"
+font-family = "MonoLisa Variable"
 font-feature = "-calt, -liga, -dlig"
 font-size = 16
 maximize = true
 theme = light:GruvboxLightHard,dark:GruvboxDark
 window-save-state = "always"
+keybind = shift+enter=text:\n
