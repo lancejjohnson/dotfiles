@@ -19,7 +19,15 @@
   "buffer_font_family": "MonoLisa Variable",
   "buffer_font_features": {
     "calt": false,
-    "liga": false
+    "liga": false,
+    // ss02: script when true
+    "ss02": false,
+    // ss04: unstyled g when true
+    "ss04": false,
+    // ss15: no serif i when true
+    "ss15": true,
+    // ss16: no serif r when true
+    "ss16": true
   },
   "buffer_font_size": 14,
   "buffer_font_weight": 400,
@@ -55,7 +63,7 @@
           "arguments": ["format", "--stdin-filename", "{buffer_path}", "-"]
         }
       },
-      "language_servers": ["lexical", "! elixir-ls", "! next-ls"]
+      "language_servers": ["! lexical", "elixir-ls", "! next-ls"]
     },
     "HEEX": {
       "format_on_save": {

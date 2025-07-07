@@ -1,5 +1,6 @@
 copy-on-select = clipboard
 font-family = "MonoLisa Variable"
+font-family-italic = "MonoLisa Variable"
 font-feature = "-calt, -liga, -dlig"
 font-size = 16
 maximize = true

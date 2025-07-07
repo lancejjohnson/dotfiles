@@ -866,7 +866,7 @@ require('lazy').setup({
       italic = {
         strings = false,
         emphasis = false,
-        comments = false,
+        comments = true,
         operators = false,
         folds = true,
       },
