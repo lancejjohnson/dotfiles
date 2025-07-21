@@ -119,4 +119,7 @@ export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
 # ASDF
 export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 
+# Rust
+export PATH="$HOME/.cargo/bin:$PATH"
+
 export MANWIDTH=80
