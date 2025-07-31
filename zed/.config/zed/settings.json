@@ -10,9 +10,9 @@
   "agent": {
     "default_profile": "ask",
     "default_model": {
-      "provider": "copilot_chat",
-      "model": "claude-3.7-sonnet"
-    },
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-latest"
+    }
   },
   "base_keymap": "VSCode",
   "buffer_font_family": "MonoLisa Variable",
@@ -62,7 +62,7 @@
           "arguments": ["format", "--stdin-filename", "{buffer_path}", "-"]
         }
       },
-      "language_servers": ["! lexical", "elixir-ls", "! next-ls"]
+      "language_servers": ["lexical", "! elixir-ls", "! next-ls"]
     },
     "HEEX": {
       "format_on_save": {
