@@ -8,17 +8,21 @@ windows:
     - clear
 
   - name: axon
+    root: apps/axon
     commands: 
     - clear
 
   - name: axon-iex
+    root: apps/axon 
     commands: 
     - clear
 
   - name: dendra
+    root: apps/dendra
     commands: 
     - clear
 
   - name: dendra-test
+    root: apps/dendra
     commands: 
     - clear
