@@ -1007,5 +1007,12 @@ require('lazy').setup({
   },
 })
 
+-- [[ Custom User Commands ]]
+local custom_functions = require 'custom.functions'
+
+vim.api.nvim_create_user_command('ToggleRelativeNumber', custom_functions.toggle_relativenumber, {
+  desc = 'Toggle relative line numbers on/off',
+})
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
