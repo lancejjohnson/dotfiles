@@ -158,6 +158,12 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 3
 
+-- Set the window width to auto resize
+vim.opt.winwidth = 105
+
+-- Turn off wrap
+vim.opt.wrap = false
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
@@ -893,7 +899,11 @@ require('lazy').setup({
     'folke/todo-comments.nvim',
     event = 'VimEnter',
     dependencies = { 'nvim-lua/plenary.nvim' },
-    opts = { signs = false },
+    opts = {
+      -- You can add things from the Configruation section of https://github.com/folke/todo-comments.nvim?tab=readme-ov-file#%EF%B8%8F-configuration
+      -- including additional patterns to match.
+      signs = false,
+    },
   },
 
   { -- Collection of various small independent plugins/modules
@@ -932,6 +942,8 @@ require('lazy').setup({
       statusline.section_git = function()
         return ''
       end
+
+      require('mini.trailspace').setup()
 
       -- ... and there is more!
       --  Check out: https://github.com/echasnovski/mini.nvim
