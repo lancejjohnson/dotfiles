@@ -49,11 +49,6 @@
     },
     "git_gutter": "hide"
   },
-  "language_overrides": {
-    "Ruby": {
-      "show_whitespaces": "selection"
-    }
-  },
   "languages": {
     "Elixir": {
       "format_on_save": {
@@ -62,7 +57,7 @@
           "arguments": ["format", "--stdin-filename", "{buffer_path}", "-"]
         }
       },
-      "language_servers": ["lexical", "! elixir-ls", "! next-ls"]
+      "language_servers": ["expert", "!lexical", "!elixir-ls", "!next-ls"]
     },
     "HEEX": {
       "format_on_save": {
@@ -71,7 +66,7 @@
           "arguments": ["format", "--stdin-filename", "{buffer_path}", "-"]
         }
       },
-      "language_servers": ["lexical", "! elixir-ls", "! next-ls"]
+      "language_servers": ["expert", "!lexical", "!elixir-ls", "!next-ls"]
     },
     "JavaScript": {
       "format_on_save": {
