@@ -179,6 +179,8 @@ vim.keymap.set('n', '<leader>tw', function()
   require('mini.trailspace').trim()
 end, { desc = '[T]rim trailing [W]hitespace' })
 
+vim.keymap.set('n', '<leader>w', vim.cmd.write, { desc = 'Write current buffer' })
+
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
 -- is not what someone will guess without a bit more experience.
@@ -242,6 +244,8 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
+  -- I like tpope better than mini because he follows the vim grammar. However, consider kylechui/nvim-surround as it supports treesitter
+  'tpope/vim-surround', -- Surrounds
 
   -- NOTE: Plugins can also be added by using a table,
   -- with the first argument being the link and the following
@@ -562,7 +566,7 @@ require('lazy').setup({
 
           -- Fuzzy find all the symbols in your current workspace.
           --  Similar to document symbols, except searches over your entire project.
-          map('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
+          map('<leader>ps', require('telescope.builtin').lsp_dynamic_workspace_symbols, 'Works[p]ace [S]ymbols')
 
           -- Rename the variable under your cursor.
           --  Most Language Servers support renaming across files, etc.
@@ -646,7 +650,6 @@ require('lazy').setup({
         -- But for many setups, the LSP (`ts_ls`) will work just fine
         -- ts_ls = {},
         --
-        expert = {},
 
         eslint = {},
 
@@ -947,7 +950,7 @@ require('lazy').setup({
       -- - saiw) - [S]urround [A]dd [I]nner [W]ord [)]Paren
       -- - sd'   - [S]urround [D]elete [']quotes
       -- - sr)'  - [S]urround [R]eplace [)] [']
-      require('mini.surround').setup()
+      -- require('mini.surround').setup()
 
       -- Simple and easy statusline.
       --  You could remove this setup call if you don't like it,
@@ -969,6 +972,8 @@ require('lazy').setup({
       end
 
       require('mini.trailspace').setup()
+
+      require('mini.pairs').setup()
 
       -- ... and there is more!
       --  Check out: https://github.com/echasnovski/mini.nvim
