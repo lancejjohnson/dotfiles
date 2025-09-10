@@ -3,26 +3,32 @@ session: dscout
 root: ~/src/dscout/dscout
 
 windows:
+  - name: editor
+    root: apps/axon
+    commands:
+    - clear
+    - nvim
+
   - name: shell
-    commands: 
+    commands:
     - clear
 
   - name: axon
     root: apps/axon
-    commands: 
+    commands:
     - clear
 
   - name: axon-iex
-    root: apps/axon 
-    commands: 
+    root:
+    commands:
     - clear
 
   - name: dendra
     root: apps/dendra
-    commands: 
+    commands:
     - clear
 
   - name: dendra-test
     root: apps/dendra
-    commands: 
+    commands:
     - clear
