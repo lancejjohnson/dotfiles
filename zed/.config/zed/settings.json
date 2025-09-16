@@ -57,7 +57,7 @@
           "arguments": ["format", "--stdin-filename", "{buffer_path}", "-"]
         }
       },
-      "language_servers": ["expert", "!lexical", "!elixir-ls", "!next-ls"]
+      "language_servers": ["!expert", "lexical", "!elixir-ls", "!next-ls"]
     },
     "HEEX": {
       "format_on_save": {
@@ -66,7 +66,7 @@
           "arguments": ["format", "--stdin-filename", "{buffer_path}", "-"]
         }
       },
-      "language_servers": ["expert", "!lexical", "!elixir-ls", "!next-ls"]
+      "language_servers": ["!expert", "lexical", "!elixir-ls", "!next-ls"]
     },
     "JavaScript": {
       "format_on_save": {
