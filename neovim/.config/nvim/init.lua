@@ -218,6 +218,31 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+-- TODO(ljj): This isn't working. I think it might have to do with this function being defined before cmp has loaded and the settings have been defined.
+--
+-- Delay the cmp popup so it's not bouncing around all over the place
+-- local timer = nil
+-- vim.api.nvim_create_autocmd({ 'TextChangedI', 'CmdlineChanged' }, {
+--   desc = 'Delay nvim-cmp popup',
+--   pattern = '*',
+--   callback = function()
+--     local delay = 2000
+--     if timer then
+--       vim.loop.timer_stop(timer)
+--       timer = nil
+--     end
+--
+--     timer = vim.loop.new_timer()
+--     timer:start(
+--       delay,
+--       0,
+--       vim.schedule_wrap(function()
+--         require('cmp').complete { reason = require('cmp').ContextReason.Auto }
+--       end)
+--     )
+--   end,
+-- })
+
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
@@ -334,7 +359,7 @@ require('lazy').setup({
         { '<leader>d', group = '[D]ocument' },
         { '<leader>r', group = '[R]ename' },
         { '<leader>s', group = '[S]earch' },
-        { '<leader>w', group = '[W]orkspace' },
+        { '<leader>p', group = 'Works[p]ace' },
         { '<leader>t', group = '[T]oggle' },
         { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
       },
@@ -562,7 +587,9 @@ require('lazy').setup({
 
           -- Fuzzy find all the symbols in your current document.
           --  Symbols are things like variables, functions, types, etc.
-          map('<leader>ds', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
+          map('<leader>ds', function()
+            require('telescope.builtin').lsp_document_symbols { symbol_width = 50 }
+          end, '[D]ocument [S]ymbols')
 
           -- Fuzzy find all the symbols in your current workspace.
           --  Similar to document symbols, except searches over your entire project.
@@ -790,6 +817,9 @@ require('lazy').setup({
       luasnip.config.setup {}
 
       cmp.setup {
+        -- autocomplete must be false to use the delay function
+        autocomplete = false,
+
         snippet = {
           expand = function(args)
             luasnip.lsp_expand(args.body)
