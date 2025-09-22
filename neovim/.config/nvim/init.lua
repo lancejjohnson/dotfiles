@@ -596,7 +596,19 @@ require('lazy').setup({
           -- Fuzzy find all the symbols in your current document.
           --  Symbols are things like variables, functions, types, etc.
           map('<leader>ds', function()
-            require('telescope.builtin').lsp_document_symbols { symbol_width = 50 }
+            -- require('telescope.builtin').lsp_document_symbols { symbol_width = 50 }
+            require('telescope.builtin').lsp_document_symbols(require('telescope.themes').get_dropdown {
+              -- Optional additional customization
+              winblend = 5,
+              border = true,
+              previewer = false,
+              symbol_width = 80,
+              layout_config = {
+                width = function(_, max_columns, _)
+                  return math.min(max_columns, 105)
+                end,
+              },
+            })
           end, '[D]ocument [S]ymbols')
 
           -- Fuzzy find all the symbols in your current workspace.
@@ -852,11 +864,11 @@ require('lazy').setup({
           -- Accept ([y]es) the completion.
           --  This will auto-import if your LSP supports it.
           --  This will expand snippets if the LSP sent a snippet.
-          ['<C-y>'] = cmp.mapping.confirm { select = true },
+          -- ['<C-y>'] = cmp.mapping.confirm { select = true },
 
           -- If you prefer more traditional completion keymaps,
           -- you can uncomment the following lines
-          --['<CR>'] = cmp.mapping.confirm { select = true },
+          ['<CR>'] = cmp.mapping.confirm { select = true },
           --['<Tab>'] = cmp.mapping.select_next_item(),
           --['<S-Tab>'] = cmp.mapping.select_prev_item(),
 
