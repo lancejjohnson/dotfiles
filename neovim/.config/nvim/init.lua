@@ -369,6 +369,7 @@ require('lazy').setup({
         { '<leader>p', group = 'Works[p]ace' },
         { '<leader>t', group = '[T]oggle' },
         { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
+        { '<leader>y', group = '[Y]ank', mode = { 'n', 'v' } },
       },
     },
   },
@@ -1093,6 +1094,22 @@ local custom_functions = require 'custom.functions'
 vim.api.nvim_create_user_command('ToggleRelativeNumber', custom_functions.toggle_relativenumber, {
   desc = 'Toggle relative line numbers on/off',
 })
+
+vim.api.nvim_create_user_command(
+  'YankRelativePath',
+  custom_functions.yank_relative_path,
+  { desc = 'Yank the relative path of the current buffer to the system clipboard' }
+)
+
+vim.keymap.set('n', '<leader>yr', custom_functions.yank_relative_path, { desc = 'Yank relative path' })
+
+vim.api.nvim_create_user_command(
+  'YankRelativePathWithLineNumber',
+  custom_functions.yank_relative_path_with_line,
+  { desc = 'Yank the relative path of the current buffer and the line number of the cursor to the system clipboard' }
+)
+
+vim.keymap.set('n', '<leader>yl', custom_functions.yank_relative_path, { desc = 'Yank relative path and line' })
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
