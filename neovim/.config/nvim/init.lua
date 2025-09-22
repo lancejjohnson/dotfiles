@@ -1121,7 +1121,7 @@ vim.api.nvim_create_user_command(
   { desc = 'Yank the relative path of the current buffer and the line number of the cursor to the system clipboard' }
 )
 
-vim.keymap.set('n', '<leader>yl', custom_functions.yank_relative_path, { desc = 'Yank relative path and line' })
+vim.keymap.set('n', '<leader>yl', custom_functions.yank_relative_path_with_line, { desc = 'Yank relative path and line' })
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
