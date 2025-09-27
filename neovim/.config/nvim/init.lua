@@ -209,7 +209,7 @@ vim.keymap.set('n', 'gl', '<C-w><C-l>', { desc = 'Move focus to the right window
 vim.keymap.set('n', 'gj', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', 'gk', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
-vim.keymap.set('i', 'jj', '<Esc>', { desc = 'Easier escape' })
+vim.keymap.set('i', 'jk', '<Esc>', { desc = 'Easier escape' })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`

@@ -8,6 +8,6 @@ font-feature = "ss15"
 font-feature = "ss16"
 font-size = 16
 maximize = true
-theme = light:GruvboxLightHard,dark:GruvboxDark
+theme = light:"Gruvbox Light Hard",dark:"Gruvbox Dark"
 window-save-state = "always"
 keybind = shift+enter=text:\n
