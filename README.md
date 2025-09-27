@@ -19,7 +19,8 @@ When you `stow neovim` it will symlink inside `~/.config`
 
 Clone dotfiles into `~/.dotfiles`.
 
-Change into the `~/.dofiles` directory. This is the directory stow assumes contains the files you are wanting to symlink.
+Change into the `~/.dofiles` directory. This is the directory stow assumes
+contains the files you are wanting to symlink.
 
     cd ~/.dotfiles
 
@@ -37,7 +38,9 @@ Specifiying directories
 
 -t the directory into which the symlinks should go
 
-Stow assumes the "stow" directory (i.e. the directory containing the software images you are wanting to link) to be the current directory. It assumes the "target" directory to the parent directory of the "stow" directory.
+Stow assumes the "stow" directory (i.e. the directory containing the software
+images you are wanting to link) to be the current directory. It assumes the
+"target" directory to the parent directory of the "stow" directory.
 
 ## Neovim
 
