@@ -12,6 +12,21 @@ key_maps_per_line = 3     # optional, default 5, number of key maps per line in 
 #-----------------------------------------------------------
 # Window management
 #-----------------------------------------------------------
+#
+# | hs.layout.constant | key 1 | key 2 | mnemonic                             |
+# | ------------------ | ----- | ----- | ------------------------------------ |
+# | left25             | h     | 2     | \[h\] vim left \[2\]5 percent        |
+# | left30             | h     | 3     | \[h\] vim left \[3\]0 percent        |
+# | left50             | h     | 5     | \[h\] vim left \[5\]0 percent        |
+# | left70             | h     | 7     | \[h\] vim left \[7\]0 percent        |
+# | left75             | h     | 8     | \[h\] vim left \[8\]0 (ish) percent  |
+# | maximized          | u     |       | \[u\]p - max the window go "up"      |
+# | right25            | l     | 2     | \[h\] vim right \[2\]5 percent       |
+# | right30            | l     | 3     | \[h\] vim right \[3\]0 percent       |
+# | right50            | l     | 5     | \[h\] vim right \[5\]0 percent       |
+# | right70            | l     | 7     | \[h\] vim right \[7\]0 percent       |
+# | right75            | l     | 8     | \[h\] vim right \[8\]0 (ish) percent |
+#-----------------------------------------------------------
 [w]
 label = "+[w]indow"
 u = "function:maximized"
