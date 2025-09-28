@@ -5,11 +5,14 @@ spoon.Hammerflow.loadFirstValidTomlFile {
   'Spoons/Hammerflow.spoon/sample.toml',
 }
 
+local locations = {
+  ['left30'] = hs.layout.left30,
+}
+
 local testFunc = function()
-  -- get the focused window
-  -- tell it to move to a layout location
   local w = hs.window.focusedWindow()
-  w:move(hs.layout.left30)
+  local loc = hs.layout.left30
+  w:move(loc)
 end
 
 spoon.Hammerflow.registerFunctions {
