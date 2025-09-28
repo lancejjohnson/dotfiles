@@ -5,35 +5,51 @@ spoon.Hammerflow.loadFirstValidTomlFile {
   'Spoons/Hammerflow.spoon/sample.toml',
 }
 
-local locations = {
-  ['left30'] = hs.layout.left30,
-}
-
-local testFunc = function()
+local movewindow = function(target)
+  if not target then
+    hs.notify.show('Hammerflow', 'not found', 'unknown target')
+  end
   local w = hs.window.focusedWindow()
-  local loc = hs.layout.left30
-  w:move(loc)
+  w:move(target)
 end
 
--- TODO(ljj): translate target into hs.layout.constants
-local moveWindow = function(target)
-  print(target)
-  local layouts = {
-    ['left30'] = hs.layout.left30,
-    ['left50'] = hs.layout.left50,
-  }
-  local layout = layouts[target] or hs.layout.maximized
-  print(layout)
-  local w = hs.window.focusedWindow()
-  w:move(layout)
-end
-
-spoon.Hammerflow.registerFunctions {
+local windowFunctions = {
+  ['left25'] = function()
+    movewindow(hs.layout.left25)
+  end,
   ['left30'] = function()
-    moveWindow 'left30'
-    -- testFunc()
+    movewindow(hs.layout.left30)
+  end,
+  ['left50'] = function()
+    movewindow(hs.layout.left50)
+  end,
+  ['left70'] = function()
+    movewindow(hs.layout.left70)
+  end,
+  ['left75'] = function()
+    movewindow(hs.layout.left75)
+  end,
+  ['maximized'] = function()
+    movewindow(hs.layout.maximized)
+  end,
+  ['right25'] = function()
+    movewindow(hs.layout.right25)
+  end,
+  ['right30'] = function()
+    movewindow(hs.layout.right30)
+  end,
+  ['right50'] = function()
+    movewindow(hs.layout.right50)
+  end,
+  ['right70'] = function()
+    movewindow(hs.layout.right70)
+  end,
+  ['right75'] = function()
+    movewindow(hs.layout.right75)
   end,
 }
+
+spoon.Hammerflow.registerFunctions(windowFunctions)
 
 -- NOTE(ljj): I think this is another (prob widely used) spoon
 -- https://github.com/Hammerspoon/Spoons/raw/master/Spoons/ReloadConfiguration.spoon.zip

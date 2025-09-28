@@ -14,23 +14,23 @@ key_maps_per_line = 3     # optional, default 5, number of key maps per line in 
 #-----------------------------------------------------------
 [w]
 label = "+[w]indow"
-u = "hs:hs.layout.maximized"
+u = "function:maximized"
 
 [w.h]
 label = "+[h] vim left"
-2 = "window:first-quarter"
+2 = "function:left25"
 3 = "function:left30"
-5 = "hs:hs.layout.left50"
-7 = "hs:hs.layout.left70"
-8 = "hs:hs.layout.left75"
+5 = "function:left50"
+7 = "function:left70"
+8 = "function:left75"
 
 [w.l]
 label = "+[l] vim right"
-2 = "hs:hs.layout.right25"
-3 = "hs:hs.layout.right30"
-5 = "hs:hs.layout.right50"
-7 = "hs:hs.layout.right70"
-8 = "hs:hs.layout.right75"
+2 = "function:right25"
+3 = "function:right30"
+5 = "function:right50"
+7 = "function:right70"
+8 = "function:right75"
 
 #-----------------------------------------------------------
 # Sample.toml copied here for now
