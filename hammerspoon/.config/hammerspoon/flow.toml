@@ -9,6 +9,10 @@ toast_on_reload = true    # optional, default false, show a toast when the confi
 show_ui = true            # optional, default true, show the ui with your key maps
 key_maps_per_line = 3     # optional, default 5, number of key maps per line in the ui
 
+[m]
+label = "+[m]ermaid.js"
+r = "function:insertReturnSequence"
+
 #-----------------------------------------------------------
 # Window management
 #-----------------------------------------------------------
@@ -86,14 +90,6 @@ w = "menu:File>New Window"    # select menu items (frontmost app)
 n = "menu:Safari|File>New Tab" # select menu items (specific app)
 r = "reload"                  # reserved for reloading your hammerspoon config (helpful when auto_reload is false)
 i = "input:https://google.com/search?q={input}" # capture input and insert it into any other action
-
-
-# we have window management too!
-# [w]
-# label = "[window]"
-# h = "window:left-half"                    # use presets listed in the README
-# c = "window:center-half"                  # use presets listed in the README
-# s = ["window:.4,.3,.2,.4","small center"] # or use 4 percentages for x,y,width,height for custom placement - more details in README
 
 
 # this group is handy to copy over
