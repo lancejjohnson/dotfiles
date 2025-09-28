@@ -5,7 +5,7 @@ spoon.Hammerflow.loadFirstValidTomlFile {
   'Spoons/Hammerflow.spoon/sample.toml',
 }
 
-require 'windows'
+local windows = require 'windows'
 
 spoon.Hammerflow.registerFunctions(windows.windowFunctions)
 
