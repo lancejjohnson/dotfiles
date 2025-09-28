@@ -9,16 +9,6 @@ local windows = require 'windows'
 
 spoon.Hammerflow.registerFunctions(windows.windowFunctions)
 
--- NOTE(ljj): I think this is another (prob widely used) spoon
--- https://github.com/Hammerspoon/Spoons/raw/master/Spoons/ReloadConfiguration.spoon.zip
--- optionally respect auto_reload setting in the toml config.
--- if spoon.Hammerflow.auto_reload then
---   hs.loadSpoon("ReloadConfiguration")
---   -- set any paths for auto reload
---   -- spoon.ReloadConfiguration.watch_paths = {hs.configDir, "~/path/to/my/configs/"}
---   spoon.ReloadConfiguration:start()
--- end
-
 -- TODO(ljj): Move this to a mermaid.lua file and load.
 local function insertReturnSequence()
   local clipboard = hs.pasteboard.getContents()
