@@ -1,11 +1,23 @@
 -- Hammerflow
 hs.loadSpoon 'Hammerflow'
 spoon.Hammerflow.loadFirstValidTomlFile {
-  -- TODO(ljj): Define your own toml
-  -- "home.toml",
-  -- "work.toml",
+  'flow.toml',
   'Spoons/Hammerflow.spoon/sample.toml',
 }
+
+local testFunc = function()
+  -- get the focused window
+  -- tell it to move to a layout location
+  local w = hs.window.focusedWindow()
+  w:move(hs.layout.left30)
+end
+
+spoon.Hammerflow.registerFunctions {
+  ['left30'] = function()
+    testFunc()
+  end,
+}
+
 -- NOTE(ljj): I think this is another (prob widely used) spoon
 -- https://github.com/Hammerspoon/Spoons/raw/master/Spoons/ReloadConfiguration.spoon.zip
 -- optionally respect auto_reload setting in the toml config.
