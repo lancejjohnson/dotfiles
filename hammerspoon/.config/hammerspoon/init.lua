@@ -15,9 +15,23 @@ local testFunc = function()
   w:move(loc)
 end
 
+-- TODO(ljj): translate target into hs.layout.constants
+local moveWindow = function(target)
+  print(target)
+  local layouts = {
+    ['left30'] = hs.layout.left30,
+    ['left50'] = hs.layout.left50,
+  }
+  local layout = layouts[target] or hs.layout.maximized
+  print(layout)
+  local w = hs.window.focusedWindow()
+  w:move(layout)
+end
+
 spoon.Hammerflow.registerFunctions {
   ['left30'] = function()
-    testFunc()
+    moveWindow 'left30'
+    -- testFunc()
   end,
 }
 
