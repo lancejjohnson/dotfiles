@@ -48,20 +48,8 @@ label = "+[l] vim right"
 8 = "function:right75"
 
 #-----------------------------------------------------------
-# Sample.toml copied here for now
+# Some of sample.toml copied here for now
 #-----------------------------------------------------------
-
-# set a key to open an app
-t = "Terminal"
-
-
-# or a url
-g = "https://google.com"
-
-
-# use an array to change the label in the popup
-v = ["Visual Studio Code", "VS Code"]
-
 
 # create groups to nest actions
 [l]
@@ -84,6 +72,7 @@ t = ["https://twitter.com/saml_dev", "my twitter"]
 label = "[raycast]"
 c = ["raycast://extensions/raycast/raycast/confetti", "confetti"]
 e = ["raycast://extensions/raycast/emoji-symbols/search-emoji-symbols", "emoji"]
+v = ["raycast://extensions/raycast/clipboard-history/clipboard-history", "clipboard"]
 
 
 # use prefixes for special actions
@@ -107,19 +96,10 @@ i = "input:https://google.com/search?q={input}" # capture input and insert it in
 # s = ["window:.4,.3,.2,.4","small center"] # or use 4 percentages for x,y,width,height for custom placement - more details in README
 
 
-# or use raycast for window management if you prefer
-[w.r]
-label = "[raycast-window]"
-h = ["raycast://extensions/raycast/window-management/left-half", "left half"]
-l = ["raycast://extensions/raycast/window-management/right-half", "right half"]
-c = ["raycast://extensions/raycast/window-management/center-half", "center half"]
-
-
 # this group is handy to copy over
 # for quick access to your config
 [h]
 label = "[hammerspoon]"
-c = "code: ~/.hammerspoon"
 r = "reload" # reserved for reloading your hammerspoon config (helpful when auto_reload is false)
 
 
