@@ -14,6 +14,7 @@
       "model": "claude-sonnet-4-latest"
     }
   },
+  "agent_font_size": 18,
   "base_keymap": "VSCode",
   "buffer_font_family": "MonoLisa Variable",
   "buffer_font_features": {
