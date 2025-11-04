@@ -14,7 +14,7 @@
       "model": "claude-sonnet-4-latest"
     }
   },
-  "agent_font_size": 18,
+  "agent_ui_font_size": 18,
   "base_keymap": "VSCode",
   "buffer_font_family": "MonoLisa Variable",
   "buffer_font_features": {
@@ -52,30 +52,32 @@
   },
   "languages": {
     "Elixir": {
-      "format_on_save": {
+      "formatter": {
         "external": {
           "command": "mix",
           "arguments": ["format", "--stdin-filename", "{buffer_path}", "-"]
         }
       },
+      "format_on_save": "on",
       "language_servers": ["!expert", "lexical", "!elixir-ls", "!next-ls"]
     },
     "HEEX": {
-      "format_on_save": {
+      "formatter": {
         "external": {
           "command": "mix",
           "arguments": ["format", "--stdin-filename", "{buffer_path}", "-"]
         }
       },
+      "format_on_save": "on",
       "language_servers": ["!expert", "lexical", "!elixir-ls", "!next-ls"]
     },
     "JavaScript": {
-      "format_on_save": {
-        "external": {
-          "command": "prettier",
-          "arguments": ["--stdin-filepath", "{buffer_path}"]
-        }
-      },
+      // "format_on_save": {
+      //   "external": {
+      //     "command": "prettier",
+      //     "arguments": ["--stdin-filepath", "{buffer_path}"]
+      //   }
+      // },
       "formatter": {
         "external": {
           "command": "prettier",
