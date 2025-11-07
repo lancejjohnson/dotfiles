@@ -1,0 +1,32 @@
+session: editors
+
+root: ~/src/dscout
+
+windows:
+  - name: axon
+    root: dscout/apps/axon
+    commands:
+    - clear
+    - nvim
+
+  - name: axon-test
+    root: dscout/apps/axon
+    commands:
+    - clear
+    - nvim
+
+  - name: dendra
+    root: dscout/apps/dendra
+    commands:
+    - clear
+    - nvim
+
+  - name: dendra-test
+    root: dscout/apps/dendra
+    commands:
+    - clear
+
+  - name: chrome-ext
+    root: dscout-chrome/
+    commands:
+    - clear

@@ -1,0 +1,23 @@
+session: claude
+
+root: ~/src/dscout
+
+windows:
+  - name: dscout
+    root: dscout
+    commands:
+    - clear
+  - name: axon
+    root: dscout/apps/axon
+    commands:
+    - clear
+
+  - name: dendra
+    root: dscout/apps/dendra
+    commands:
+    - clear
+
+  - name: chrome-ext
+    root: dscout-chrome/
+    commands:
+    - clear
