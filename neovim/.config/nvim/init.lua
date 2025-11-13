@@ -690,7 +690,7 @@ require('lazy').setup({
         -- clangd = {},
         gopls = {},
         -- pyright = {},
-        -- rust_analyzer = {},
+        rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
         -- Some languages (like typescript) have entire language plugins that can be useful:
@@ -979,22 +979,22 @@ require('lazy').setup({
   },
 
   -- Highlight todo, notes, etc in comments
-  {
-    'folke/todo-comments.nvim',
-    event = 'VimEnter',
-    dependencies = { 'nvim-lua/plenary.nvim' },
-    opts = {
-      signs = false,
-      -- See https://github.com/folke/todo-comments.nvim/pull/255
-      -- Hightlight and search pattern supports (name) following comments
-      highlight = {
-        pattern = [[.*<((KEYWORDS)%(\(.{-1,}\))?):]],
-      },
-      search = {
-        pattern = [[\b(KEYWORDS)(\(\w*\))*:]],
-      },
-    },
-  },
+  -- {
+  --   'folke/todo-comments.nvim',
+  --   event = 'VimEnter',
+  --   dependencies = { 'nvim-lua/plenary.nvim' },
+  --   opts = {
+  --     signs = false,
+  --     -- See https://github.com/folke/todo-comments.nvim/pull/255
+  --     -- Hightlight and search pattern supports (name) following comments
+  --     highlight = {
+  --       pattern = [[.*<((KEYWORDS)%(\(.{-1,}\))?):]],
+  --     },
+  --     search = {
+  --       pattern = [[\b(KEYWORDS)(\(\w*\))*:]],
+  --     },
+  --   },
+  -- },
 
   { -- Collection of various small independent plugins/modules
     'echasnovski/mini.nvim',
@@ -1060,6 +1060,7 @@ require('lazy').setup({
         'markdown',
         'markdown_inline',
         'query',
+        'rust',
         'typescript',
         'vim',
         'vimdoc',
