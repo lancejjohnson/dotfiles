@@ -109,7 +109,7 @@
       }
     }
   },
-  "relative_line_numbers": true,
+  "relative_line_numbers": "enabled",
   "show_copilot_suggestions": true,
   "soft_wrap": "none",
   "tab_size": 2,
