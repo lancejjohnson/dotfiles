@@ -1151,6 +1151,8 @@ vim.api.nvim_create_user_command(
 )
 
 vim.keymap.set('n', '<leader>yl', custom_functions.yank_relative_path_with_line, { desc = 'Yank relative path and line' })
+vim.keymap.set('i', '<C-\\>', '|><space>')
+vim.keymap.set('i', '<C-a>', '<space>=><space>')
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
