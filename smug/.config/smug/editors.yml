@@ -26,7 +26,13 @@ windows:
     commands:
     - clear
 
+  - name: astro
+    root: dscout/apps/astro
+    commands:
+    - clear
+
   - name: chrome-ext
     root: dscout-chrome/
     commands:
     - clear
+

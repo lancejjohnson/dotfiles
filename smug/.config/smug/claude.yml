@@ -7,15 +7,23 @@ windows:
     root: dscout
     commands:
     - clear
+
   - name: axon
     root: dscout/apps/axon
     commands:
     - clear
+    - claude
 
   - name: dendra
     root: dscout/apps/dendra
     commands:
     - clear
+
+  - name: astro
+    root: dscout/apps/astro
+    commands:
+    - clear
+    - claude
 
   - name: chrome-ext
     root: dscout-chrome/
