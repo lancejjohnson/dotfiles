@@ -877,11 +877,11 @@ require('lazy').setup({
           -- Accept ([y]es) the completion.
           --  This will auto-import if your LSP supports it.
           --  This will expand snippets if the LSP sent a snippet.
-          -- ['<C-y>'] = cmp.mapping.confirm { select = true },
+          ['<C-y>'] = cmp.mapping.confirm { select = true },
 
           -- If you prefer more traditional completion keymaps,
           -- you can uncomment the following lines
-          ['<CR>'] = cmp.mapping.confirm { select = true },
+          -- ['<CR>'] = cmp.mapping.confirm { select = true },
           --['<Tab>'] = cmp.mapping.select_next_item(),
           --['<S-Tab>'] = cmp.mapping.select_prev_item(),
 
@@ -1152,7 +1152,7 @@ vim.api.nvim_create_user_command(
 )
 
 vim.keymap.set('n', '<leader>yl', custom_functions.yank_relative_path_with_line, { desc = 'Yank relative path and line' })
-vim.keymap.set('i', '<C-\\>', '|><space>')
+vim.keymap.set('i', '<C-p>', '|><space>')
 vim.keymap.set('i', '<C-a>', '<space>=><space>')
 
 -- The line beneath this is called `modeline`. See `:help modeline`

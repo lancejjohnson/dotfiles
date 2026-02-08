@@ -13,7 +13,6 @@ windows:
     root: dscout/apps/axon
     commands:
     - clear
-    - nvim
 
   - name: dendra
     root: dscout/apps/dendra

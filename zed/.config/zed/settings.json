@@ -11,8 +11,8 @@
     "default_profile": "ask",
     "default_model": {
       "provider": "anthropic",
-      "model": "claude-sonnet-4-latest"
-    }
+      "model": "claude-sonnet-4-latest",
+    },
   },
   "agent_ui_font_size": 18,
   "base_keymap": "VSCode",
@@ -27,49 +27,49 @@
     // ss15: no serif i when true
     "ss15": true,
     // ss16: no serif r when true
-    "ss16": true
+    "ss16": true,
   },
   "buffer_font_size": 15,
   "buffer_font_weight": 400,
   "experimental.theme_overrides": {
     "syntax": {
       "comment": {
-        "font_style": "italic"
+        "font_style": "italic",
       },
       "comment.doc": {
-        "font_style": "italic"
-      }
-    }
+        "font_style": "italic",
+      },
+    },
   },
   "features": {
-    "edit_prediction_provider": "none"
+    "edit_prediction_provider": "none",
   },
   "git": {
     "inline_blame": {
-      "enabled": false
+      "enabled": false,
     },
-    "git_gutter": "hide"
+    "git_gutter": "hide",
   },
   "languages": {
     "Elixir": {
       "formatter": {
         "external": {
           "command": "mix",
-          "arguments": ["format", "--stdin-filename", "{buffer_path}", "-"]
-        }
+          "arguments": ["format", "--stdin-filename", "{buffer_path}", "-"],
+        },
       },
       "format_on_save": "on",
-      "language_servers": ["!expert", "lexical", "!elixir-ls", "!next-ls"]
+      "language_servers": ["expert", "!lexical", "!elixir-ls", "!next-ls"],
     },
     "HEEX": {
       "formatter": {
         "external": {
           "command": "mix",
-          "arguments": ["format", "--stdin-filename", "{buffer_path}", "-"]
-        }
+          "arguments": ["format", "--stdin-filename", "{buffer_path}", "-"],
+        },
       },
       "format_on_save": "on",
-      "language_servers": ["!expert", "lexical", "!elixir-ls", "!next-ls"]
+      "language_servers": ["expert", "!lexical", "!elixir-ls", "!next-ls"],
     },
     "JavaScript": {
       // "format_on_save": {
@@ -81,33 +81,33 @@
       "formatter": {
         "external": {
           "command": "prettier",
-          "arguments": ["--stdin-filepath", "{buffer_path}"]
-        }
+          "arguments": ["--stdin-filepath", "{buffer_path}"],
+        },
       },
       "code_actions_on_format": {
-        "source.fixAll.eslint": true
-      }
+        "source.fixAll.eslint": true,
+      },
     },
     "Ruby": {
       "language_servers": ["ruby-lsp", "!solargraph", "!rubocop"],
-      "formatter": "language_server"
-    }
+      "formatter": "language_server",
+    },
   },
   "lsp": {
     "ruby-lsp": {
       "initialization_options": {
         "enabledFeatures": {
           "diagnostics": false,
-          "formatting": true
+          "formatting": true,
         },
-        "formatter": "standard"
-      }
+        "formatter": "standard",
+      },
     },
     "biome": {
       "settings": {
-        "require_config_file": true
-      }
-    }
+        "require_config_file": true,
+      },
+    },
   },
   "relative_line_numbers": "enabled",
   "show_copilot_suggestions": true,
@@ -117,7 +117,7 @@
     // Whether or not to show the tab bar in the editor
     "show": true,
     // Whether or not to show the navigation history buttons.
-    "show_nav_history_buttons": true
+    "show_nav_history_buttons": true,
   },
   // "theme": "Github Light",
   "theme": "Gruvbox Light Hard",
@@ -125,5 +125,5 @@
   "vim_mode": true,
   "current_line_highlight": "gutter",
   "pane_split_direction_horizontal": "down",
-  "pane_split_direction_vertical": "right"
+  "pane_split_direction_vertical": "right",
 }
