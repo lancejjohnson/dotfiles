@@ -7,6 +7,9 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "edit_predictions": {
+    "provider": "none",
+  },
   "agent": {
     "default_profile": "ask",
     "default_model": {
@@ -40,9 +43,6 @@
         "font_style": "italic",
       },
     },
-  },
-  "features": {
-    "edit_prediction_provider": "none",
   },
   "git": {
     "inline_blame": {

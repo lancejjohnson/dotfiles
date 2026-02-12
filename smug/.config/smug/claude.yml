@@ -23,7 +23,6 @@ windows:
     root: dscout/apps/astro
     commands:
     - clear
-    - claude
 
   - name: chrome-ext
     root: dscout-chrome/
