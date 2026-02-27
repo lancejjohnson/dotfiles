@@ -1,0 +1,19 @@
+session: mono
+
+root: ~/src/dscout/mono
+
+windows:
+  - name: terminal
+    root: ./
+    commands:
+      - clear
+
+  - name: editor
+    root: ./
+    commands:
+      - clear
+
+  - name: agent
+    root: ./
+    commands:
+      - clear
