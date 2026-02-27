@@ -111,3 +111,5 @@ lance.workspace
 # Worktrees in git
 .worktrees/
 
+# direnv
+.envrc
