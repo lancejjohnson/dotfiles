@@ -19,20 +19,20 @@
   },
   "agent_ui_font_size": 18,
   "base_keymap": "VSCode",
-  "buffer_font_family": "MonoLisa Variable",
+  "buffer_font_family": "Iosevka Nerd Font",
   "buffer_font_features": {
-    "calt": false,
-    "liga": false,
+    // "calt": false,
+    // "liga": false,
     // ss02: script when true
-    "ss02": false,
+    // "ss02": false,
     // ss04: unstyled g when true
-    "ss04": false,
+    // "ss04": false,
     // ss15: no serif i when true
-    "ss15": true,
+    // "ss15": true,
     // ss16: no serif r when true
-    "ss16": true,
+    // "ss16": true,
   },
-  "buffer_font_size": 15,
+  "buffer_font_size": 17.0,
   "buffer_font_weight": 400,
   "experimental.theme_overrides": {
     "syntax": {
