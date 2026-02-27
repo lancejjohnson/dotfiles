@@ -164,6 +164,12 @@ vim.opt.winwidth = 105
 -- Turn off wrap
 vim.opt.wrap = false
 
+-- Use treesitter for folds
+vim.opt.foldmethod = 'expr'
+vim.opt.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+-- Have new buffers open unfolded
+vim.opt.foldlevel = 99
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
