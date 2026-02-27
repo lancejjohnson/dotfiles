@@ -1,0 +1,11 @@
+session: dotfiles
+
+root: ~/.dotfiles
+
+windows:
+  - name: editor
+    commands:
+      - clear
+  - name: terminal
+    commands:
+      - clear

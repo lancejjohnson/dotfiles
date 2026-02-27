@@ -1,0 +1,15 @@
+session: rust-koans
+
+root: ~/src/oss/rust-koans/
+
+windows:
+  - name: koans
+    layout: even-horizontal
+    commands:
+      - clear
+      - nvim
+    panes:
+      - root: .
+        commands:
+          - cargo run
+

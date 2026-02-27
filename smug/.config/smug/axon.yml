@@ -1,19 +1,21 @@
-session: dscout
+session: ${wt}
 
-root: ~/src/dscout/dscout
+root: ${wtd}
 
 windows:
   - name: editor
-    root: apps/axon
+    root: ${wtd}/apps/axon
     commands:
       - clear
       - nvim
 
   - name: terminal
+    root: ${wtd}/apps/axon
     commands:
       - clear
 
   - name: agent
+    root: ${wtd}/apps/axon
     commands:
       - clear
       - claude

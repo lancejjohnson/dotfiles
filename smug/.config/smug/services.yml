@@ -1,0 +1,8 @@
+session: services
+
+root: ~/src/dscout
+
+windows:
+  - name: all
+    commands:
+      - clear
