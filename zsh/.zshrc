@@ -123,3 +123,10 @@ export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
 export MANWIDTH=80
+
+# bun completions
+[ -s "/Users/lance/.bun/_bun" ] && source "/Users/lance/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

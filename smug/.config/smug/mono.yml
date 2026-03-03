@@ -3,12 +3,12 @@ session: mono
 root: ~/src/dscout/mono
 
 windows:
-  - name: terminal
+  - name: editor
     root: ./
     commands:
       - clear
 
-  - name: editor
+  - name: terminal
     root: ./
     commands:
       - clear
