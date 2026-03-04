@@ -285,6 +285,7 @@ require('lazy').setup({
   -- I like tpope better than mini because he follows the vim grammar. However, consider kylechui/nvim-surround as it supports treesitter
   'tpope/vim-surround', -- Surrounds
   'tpope/vim-fugitive',
+  'tpope/vim-unimpaired',
 
   'fatih/vim-go',
 
