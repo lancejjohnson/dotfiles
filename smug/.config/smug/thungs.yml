@@ -1,0 +1,18 @@
+session: thungs
+
+root: ~/src/lancejjohnson/thungs
+
+windows:
+  - name: editor
+    commands:
+      - clear
+      - nvim
+
+  - name: terminal
+    commands:
+      - clear
+
+  - name: agent
+    commands:
+      - clear
+      - claude

@@ -24,3 +24,5 @@ disabled = true
 disabled = true
 [terraform]
 disabled = true
+[bun]
+symbol = '🍚 '
