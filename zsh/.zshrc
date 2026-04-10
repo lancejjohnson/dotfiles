@@ -80,6 +80,7 @@ _load_settings "$HOME/.zsh/configs"
 ################################################################################
 
 export EDITOR=nvim
+export VISUAL="zed --wait"
 
 # Git
 export GIT_EDITOR=nvim
