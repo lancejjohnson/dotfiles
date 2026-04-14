@@ -84,7 +84,6 @@ I hope you enjoy your Neovim journey,
 P.S. You can delete this when you're done too. It's your config now! :)
 --]]
 
--- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
 vim.g.mapleader = ','
@@ -95,13 +94,8 @@ vim.g.have_nerd_font = true
 
 -- [[ Setting options ]]
 -- See `:help vim.opt`
--- NOTE: You can change these options as you wish!
---  For more options, you can see `:help option-list`
-
--- Make line numbers default
+-- For more options, you can see `:help option-list`
 vim.opt.number = true
--- You can also add relative line numbers, to help with jumping.
---  Experiment for yourself to see if you like it!
 vim.opt.relativenumber = true
 
 -- Enable mouse mode, can be useful for resizing splits for example!
@@ -164,6 +158,7 @@ vim.opt.winwidth = 105
 -- Turn off wrap
 vim.opt.wrap = false
 
+-- TODO(ljj): This should be filetype specific for those filetypes for which you have installed grammars
 -- Use treesitter for folds
 vim.opt.foldmethod = 'expr'
 vim.opt.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
@@ -393,8 +388,8 @@ require('lazy').setup({
 
   { -- Fuzzy Finder (files, lsp, etc)
     'nvim-telescope/telescope.nvim',
+    version = '*',
     event = 'VimEnter',
-    branch = '0.1.x',
     dependencies = {
       'nvim-lua/plenary.nvim',
       { -- If encountering errors, see telescope-fzf-native README for installation instructions
@@ -786,7 +781,7 @@ require('lazy').setup({
       },
     },
     opts = {
-      notify_on_error = false,
+      notify_on_error = true,
       format_on_save = function(bufnr)
         -- Disable "format_on_save lsp_fallback" for languages that don't
         -- have a well standardized coding style. You can add additional
@@ -1050,48 +1045,17 @@ require('lazy').setup({
       --  Check out: https://github.com/echasnovski/mini.nvim
     end,
   },
-  { -- Highlight, edit, and navigate code
+  { -- Highlight, edit, ajd navigate code
     'nvim-treesitter/nvim-treesitter',
+    lazy = false,
     build = ':TSUpdate',
-    main = 'nvim-treesitter.configs', -- Sets main module to use for opts
-    -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
-    opts = {
-      ensure_installed = {
-        'bash',
-        'c',
-        'diff',
-        'elixir',
-        'go',
-        'html',
-        'javascript',
-        'lua',
-        'luadoc',
-        'markdown',
-        'markdown_inline',
-        'query',
-        'rust',
-        'typescript',
-        'vim',
-        'vimdoc',
-      },
-      -- Autoinstall languages that are not installed
-      auto_install = true,
-      highlight = {
-        enable = true,
-        -- Some languages depend on vim's regex highlighting system (such as Ruby) for indent rules.
-        --  If you are experiencing weird indenting issues, add the language to
-        --  the list of additional_vim_regex_highlighting and disabled languages for indent.
-        additional_vim_regex_highlighting = { 'ruby' },
-      },
-      indent = { enable = true, disable = { 'ruby' } },
-    },
-    -- There are additional nvim-treesitter modules that you can use to interact
-    -- with nvim-treesitter. You should go explore a few and see what interests you:
-    --
-    --    - Incremental selection: Included, see `:help nvim-treesitter-incremental-selection-mod`
-    --    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
-    --    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
   },
+  -- There are additional nvim-treesitter modules that you can use to interact
+  -- with nvim-treesitter. You should go explore a few and see what interests you:
+  --
+  --    - Incremental selection: Included, see `:help nvim-treesitter-incremental-selection-mod`
+  --    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
+  --    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
 
   -- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
   -- init.lua. If you want these files, they are in the repository, so you can just download them and
