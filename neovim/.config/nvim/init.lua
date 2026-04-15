@@ -158,10 +158,10 @@ vim.opt.winwidth = 105
 -- Turn off wrap
 vim.opt.wrap = false
 
--- TODO(ljj): This should be filetype specific for those filetypes for which you have installed grammars
--- Use treesitter for folds
-vim.opt.foldmethod = 'expr'
-vim.opt.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+-- -- TODO(ljj): This should be filetype specific for those filetypes for which you have installed grammars
+-- -- Use treesitter for folds
+-- vim.opt.foldmethod = 'expr'
+-- vim.opt.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
 -- Have new buffers open unfolded
 vim.opt.foldlevel = 99
 
@@ -1100,6 +1100,59 @@ require('lazy').setup({
       lazy = '💤 ',
     },
   },
+})
+
+local ts_languages = {
+  'bash',
+  'css',
+  'diff',
+  'dockerfile',
+  'editorconfig',
+  'eex',
+  'elixir',
+  'erlang',
+  'git_config',
+  'git_rebase',
+  'gitcommit',
+  'gitignore',
+  'go',
+  'graphql',
+  'heex',
+  'html',
+  'javascript',
+  'jq',
+  'json',
+  'lua',
+  'luadoc',
+  'make',
+  'markdown',
+  'markdown_inline',
+  'mermaid',
+  'python',
+  'regex',
+  'ruby',
+  'rust',
+  'scss',
+  'sql',
+  'svelte',
+  'terraform',
+  'tmux',
+  'toml',
+  'typescript',
+  'vim',
+  'vimdoc',
+  'yaml',
+  'zsh',
+}
+
+require('nvim-treesitter').install(ts_languages)
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = ts_languages,
+  callback = function()
+    vim.treesitter.start()
+    vim.wo[0][0].foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+    vim.wo[0][0].foldmethod = 'expr'
+  end,
 })
 
 -- [[ Custom User Commands ]]
