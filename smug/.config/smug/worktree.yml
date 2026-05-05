@@ -1,0 +1,21 @@
+session: ${name}
+attach: true # Automatically attach to this session
+
+root: ${dir}
+
+windows:
+  - name: mono
+    selected: true # Selects this window at the start of the session
+    layout: main-vertical
+    commands:
+      - claude
+    panes:
+      - type: horizontal
+        commands:
+          - nvim
+
+  - name: axon
+    root: apps/axon
+
+  - name: dendra
+    root: apps/dendra
