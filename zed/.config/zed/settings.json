@@ -22,6 +22,7 @@
     "dock": "left"
   },
   "git_panel": {
+    "tree_view": false,
     "dock": "left"
   },
   "document_symbols": "on",
