@@ -11,11 +11,15 @@ windows:
       - claude
     panes:
       - type: horizontal
-        commands:
-          - nvim
 
   - name: axon
     root: apps/axon
+    commands:
+      - rm -rf deps/
+      - mix deps.get
+      - npm install --prefix assets/
 
   - name: dendra
     root: apps/dendra
+    commands:
+      - yarn install
