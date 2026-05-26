@@ -5,7 +5,7 @@ vim.opt_local.shiftwidth = 4 -- Number of spaces to use for autoindent
 vim.opt_local.expandtab = false -- Do not convert tabs to spaces (use actual tabs)
 
 -- Optional additional Go-specific settings
-vim.opt_local.formatoptions:append 'ro' -- Auto-continue comments
+-- vim.opt_local.formatoptions:append 'ro' -- Auto-continue comments
 
 -- Optional: Go-specific formatting or linting settings
 -- If using vim-go or gopls
