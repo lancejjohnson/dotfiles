@@ -42,6 +42,9 @@
   "base_keymap": "VSCode",
   "buffer_font_family": "Iosevka Nerd Font",
   "buffer_font_features": {
+    "calt": false,
+    "liga": false,
+    "dlig": false,
     // "calt": false,
     // "liga": false,
     // ss02: script when true
