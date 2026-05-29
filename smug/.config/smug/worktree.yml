@@ -4,22 +4,34 @@ attach: true # Automatically attach to this session
 root: ${dir}
 
 windows:
-  - name: mono
+  - name: axon
     selected: true # Selects this window at the start of the session
+    root: apps/axon
+    commands:
+      - claude
+    panes:
+      - type: horizontal
+        commands:
+          - rm -rf deps/
+          - mix deps.get
+
+  - name: axon-sh
+    root: apps/axon
+    commands:
+      - cd assets/; npm install; cd -
+
+  - name: dendra
+    root: apps/dendra
+    commands:
+      - yarn install
+
+  - name: dendra-sh
+    root: apps/dendra
+
+  - name: mono
     layout: main-vertical
     commands:
       - claude
     panes:
       - type: horizontal
 
-  - name: axon
-    root: apps/axon
-    commands:
-      - rm -rf deps/
-      - mix deps.get
-      - npm install --prefix assets/
-
-  - name: dendra
-    root: apps/dendra
-    commands:
-      - yarn install
