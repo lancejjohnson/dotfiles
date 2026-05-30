@@ -59,7 +59,7 @@
     // "ss16": true,
   },
   "buffer_font_size": 17.0,
-  "buffer_font_weight": 400,
+  "buffer_font_weight": 400.0,
   "experimental.theme_overrides": {
     "syntax": {
       "comment": {
@@ -98,21 +98,40 @@
       "language_servers": ["expert", "!lexical", "!elixir-ls", "!next-ls"],
     },
     "JavaScript": {
-      // "format_on_save": {
-      //   "external": {
-      //     "command": "prettier",
-      //     "arguments": ["--stdin-filepath", "{buffer_path}"]
-      //   }
-      // },
-      "formatter": {
-        "external": {
-          "command": "prettier",
-          "arguments": ["--stdin-filepath", "{buffer_path}"],
-        },
-      },
-      "code_actions_on_format": {
-        "source.fixAll.eslint": true,
-      },
+      "formatter": [
+        { "language_server": { "name": "biome" } },
+        { "code_action": "source.organizeImports.biome" },
+        { "code_action": "source.fixAll.biome" },
+      ],
+    },
+    "TypeScript": {
+      "prettier": { "allowed": false },
+      "formatter": [
+        { "language_server": { "name": "biome" } },
+        { "code_action": "source.organizeImports.biome" },
+        { "code_action": "source.fixAll.biome" },
+      ],
+    },
+    // Zed doesn't recognize JSX as a language
+    // "JSX": {
+    //   "formatter": [
+    //     { "language_server": { "name": "biome" } },
+    //     { "code_action": "source.organizeImports.biome" },
+    //     { "code_action": "source.fixAll.biome" },
+    //   ],
+    // },
+    "TSX": {
+      "formatter": [
+        { "language_server": { "name": "biome" } },
+        { "code_action": "source.organizeImports.biome" },
+        { "code_action": "source.fixAll.biome" },
+      ],
+    },
+    "JSON": {
+      "formatter": [{ "language_server": { "name": "biome" } }],
+    },
+    "CSS": {
+      "formatter": [{ "language_server": { "name": "biome" } }],
     },
     "Ruby": {
       "language_servers": ["ruby-lsp", "!solargraph", "!rubocop"],
@@ -134,8 +153,27 @@
         "require_config_file": true,
       },
     },
+    "tailwindcss-language-server": {
+      "settings": {
+        "experimental": {
+          "classRegex": [
+            "\\.className\\s*[+]?=\\s*['\"]([^'\"]*)['\"]",
+            "\\.setAttributeNS\\(.*,\\s*['\"]class['\"],\\s*['\"]([^'\"]*)['\"]",
+            "\\.setAttribute\\(['\"]class['\"],\\s*['\"]([^'\"]*)['\"]",
+            "\\.classList\\.add\\(['\"]([^'\"]*)['\"]",
+            "\\.classList\\.remove\\(['\"]([^'\"]*)['\"]",
+            "\\.classList\\.toggle\\(['\"]([^'\"]*)['\"]",
+            "\\.classList\\.contains\\(['\"]([^'\"]*)['\"]",
+            "\\.classList\\.replace\\(\\s*['\"]([^'\"]*)['\"]",
+            "\\.classList\\.replace\\([^,)]+,\\s*['\"]([^'\"]*)['\"]",
+          ],
+        },
+      },
+    },
   },
   "relative_line_numbers": "enabled",
+  "show_copilot_suggestions": true,
+  "format_on_save": "on",
   "soft_wrap": "none",
   "tab_size": 2,
   "tab_bar": {

@@ -1,5 +1,10 @@
 local M = {}
 
+function M.is_biome_project()
+  local root = vim.fs.find({ 'biome.json', 'biome.jsonc' }, { upward = true, stop = vim.env.HOME, path = vim.fs.dirname(vim.api.nvim_buf_get_name(0)) })
+  return #root > 0
+end
+
 function M.toggle_relativenumber()
   if vim.opt.relativenumber:get() then
     vim.opt.relativenumber = false
@@ -18,11 +23,10 @@ end
 
 function M.yank_relative_path_with_line()
   local relative_path = vim.fn.fnamemodify(vim.fn.expand '%:p', ':~:.')
-  local line_number = vim.fn.line('.')
+  local line_number = vim.fn.line '.'
   local path_with_line = relative_path .. ':' .. line_number
   vim.fn.setreg('+', path_with_line)
   vim.notify('Yanked relative path with line: ' .. path_with_line, vim.log.levels.INFO)
 end
 
 return M
-

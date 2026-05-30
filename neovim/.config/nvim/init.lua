@@ -736,11 +736,11 @@ require('lazy').setup({
           },
         },
 
-        ts_ls = {
-          root_dir = require('lspconfig').util.root_pattern { 'package.json', 'tsconfig.json' },
-          single_file_support = false,
-          settings = {},
-        },
+        -- ts_ls = {
+        --   root_dir = require('lspconfig').util.root_pattern { 'package.json', 'tsconfig.json' },
+        --   single_file_support = false,
+        --   settings = {},
+        -- },
       }
 
       -- Ensure the servers and tools above are installed
@@ -812,7 +812,7 @@ require('lazy').setup({
         -- python = { "isort", "black" },
         --
         -- You can use 'stop_after_first' to run the first available formatter from the list
-        javascript = { 'prettierd', 'prettier', stop_after_first = true },
+        javascript = { 'biome', 'prettierd', 'prettier', stop_after_first = true },
         go = { 'gofmt' },
       },
     },
@@ -1187,6 +1187,14 @@ vim.api.nvim_create_user_command(
 vim.keymap.set('n', '<leader>yl', custom_functions.yank_relative_path_with_line, { desc = 'Yank relative path and line' })
 vim.keymap.set('i', '<C-p>', '|><space>')
 vim.keymap.set('i', '<C-a>', '<space>=><space>')
+
+-- Set wrap for quickfix and location list windows
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = 'qf',
+  callback = function()
+    vim.wo.wrap = true
+  end,
+})
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
