@@ -531,7 +531,7 @@ require('lazy').setup({
         config = true,
       }, -- NOTE: Must be loaded before dependants
 
-      'williamboman/mason-lspconfig.nvim',
+      'mason-org/mason-lspconfig.nvim',
 
       'WhoIsSethDaniel/mason-tool-installer.nvim',
 
@@ -688,6 +688,9 @@ require('lazy').setup({
       local capabilities = vim.lsp.protocol.make_client_capabilities()
       capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
 
+      -- Broadcast enhanced capabilities to all servers
+      vim.lsp.config('*', { capabilities = capabilities })
+
       -- Enable the following language servers
       --  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
       --
@@ -719,8 +722,6 @@ require('lazy').setup({
 
         eslint = {},
 
-        prettier = {},
-
         lua_ls = {
           -- cmd = {...},
           -- filetypes = { ...},
@@ -730,8 +731,7 @@ require('lazy').setup({
               completion = {
                 callSnippet = 'Replace',
               },
-              -- You can toggle below to ignore Lua_LS's noisy `missing-fields` warnings
-              -- diagnostics = { disable = { 'missing-fields' } },
+              diagnostics = { globals = { 'vim' } },
             },
           },
         },
@@ -742,6 +742,13 @@ require('lazy').setup({
         --   settings = {},
         -- },
       }
+
+      -- Apply per-server config overrides for servers with non-default settings
+      for server_name, server_config in pairs(servers) do
+        if next(server_config) ~= nil then
+          vim.lsp.config(server_name, server_config)
+        end
+      end
 
       -- Ensure the servers and tools above are installed
       --  To check the current status of installed tools and/or manually install
@@ -756,20 +763,14 @@ require('lazy').setup({
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
+        'prettier', -- Used to format JavaScript/TypeScript
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
+      -- mason-lspconfig v2: automatic_enable (default true) replaces the old
+      -- handlers pattern by calling vim.lsp.enable() for each installed server
       require('mason-lspconfig').setup {
-        handlers = {
-          function(server_name)
-            local server = servers[server_name] or {}
-            -- This handles overriding only values explicitly passed
-            -- by the server configuration above. Useful when disabling
-            -- certain features of an LSP (for example, turning off formatting for ts_ls)
-            server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
-            require('lspconfig')[server_name].setup(server)
-          end,
-        },
+        ensure_installed = vim.tbl_keys(servers),
       }
     end,
   },
