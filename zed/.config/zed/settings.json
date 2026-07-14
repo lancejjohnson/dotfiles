@@ -7,9 +7,13 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "cli_default_open_behavior": "new_window",
   "agent_buffer_font_size": 17.0,
   "agent_servers": {
     "claude-acp": {
+      "default_config_options": {
+        "mode": "auto",
+      },
       "type": "registry",
     },
   },
@@ -103,6 +107,13 @@
         { "code_action": "source.organizeImports.biome" },
         { "code_action": "source.fixAll.biome" },
       ],
+      "language_servers": [
+        "biome",
+        "deno",
+        "!typescript-language-server",
+        "!vtsls",
+        "!eslint",
+      ],
     },
     "TypeScript": {
       "prettier": { "allowed": false },
@@ -110,6 +121,13 @@
         { "language_server": { "name": "biome" } },
         { "code_action": "source.organizeImports.biome" },
         { "code_action": "source.fixAll.biome" },
+      ],
+      "language_servers": [
+        "biome",
+        "deno",
+        "!typescript-language-server",
+        "!vtsls",
+        "!eslint",
       ],
     },
     // Zed doesn't recognize JSX as a language
@@ -153,6 +171,13 @@
         "require_config_file": true,
       },
     },
+    "deno": {
+      "settings": {
+        "deno": {
+          "enable": true,
+        },
+      },
+    },
     "tailwindcss-language-server": {
       "settings": {
         "experimental": {
@@ -172,7 +197,6 @@
     },
   },
   "relative_line_numbers": "enabled",
-  "show_copilot_suggestions": true,
   "format_on_save": "on",
   "soft_wrap": "none",
   "tab_size": 2,

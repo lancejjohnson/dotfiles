@@ -85,3 +85,6 @@ alias todo="todo.sh"
 # AWS
 alias av="aws-vault"
 alias adb="aws dynamodb"
+
+# Zed
+alias zn="zed ./ -n"
