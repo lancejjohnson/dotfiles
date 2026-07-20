@@ -87,4 +87,4 @@ alias av="aws-vault"
 alias adb="aws dynamodb"
 
 # Zed
-alias zn="zed ./ -n"
+alias zn="zed -n ./"
