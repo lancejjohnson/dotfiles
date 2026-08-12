@@ -13,3 +13,4 @@ maximize = true
 theme = light:"Gruvbox Light Hard",dark:"Gruvbox Dark"
 window-save-state = "always"
 keybind = shift+enter=text:\n
+shell-integration-features = ssh-env,ssh-terminfo

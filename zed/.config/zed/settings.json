@@ -150,6 +150,10 @@
     },
     "CSS": {
       "formatter": [{ "language_server": { "name": "biome" } }],
+      "language_servers": [
+        "tailwindcss-intellisense-css",
+        "!vscode-css-language-server",
+      ],
     },
     "Ruby": {
       "language_servers": ["ruby-lsp", "!solargraph", "!rubocop"],
