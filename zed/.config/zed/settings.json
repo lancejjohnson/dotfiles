@@ -36,12 +36,22 @@
     "provider": "none",
   },
   "agent": {
+    "favorite_models": [
+      {
+        "provider": "openai-subscribed",
+        "model": "gpt-5.6-luna",
+        "enable_thinking": true,
+        "effort": "medium"
+      }
+    ],
     "use_modifier_to_send": true,
     "dock": "right",
     "default_profile": "ask",
     "default_model": {
-      "provider": "anthropic",
-      "model": "claude-sonnet-4-latest",
+      "effort": "medium",
+      "enable_thinking": true,
+      "provider": "openai-subscribed",
+      "model": "gpt-5.6-luna",
     },
   },
   "agent_ui_font_size": 17.0,
