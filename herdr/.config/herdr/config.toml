@@ -1,0 +1,47 @@
+onboarding = false
+
+[theme]
+name = "gruvbox-light"
+auto_switch = false
+
+[terminal]
+# Match Tmux's behavior of opening panes and tabs in the source location.
+new_cwd = "follow"
+
+[ui]
+# Herdr is mouse-native; retain mouse interaction and avoid adding a status area.
+mouse_capture = true
+tab_bar_right = []
+hide_tab_bar_when_single_tab = true
+status_indicators = "symbols"
+
+[ui.toast]
+delivery = "terminal"
+
+[ui.sound]
+enabled = true
+
+[keys]
+# Preserve the requested Tmux-style prefix, using Herdr's key syntax.
+prefix = "ctrl+;"
+
+# prefix+s is the requested downward split. Move Herdr Settings elsewhere.
+settings = "prefix+shift+s"
+split_vertical = "prefix+v"
+split_horizontal = "prefix+s"
+
+focus_pane_left = "prefix+h"
+focus_pane_down = "prefix+j"
+focus_pane_up = "prefix+k"
+focus_pane_right = "prefix+l"
+
+new_tab = "prefix+c"
+previous_tab = "prefix+p"
+next_tab = "prefix+n"
+switch_tab = "prefix+1..9"
+
+# Large direct resize bindings from the Tmux configuration.
+resize_pane_left = "ctrl+shift+left"
+resize_pane_right = "ctrl+shift+right"
+resize_pane_up = "ctrl+shift+up"
+resize_pane_down = "ctrl+shift+down"
