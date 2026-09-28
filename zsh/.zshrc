@@ -131,3 +131,6 @@ export MANWIDTH=80
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# Pi
+export PATH="/Users/lance/.pi/agent/bin:$PATH"
